@@ -8,8 +8,7 @@ package proyecto1.so;
  *
  * @author manza
  */
-public class Trabajador extends Thread{
-    private int tipoTrabajador;
+public class Ensamblador extends Thread{
     private int salario;
     private float salarioAcumulado;
     private int cantidadTrabajadores;
@@ -19,8 +18,7 @@ public class Trabajador extends Thread{
     private Almacen almacen;
     //private Semaforo semaforo;
 
-    public Trabajador(int tipo, int salario, float salarioAcumulado, int cantidadTrabajadores, int duracionDia, int diasRestantes, int contadorDias, Almacen almacen) {
-        this.tipoTrabajador = tipoTrabajador;
+    public Ensamblador(int salario, float salarioAcumulado, int cantidadTrabajadores, int duracionDia, int diasRestantes, int contadorDias, Almacen almacen) {
         this.salario = salario;
         this.salarioAcumulado = salarioAcumulado;
         this.cantidadTrabajadores = cantidadTrabajadores;
@@ -28,14 +26,6 @@ public class Trabajador extends Thread{
         this.diasRestantes = diasRestantes;
         this.contadorDias = contadorDias;
         this.almacen = almacen;
-    }
-
-    public int getTipoTrabajador() {
-        return tipoTrabajador;
-    }
-
-    public void setTipoTrabajador(int tipoTrabajador) {
-        this.tipoTrabajador = tipoTrabajador;
     }
 
     public int getSalario() {
@@ -96,4 +86,3 @@ public class Trabajador extends Thread{
     
     
 }
-
