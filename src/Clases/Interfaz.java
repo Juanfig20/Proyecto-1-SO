@@ -106,7 +106,7 @@ public class Interfaz extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         cantCompEstandarListos_Apple = new javax.swing.JLabel();
         compEstandarLabel_Apple = new javax.swing.JLabel();
-        compConTGLabel = new javax.swing.JLabel();
+        compConTGLabel_Apple = new javax.swing.JLabel();
         cantCompTGListos_Apple = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         fuentesLabel_Apple = new javax.swing.JLabel();
@@ -155,6 +155,63 @@ public class Interfaz extends javax.swing.JFrame {
         utilidad_Apple = new javax.swing.JLabel();
         diasRestantes_Apple = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
+        jPanel11 = new javax.swing.JPanel();
+        fuentesLabel_HP = new javax.swing.JLabel();
+        removeNumFuente_HP = new javax.swing.JButton();
+        RAMLabel_HP = new javax.swing.JLabel();
+        removeNumRAM_HP = new javax.swing.JButton();
+        CPUsLabel_HP = new javax.swing.JLabel();
+        removeNumCPUs_HP = new javax.swing.JButton();
+        placaBaseLabel_HP = new javax.swing.JLabel();
+        removeNumPB_HP = new javax.swing.JButton();
+        numTrabajadoresFuente_HP = new javax.swing.JLabel();
+        numTrabajadoresRAM_HP = new javax.swing.JLabel();
+        numTrabajadoresCPU_HP = new javax.swing.JLabel();
+        numTrabajadoresPB_HP = new javax.swing.JLabel();
+        numTrabajadoresTG_HP = new javax.swing.JLabel();
+        labelTrabajadores1 = new javax.swing.JLabel();
+        removeNumEnsamb_HP = new javax.swing.JButton();
+        ensambladoresLabel_HP = new javax.swing.JLabel();
+        addNumEnsamb_HP = new javax.swing.JButton();
+        numTrabajadoresEnsamb_HP = new javax.swing.JLabel();
+        addNumTG_HP = new javax.swing.JButton();
+        addNumFuente_HP = new javax.swing.JButton();
+        addNumRAM_HP = new javax.swing.JButton();
+        addNumCPUs_HP = new javax.swing.JButton();
+        removeNumTG_HP = new javax.swing.JButton();
+        addNumPB_HP = new javax.swing.JButton();
+        tGraficaLabel_HP = new javax.swing.JLabel();
+        jPanel12 = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        placasEnStock_HP = new javax.swing.JLabel();
+        CPUsEnStock_HP = new javax.swing.JLabel();
+        RAMsEnStock_HP = new javax.swing.JLabel();
+        fuentesEnStock_HP = new javax.swing.JLabel();
+        tGraficasEnStock_HP = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        cantCompEstandarListos_HP = new javax.swing.JLabel();
+        compEstandarLabel_HP = new javax.swing.JLabel();
+        compConTGLabel_HP = new javax.swing.JLabel();
+        cantCompTGListos_HP = new javax.swing.JLabel();
+        jPanel13 = new javax.swing.JPanel();
+        jLabel25 = new javax.swing.JLabel();
+        ganaciasLabel_HP = new javax.swing.JLabel();
+        costosLabel_HP = new javax.swing.JLabel();
+        utilidadLabel_HP = new javax.swing.JLabel();
+        diasRestantesLabel_HP = new javax.swing.JLabel();
+        ganacias_HP = new javax.swing.JLabel();
+        costos_HP = new javax.swing.JLabel();
+        utilidad_HP = new javax.swing.JLabel();
+        diasRestantes_HP = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -723,7 +780,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         compEstandarLabel_Apple.setText("Computadores estándar listos:");
 
-        compConTGLabel.setText("Computadores con tarjeta gráfica listos:");
+        compConTGLabel_Apple.setText("Computadores con tarjeta gráfica listos:");
 
         cantCompTGListos_Apple.setText("0");
 
@@ -762,7 +819,7 @@ public class Interfaz extends javax.swing.JFrame {
                 .addGap(79, 79, 79)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(compEstandarLabel_Apple)
-                    .addComponent(compConTGLabel))
+                    .addComponent(compConTGLabel_Apple))
                 .addGap(41, 41, 41)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(cantCompTGListos_Apple)
@@ -805,7 +862,7 @@ public class Interfaz extends javax.swing.JFrame {
                     .addComponent(cantCompEstandarListos_Apple))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(compConTGLabel)
+                    .addComponent(compConTGLabel_Apple)
                     .addComponent(cantCompTGListos_Apple))
                 .addGap(25, 25, 25))
         );
@@ -1212,6 +1269,421 @@ public class Interfaz extends javax.swing.JFrame {
         jTabbedPane1.addTab("Apple", jPanel2);
 
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        fuentesLabel_HP.setText("Productores de fuentes:");
+
+        removeNumFuente_HP.setText("-");
+        removeNumFuente_HP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeNumFuente_HPActionPerformed(evt);
+            }
+        });
+
+        RAMLabel_HP.setText("Productores de memoria RAM:");
+
+        removeNumRAM_HP.setText("-");
+        removeNumRAM_HP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeNumRAM_HPActionPerformed(evt);
+            }
+        });
+
+        CPUsLabel_HP.setText("Productores de placas CPUs:");
+
+        removeNumCPUs_HP.setText("-");
+        removeNumCPUs_HP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeNumCPUs_HPActionPerformed(evt);
+            }
+        });
+
+        placaBaseLabel_HP.setText("Productores de placas bases:");
+
+        removeNumPB_HP.setText("-");
+        removeNumPB_HP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeNumPB_HPActionPerformed(evt);
+            }
+        });
+
+        numTrabajadoresFuente_HP.setText("0");
+
+        numTrabajadoresRAM_HP.setText("0");
+
+        numTrabajadoresCPU_HP.setText("0");
+
+        numTrabajadoresPB_HP.setText("0");
+
+        numTrabajadoresTG_HP.setText("0");
+
+        labelTrabajadores1.setText("LISTA DE TRABAJADORES");
+
+        removeNumEnsamb_HP.setText("-");
+        removeNumEnsamb_HP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeNumEnsamb_HPActionPerformed(evt);
+            }
+        });
+
+        ensambladoresLabel_HP.setText("Ensambladores:");
+
+        addNumEnsamb_HP.setText("+");
+        addNumEnsamb_HP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addNumEnsamb_HPActionPerformed(evt);
+            }
+        });
+
+        numTrabajadoresEnsamb_HP.setText("0");
+
+        addNumTG_HP.setText("+");
+        addNumTG_HP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addNumTG_HPActionPerformed(evt);
+            }
+        });
+
+        addNumFuente_HP.setText("+");
+        addNumFuente_HP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addNumFuente_HPActionPerformed(evt);
+            }
+        });
+
+        addNumRAM_HP.setText("+");
+        addNumRAM_HP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addNumRAM_HPActionPerformed(evt);
+            }
+        });
+
+        addNumCPUs_HP.setText("+");
+        addNumCPUs_HP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addNumCPUs_HPActionPerformed(evt);
+            }
+        });
+
+        removeNumTG_HP.setText("-");
+        removeNumTG_HP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeNumTG_HPActionPerformed(evt);
+            }
+        });
+
+        addNumPB_HP.setText("+");
+        addNumPB_HP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addNumPB_HPActionPerformed(evt);
+            }
+        });
+
+        tGraficaLabel_HP.setText("Productores de tarjetas gráficas:");
+
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addComponent(CPUsLabel_HP)
+                        .addGap(51, 51, 51)
+                        .addComponent(removeNumCPUs_HP)
+                        .addGap(17, 17, 17)
+                        .addComponent(numTrabajadoresCPU_HP)
+                        .addGap(14, 14, 14)
+                        .addComponent(addNumCPUs_HP))
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addComponent(RAMLabel_HP)
+                        .addGap(38, 38, 38)
+                        .addComponent(removeNumRAM_HP)
+                        .addGap(17, 17, 17)
+                        .addComponent(numTrabajadoresRAM_HP)
+                        .addGap(14, 14, 14)
+                        .addComponent(addNumRAM_HP))
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(fuentesLabel_HP)
+                            .addComponent(tGraficaLabel_HP)
+                            .addComponent(ensambladoresLabel_HP))
+                        .addGap(30, 30, 30)
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel11Layout.createSequentialGroup()
+                                .addComponent(removeNumFuente_HP)
+                                .addGap(17, 17, 17)
+                                .addComponent(numTrabajadoresFuente_HP)
+                                .addGap(14, 14, 14)
+                                .addComponent(addNumFuente_HP))
+                            .addGroup(jPanel11Layout.createSequentialGroup()
+                                .addComponent(removeNumTG_HP)
+                                .addGap(17, 17, 17)
+                                .addComponent(numTrabajadoresTG_HP)
+                                .addGap(14, 14, 14)
+                                .addComponent(addNumTG_HP))
+                            .addGroup(jPanel11Layout.createSequentialGroup()
+                                .addComponent(removeNumEnsamb_HP)
+                                .addGap(17, 17, 17)
+                                .addComponent(numTrabajadoresEnsamb_HP)
+                                .addGap(14, 14, 14)
+                                .addComponent(addNumEnsamb_HP))))
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel11Layout.createSequentialGroup()
+                                .addComponent(placaBaseLabel_HP)
+                                .addGap(48, 48, 48)
+                                .addComponent(removeNumPB_HP))
+                            .addGroup(jPanel11Layout.createSequentialGroup()
+                                .addGap(75, 75, 75)
+                                .addComponent(labelTrabajadores1)))
+                        .addGap(17, 17, 17)
+                        .addComponent(numTrabajadoresPB_HP)
+                        .addGap(14, 14, 14)
+                        .addComponent(addNumPB_HP)))
+                .addContainerGap(38, Short.MAX_VALUE))
+        );
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(labelTrabajadores1)
+                .addGap(31, 31, 31)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(placaBaseLabel_HP)
+                    .addComponent(removeNumPB_HP)
+                    .addComponent(numTrabajadoresPB_HP)
+                    .addComponent(addNumPB_HP))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(CPUsLabel_HP)
+                    .addComponent(removeNumCPUs_HP)
+                    .addComponent(numTrabajadoresCPU_HP)
+                    .addComponent(addNumCPUs_HP))
+                .addGap(17, 17, 17)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(RAMLabel_HP)
+                    .addComponent(removeNumRAM_HP)
+                    .addComponent(numTrabajadoresRAM_HP)
+                    .addComponent(addNumRAM_HP))
+                .addGap(17, 17, 17)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(fuentesLabel_HP)
+                    .addComponent(removeNumFuente_HP)
+                    .addComponent(numTrabajadoresFuente_HP)
+                    .addComponent(addNumFuente_HP))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(removeNumTG_HP)
+                        .addComponent(tGraficaLabel_HP))
+                    .addComponent(numTrabajadoresTG_HP)
+                    .addComponent(addNumTG_HP))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(removeNumEnsamb_HP)
+                        .addComponent(ensambladoresLabel_HP))
+                    .addComponent(numTrabajadoresEnsamb_HP)
+                    .addComponent(addNumEnsamb_HP))
+                .addContainerGap(20, Short.MAX_VALUE))
+        );
+
+        jPanel3.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, -1, -1));
+
+        jLabel14.setText("Cant. de placas bases:");
+
+        jLabel15.setText("Cant. de CPUs:");
+
+        jLabel16.setText("Cant. de memorias RAM:");
+
+        jLabel17.setText("Cant. de fuentes:");
+
+        jLabel18.setText("Cant. de tarjetas gráficas:");
+
+        jLabel19.setText("ALMACEN");
+
+        placasEnStock_HP.setText("0");
+
+        CPUsEnStock_HP.setText("0");
+
+        RAMsEnStock_HP.setText("0");
+
+        fuentesEnStock_HP.setText("0");
+
+        tGraficasEnStock_HP.setText("0");
+
+        jLabel20.setText("Capacidad máx.:            25");
+
+        jLabel21.setText("Capacidad máx.:            20");
+
+        jLabel22.setText("Capacidad máx.:            55");
+
+        jLabel23.setText("Capacidad máx.:            35");
+
+        jLabel24.setText("Capacidad máx.:            10");
+
+        cantCompEstandarListos_HP.setText("0");
+
+        compEstandarLabel_HP.setText("Computadores estándar listos:");
+
+        compConTGLabel_HP.setText("Computadores con tarjeta gráfica listos:");
+
+        cantCompTGListos_HP.setText("0");
+
+        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
+        jPanel12.setLayout(jPanel12Layout);
+        jPanel12Layout.setHorizontalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel14)
+                    .addComponent(jLabel15)
+                    .addComponent(jLabel17)
+                    .addComponent(jLabel18)
+                    .addComponent(jLabel16))
+                .addGap(52, 52, 52)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(placasEnStock_HP)
+                    .addComponent(tGraficasEnStock_HP)
+                    .addComponent(fuentesEnStock_HP)
+                    .addComponent(RAMsEnStock_HP)
+                    .addComponent(CPUsEnStock_HP))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(25, 25, 25))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel19)
+                .addGap(173, 173, 173))
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addGap(79, 79, 79)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(compEstandarLabel_HP)
+                    .addComponent(compConTGLabel_HP))
+                .addGap(41, 41, 41)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(cantCompTGListos_HP)
+                    .addComponent(cantCompEstandarListos_HP))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel12Layout.setVerticalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addGap(13, 13, 13)
+                .addComponent(jLabel19)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel14)
+                    .addComponent(placasEnStock_HP)
+                    .addComponent(jLabel20))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15)
+                    .addComponent(CPUsEnStock_HP)
+                    .addComponent(jLabel21))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16)
+                    .addComponent(RAMsEnStock_HP)
+                    .addComponent(jLabel22))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel17)
+                    .addComponent(fuentesEnStock_HP)
+                    .addComponent(jLabel23))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel18)
+                    .addComponent(tGraficasEnStock_HP)
+                    .addComponent(jLabel24))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(compEstandarLabel_HP)
+                    .addComponent(cantCompEstandarListos_HP))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(compConTGLabel_HP)
+                    .addComponent(cantCompTGListos_HP))
+                .addGap(25, 25, 25))
+        );
+
+        jPanel3.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 20, -1, -1));
+
+        jLabel25.setText("DATOS RELEVANTES");
+
+        ganaciasLabel_HP.setText("Ganancias en bruto:");
+
+        costosLabel_HP.setText("Costos operativos:");
+
+        utilidadLabel_HP.setText("Utilidad total:");
+
+        diasRestantesLabel_HP.setText("Días restantes para la entrega:");
+
+        ganacias_HP.setText("0");
+
+        costos_HP.setText("0");
+
+        utilidad_HP.setText("0");
+
+        diasRestantes_HP.setText("0");
+
+        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
+        jPanel13.setLayout(jPanel13Layout);
+        jPanel13Layout.setHorizontalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addContainerGap(46, Short.MAX_VALUE)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(diasRestantesLabel_HP)
+                    .addComponent(utilidadLabel_HP)
+                    .addComponent(costosLabel_HP)
+                    .addComponent(ganaciasLabel_HP))
+                .addGap(33, 33, 33)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(costos_HP, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
+                        .addComponent(ganacias_HP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(utilidad_HP)
+                    .addComponent(diasRestantes_HP))
+                .addGap(45, 45, 45))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel25)
+                .addGap(84, 84, 84))
+        );
+        jPanel13Layout.setVerticalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(jLabel25)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ganaciasLabel_HP)
+                    .addComponent(ganacias_HP))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(costosLabel_HP)
+                    .addComponent(costos_HP))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(utilidadLabel_HP)
+                    .addComponent(utilidad_HP))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(diasRestantesLabel_HP)
+                    .addComponent(diasRestantes_HP))
+                .addContainerGap(28, Short.MAX_VALUE))
+        );
+
+        jPanel3.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 320, 310, -1));
+
         jTabbedPane1.addTab("HP", jPanel3);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -1376,6 +1848,54 @@ public class Interfaz extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_removeNumEnsamb_AppleActionPerformed
 
+    private void removeNumFuente_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeNumFuente_HPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_removeNumFuente_HPActionPerformed
+
+    private void removeNumRAM_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeNumRAM_HPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_removeNumRAM_HPActionPerformed
+
+    private void removeNumCPUs_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeNumCPUs_HPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_removeNumCPUs_HPActionPerformed
+
+    private void removeNumPB_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeNumPB_HPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_removeNumPB_HPActionPerformed
+
+    private void removeNumEnsamb_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeNumEnsamb_HPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_removeNumEnsamb_HPActionPerformed
+
+    private void addNumEnsamb_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNumEnsamb_HPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addNumEnsamb_HPActionPerformed
+
+    private void addNumTG_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNumTG_HPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addNumTG_HPActionPerformed
+
+    private void addNumFuente_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNumFuente_HPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addNumFuente_HPActionPerformed
+
+    private void addNumRAM_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNumRAM_HPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addNumRAM_HPActionPerformed
+
+    private void addNumCPUs_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNumCPUs_HPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addNumCPUs_HPActionPerformed
+
+    private void removeNumTG_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeNumTG_HPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_removeNumTG_HPActionPerformed
+
+    private void addNumPB_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNumPB_HPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addNumPB_HPActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1413,9 +1933,13 @@ public class Interfaz extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel CPUsEnStock_Apple;
+    private javax.swing.JLabel CPUsEnStock_HP;
     private javax.swing.JLabel CPUsLabel_Apple;
+    private javax.swing.JLabel CPUsLabel_HP;
     private javax.swing.JLabel RAMLabel_Apple;
+    private javax.swing.JLabel RAMLabel_HP;
     private javax.swing.JLabel RAMsEnStock_Apple;
+    private javax.swing.JLabel RAMsEnStock_HP;
     private javax.swing.JButton addCPU_Apple;
     private javax.swing.JButton addCPU_HP;
     private javax.swing.JButton addEnsamblador_Apple;
@@ -1423,11 +1947,17 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JButton addFuente_Apple;
     private javax.swing.JButton addFuente_HP;
     private javax.swing.JButton addNumCPUs_Apple;
+    private javax.swing.JButton addNumCPUs_HP;
     private javax.swing.JButton addNumEnsamb_Apple;
+    private javax.swing.JButton addNumEnsamb_HP;
     private javax.swing.JButton addNumFuente_Apple;
+    private javax.swing.JButton addNumFuente_HP;
     private javax.swing.JButton addNumPB_Apple;
+    private javax.swing.JButton addNumPB_HP;
     private javax.swing.JButton addNumRAM_Apple;
+    private javax.swing.JButton addNumRAM_HP;
     private javax.swing.JButton addNumTG_Apple;
+    private javax.swing.JButton addNumTG_HP;
     private javax.swing.JButton addPlacaBase_Apple;
     private javax.swing.JButton addPlacaBase_HP;
     private javax.swing.JButton addRAM_Apple;
@@ -1435,38 +1965,63 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JButton addTGrafica_Apple;
     private javax.swing.JButton addTGrafica_HP;
     private javax.swing.JLabel cantCompEstandarListos_Apple;
+    private javax.swing.JLabel cantCompEstandarListos_HP;
     private javax.swing.JLabel cantCompTGListos_Apple;
-    private javax.swing.JLabel compConTGLabel;
+    private javax.swing.JLabel cantCompTGListos_HP;
+    private javax.swing.JLabel compConTGLabel_Apple;
+    private javax.swing.JLabel compConTGLabel_HP;
     private javax.swing.JLabel compEstandarLabel_Apple;
+    private javax.swing.JLabel compEstandarLabel_HP;
     private javax.swing.JLabel costosLabel_Apple;
+    private javax.swing.JLabel costosLabel_HP;
     private javax.swing.JLabel costos_Apple;
+    private javax.swing.JLabel costos_HP;
     private javax.swing.JLabel cpusMenu_Apple;
     private javax.swing.JLabel cpusMenu_HP;
     private javax.swing.JSpinner deadline;
     private javax.swing.JLabel deadlineLabel;
     private javax.swing.JLabel diasRestantesLabel_Apple;
+    private javax.swing.JLabel diasRestantesLabel_HP;
     private javax.swing.JLabel diasRestantes_Apple;
+    private javax.swing.JLabel diasRestantes_HP;
     private javax.swing.JSpinner duracionDia;
     private javax.swing.JLabel duracionDiaLabel;
     private javax.swing.JLabel ensambladorMenu_Apple;
     private javax.swing.JLabel ensambladoresLabel_Apple;
+    private javax.swing.JLabel ensambladoresLabel_HP;
     private javax.swing.JLabel ensambladoresMenu_HP;
     private javax.swing.JLabel estadoDirectorLabel_Apple;
     private javax.swing.JLabel estadoDirector_Apple;
     private javax.swing.JLabel estadoPMLabel_Apple;
     private javax.swing.JLabel estadoPM_Apple;
     private javax.swing.JLabel fuentesEnStock_Apple;
+    private javax.swing.JLabel fuentesEnStock_HP;
     private javax.swing.JLabel fuentesLabel_Apple;
+    private javax.swing.JLabel fuentesLabel_HP;
     private javax.swing.JLabel fuentesMenu_Apple;
     private javax.swing.JLabel fuentesMenu_HP;
     private javax.swing.JLabel ganaciasLabel_Apple;
+    private javax.swing.JLabel ganaciasLabel_HP;
     private javax.swing.JLabel ganacias_Apple;
+    private javax.swing.JLabel ganacias_HP;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel3;
@@ -1479,6 +2034,9 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -1489,6 +2047,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel9;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JLabel labelTrabajadores;
+    private javax.swing.JLabel labelTrabajadores1;
     private javax.swing.JLabel memoriaRAMMenu_Apple;
     private javax.swing.JLabel memoriaRAMMenu_HP;
     private javax.swing.JLabel nroFaltasPMLabel_Apple;
@@ -1506,15 +2065,23 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel numTGraficas_Apple;
     private javax.swing.JLabel numTGraficas_HP;
     private javax.swing.JLabel numTrabajadoresCPU_Apple;
+    private javax.swing.JLabel numTrabajadoresCPU_HP;
     private javax.swing.JLabel numTrabajadoresEnsamb_Apple;
+    private javax.swing.JLabel numTrabajadoresEnsamb_HP;
     private javax.swing.JLabel numTrabajadoresFuente_Apple;
+    private javax.swing.JLabel numTrabajadoresFuente_HP;
     private javax.swing.JLabel numTrabajadoresPB_Apple;
+    private javax.swing.JLabel numTrabajadoresPB_HP;
     private javax.swing.JLabel numTrabajadoresRAM_Apple;
+    private javax.swing.JLabel numTrabajadoresRAM_HP;
     private javax.swing.JLabel numTrabajadoresTG_Apple;
+    private javax.swing.JLabel numTrabajadoresTG_HP;
     private javax.swing.JLabel placaBaseLabel_Apple;
+    private javax.swing.JLabel placaBaseLabel_HP;
     private javax.swing.JLabel placaBaseMenu_Apple;
     private javax.swing.JLabel placaBaseMenu_HP;
     private javax.swing.JLabel placasEnStock_Apple;
+    private javax.swing.JLabel placasEnStock_HP;
     private javax.swing.JButton removeCPU_Apple;
     private javax.swing.JButton removeCPU_HP;
     private javax.swing.JButton removeEnsamblador_Apple;
@@ -1522,11 +2089,17 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JButton removeFuente_Apple;
     private javax.swing.JButton removeFuente_HP;
     private javax.swing.JButton removeNumCPUs_Apple;
+    private javax.swing.JButton removeNumCPUs_HP;
     private javax.swing.JButton removeNumEnsamb_Apple;
+    private javax.swing.JButton removeNumEnsamb_HP;
     private javax.swing.JButton removeNumFuente_Apple;
+    private javax.swing.JButton removeNumFuente_HP;
     private javax.swing.JButton removeNumPB_Apple;
+    private javax.swing.JButton removeNumPB_HP;
     private javax.swing.JButton removeNumRAM_Apple;
+    private javax.swing.JButton removeNumRAM_HP;
     private javax.swing.JButton removeNumTG_Apple;
+    private javax.swing.JButton removeNumTG_HP;
     private javax.swing.JButton removePlacaBase_Apple;
     private javax.swing.JButton removePlacaBase_HP;
     private javax.swing.JButton removeRAM_Apple;
@@ -1536,11 +2109,15 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel sueldoDescontadoPMLabel_Apple;
     private javax.swing.JLabel sueldoDescontadoPM_Apple;
     private javax.swing.JLabel tGraficaLabel_Apple;
+    private javax.swing.JLabel tGraficaLabel_HP;
     private javax.swing.JLabel tGraficasEnStock_Apple;
+    private javax.swing.JLabel tGraficasEnStock_HP;
     private javax.swing.JLabel tarjetaGraficaMenu_Apple;
     private javax.swing.JLabel tarjetasGraficasMenu_HP;
     private javax.swing.JLabel tituloMenu;
     private javax.swing.JLabel utilidadLabel_Apple;
+    private javax.swing.JLabel utilidadLabel_HP;
     private javax.swing.JLabel utilidad_Apple;
+    private javax.swing.JLabel utilidad_HP;
     // End of variables declaration//GEN-END:variables
 }

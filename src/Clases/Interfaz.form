@@ -891,7 +891,7 @@
                           <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="compEstandarLabel_Apple" min="-2" max="-2" attributes="0"/>
-                              <Component id="compConTGLabel" min="-2" max="-2" attributes="0"/>
+                              <Component id="compConTGLabel_Apple" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
@@ -944,7 +944,7 @@
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="compConTGLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="compConTGLabel_Apple" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="cantCompTGListos_Apple" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
@@ -1043,7 +1043,7 @@
                     <Property name="text" type="java.lang.String" value="Computadores est&#xe1;ndar listos:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="compConTGLabel">
+                <Component class="javax.swing.JLabel" name="compConTGLabel_Apple">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Computadores con tarjeta gr&#xe1;fica listos:"/>
                   </Properties>
@@ -1597,6 +1597,636 @@
           <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
             <Property name="useNullLayout" type="boolean" value="false"/>
           </Layout>
+          <SubComponents>
+            <Container class="javax.swing.JPanel" name="jPanel11">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="10" y="90" width="-1" height="-1"/>
+                </Constraint>
+              </Constraints>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="CPUsLabel_HP" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="51" pref="51" max="-2" attributes="0"/>
+                                  <Component id="removeNumCPUs_HP" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="17" pref="17" max="-2" attributes="0"/>
+                                  <Component id="numTrabajadoresCPU_HP" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="14" pref="14" max="-2" attributes="0"/>
+                                  <Component id="addNumCPUs_HP" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="RAMLabel_HP" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="38" pref="38" max="-2" attributes="0"/>
+                                  <Component id="removeNumRAM_HP" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="17" pref="17" max="-2" attributes="0"/>
+                                  <Component id="numTrabajadoresRAM_HP" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="14" pref="14" max="-2" attributes="0"/>
+                                  <Component id="addNumRAM_HP" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="fuentesLabel_HP" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="tGraficaLabel_HP" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ensambladoresLabel_HP" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="removeNumFuente_HP" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="17" pref="17" max="-2" attributes="0"/>
+                                          <Component id="numTrabajadoresFuente_HP" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="14" pref="14" max="-2" attributes="0"/>
+                                          <Component id="addNumFuente_HP" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="removeNumTG_HP" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="17" pref="17" max="-2" attributes="0"/>
+                                          <Component id="numTrabajadoresTG_HP" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="14" pref="14" max="-2" attributes="0"/>
+                                          <Component id="addNumTG_HP" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="removeNumEnsamb_HP" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="17" pref="17" max="-2" attributes="0"/>
+                                          <Component id="numTrabajadoresEnsamb_HP" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="14" pref="14" max="-2" attributes="0"/>
+                                          <Component id="addNumEnsamb_HP" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="placaBaseLabel_HP" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="48" pref="48" max="-2" attributes="0"/>
+                                          <Component id="removeNumPB_HP" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
+                                          <Component id="labelTrabajadores1" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="17" pref="17" max="-2" attributes="0"/>
+                                  <Component id="numTrabajadoresPB_HP" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="14" pref="14" max="-2" attributes="0"/>
+                                  <Component id="addNumPB_HP" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace pref="38" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="labelTrabajadores1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="placaBaseLabel_HP" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="removeNumPB_HP" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="numTrabajadoresPB_HP" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="addNumPB_HP" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="CPUsLabel_HP" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="removeNumCPUs_HP" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="numTrabajadoresCPU_HP" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="addNumCPUs_HP" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="RAMLabel_HP" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="removeNumRAM_HP" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="numTrabajadoresRAM_HP" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="addNumRAM_HP" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="fuentesLabel_HP" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="removeNumFuente_HP" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="numTrabajadoresFuente_HP" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="addNumFuente_HP" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                  <Component id="removeNumTG_HP" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="tGraficaLabel_HP" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="numTrabajadoresTG_HP" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="addNumTG_HP" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                  <Component id="removeNumEnsamb_HP" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="ensambladoresLabel_HP" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="numTrabajadoresEnsamb_HP" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="addNumEnsamb_HP" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="20" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="fuentesLabel_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Productores de fuentes:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="removeNumFuente_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="-"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="removeNumFuente_HPActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="RAMLabel_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Productores de memoria RAM:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="removeNumRAM_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="-"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="removeNumRAM_HPActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="CPUsLabel_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Productores de placas CPUs:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="removeNumCPUs_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="-"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="removeNumCPUs_HPActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="placaBaseLabel_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Productores de placas bases:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="removeNumPB_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="-"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="removeNumPB_HPActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="numTrabajadoresFuente_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="0"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="numTrabajadoresRAM_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="0"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="numTrabajadoresCPU_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="0"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="numTrabajadoresPB_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="0"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="numTrabajadoresTG_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="0"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="labelTrabajadores1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="LISTA DE TRABAJADORES"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="removeNumEnsamb_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="-"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="removeNumEnsamb_HPActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="ensambladoresLabel_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Ensambladores:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="addNumEnsamb_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="+"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addNumEnsamb_HPActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="numTrabajadoresEnsamb_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="0"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="addNumTG_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="+"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addNumTG_HPActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="addNumFuente_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="+"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addNumFuente_HPActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="addNumRAM_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="+"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addNumRAM_HPActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="addNumCPUs_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="+"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addNumCPUs_HPActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="removeNumTG_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="-"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="removeNumTG_HPActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="addNumPB_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="+"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addNumPB_HPActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="tGraficaLabel_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Productores de tarjetas gr&#xe1;ficas:"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="jPanel12">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="380" y="20" width="-1" height="-1"/>
+                </Constraint>
+              </Constraints>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jLabel14" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel15" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel17" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel18" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel16" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="placasEnStock_HP" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="tGraficasEnStock_HP" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="fuentesEnStock_HP" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="RAMsEnStock_HP" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="CPUsEnStock_HP" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="48" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jLabel20" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                              <Component id="jLabel21" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                              <Component id="jLabel22" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                              <Component id="jLabel23" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                              <Component id="jLabel24" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="173" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="compEstandarLabel_HP" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="compConTGLabel_HP" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="cantCompTGListos_HP" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="cantCompEstandarListos_HP" alignment="1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                          <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="placasEnStock_HP" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel20" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="CPUsEnStock_HP" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel21" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel16" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="RAMsEnStock_HP" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel22" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel17" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fuentesEnStock_HP" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel23" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel18" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="tGraficasEnStock_HP" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel24" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="28" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="compEstandarLabel_HP" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cantCompEstandarListos_HP" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="compConTGLabel_HP" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="cantCompTGListos_HP" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="jLabel14">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Cant. de placas bases:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel15">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Cant. de CPUs:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel16">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Cant. de memorias RAM:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel17">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Cant. de fuentes:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel18">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Cant. de tarjetas gr&#xe1;ficas:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel19">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="ALMACEN"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="placasEnStock_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="0"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="CPUsEnStock_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="0"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="RAMsEnStock_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="0"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="fuentesEnStock_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="0"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="tGraficasEnStock_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="0"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel20">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Capacidad m&#xe1;x.:            25"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel21">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Capacidad m&#xe1;x.:            20"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel22">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Capacidad m&#xe1;x.:            55"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel23">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Capacidad m&#xe1;x.:            35"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel24">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Capacidad m&#xe1;x.:            10"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="cantCompEstandarListos_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="0"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="compEstandarLabel_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Computadores est&#xe1;ndar listos:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="compConTGLabel_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Computadores con tarjeta gr&#xe1;fica listos:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="cantCompTGListos_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="0"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="jPanel13">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="470" y="320" width="310" height="-1"/>
+                </Constraint>
+              </Constraints>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace pref="46" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="diasRestantesLabel_HP" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="utilidadLabel_HP" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="costosLabel_HP" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="ganaciasLabel_HP" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" alignment="1" groupAlignment="1" attributes="0">
+                                  <Component id="costos_HP" alignment="0" pref="26" max="32767" attributes="0"/>
+                                  <Component id="ganacias_HP" alignment="1" max="32767" attributes="0"/>
+                              </Group>
+                              <Component id="utilidad_HP" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="diasRestantes_HP" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="jLabel25" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                          <Component id="jLabel25" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="ganaciasLabel_HP" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ganacias_HP" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="costosLabel_HP" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="costos_HP" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="utilidadLabel_HP" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="utilidad_HP" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="diasRestantesLabel_HP" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="diasRestantes_HP" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="28" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="jLabel25">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="DATOS RELEVANTES"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="ganaciasLabel_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Ganancias en bruto:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="costosLabel_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Costos operativos:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="utilidadLabel_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Utilidad total:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="diasRestantesLabel_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="D&#xed;as restantes para la entrega:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="ganacias_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="0"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="costos_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="0"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="utilidad_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="0"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="diasRestantes_HP">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="0"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+          </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="jPanel4">
           <Constraints>
