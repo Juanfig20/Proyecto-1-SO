@@ -102,7 +102,7 @@
             <Component class="javax.swing.JLabel" name="jLabel26">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Im&#xe1;genes/file.jpg"/>
+                  <Image iconType="3" name="/Im&#xe1;genes/Logo-Apple.jpg"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="jLabel26"/>
               </Properties>
@@ -115,7 +115,7 @@
             <Component class="javax.swing.JLabel" name="jLabel28">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Im&#xe1;genes/file.png"/>
+                  <Image iconType="3" name="/Im&#xe1;genes/Logo-HP.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="jLabel28"/>
               </Properties>
@@ -862,10 +862,12 @@
                               <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="CPUsEnStock_Apple" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -891,9 +893,9 @@
                               <Component id="cantCompEstandarListos_Apple" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="compConTGLabel_Apple" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="cantCompTGListos_Apple" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cantCompTGListos_Apple" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                       </Group>
@@ -1477,12 +1479,14 @@
                               <Component id="estadoPM_Apple" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="nroFaltasPMLabel_Apple" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="nroFaltasPM_Apple" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" alignment="3" groupAlignment="3" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                                   <Component id="estadoDirectorLabel_Apple" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="estadoDirector_Apple" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="nroFaltasPMLabel_Apple" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="nroFaltasPM_Apple" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace pref="11" max="32767" attributes="0"/>
@@ -1588,29 +1592,19 @@
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="diasRestantesLabel_Apple" min="-2" max="-2" attributes="0"/>
-                                      <Component id="utilidadLabel_Apple" min="-2" max="-2" attributes="0"/>
-                                      <Component id="costosLabel_Apple" min="-2" max="-2" attributes="0"/>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="ganaciasLabel_Apple" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="diasRestantesLabel_Apple" min="-2" max="-2" attributes="0"/>
+                              <Component id="utilidadLabel_Apple" min="-2" max="-2" attributes="0"/>
+                              <Component id="costosLabel_Apple" min="-2" max="-2" attributes="0"/>
+                              <Component id="ganaciasLabel_Apple" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
                                   <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
+                          <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="103" alignment="1" groupAlignment="1" attributes="0">
-                                  <Component id="costos_Apple" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="ganacias_Apple" max="32767" attributes="0"/>
-                              </Group>
+                              <Component id="costos_Apple" alignment="0" max="32767" attributes="0"/>
+                              <Component id="ganacias_Apple" alignment="1" max="32767" attributes="0"/>
                               <Component id="utilidad_Apple" min="-2" max="-2" attributes="0"/>
                               <Component id="diasRestantes_Apple" min="-2" max="-2" attributes="0"/>
                           </Group>
@@ -2182,10 +2176,12 @@
                               <Component id="jLabel20" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="CPUsEnStock_HP" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel21" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel21" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -2211,9 +2207,9 @@
                               <Component id="cantCompEstandarListos_HP" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="compConTGLabel_HP" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="cantCompTGListos_HP" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cantCompTGListos_HP" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                       </Group>
