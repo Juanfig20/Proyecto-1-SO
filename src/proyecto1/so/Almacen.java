@@ -25,7 +25,7 @@ public class Almacen {
     private int fuenteAlimentacionEnsamblaje;
     private int tarjetaGraficaEnsamblaje;
     private int cantidad;
-    private int contadorcap;
+    private int contadorcompus;
     private String name;
 
     public Almacen(String name, int placaBaseEnsamblaje, int cpuEnsamblaje, int ramEnsamblaje, int fuenteAlimentacionEnsamblaje, int tarjetaGraficaEnsamblaje, int cantidad) {
@@ -42,7 +42,7 @@ public class Almacen {
         this.fuenteAlimentacionEnsamblaje = fuenteAlimentacionEnsamblaje;
         this.tarjetaGraficaEnsamblaje = tarjetaGraficaEnsamblaje;
         this.cantidad = cantidad;
-        this.contadorcap = 0;
+        this.contadorcompus = 0;
         this.name = name;
     }
     

@@ -1,0 +1,86 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package proyecto1.so;
+
+import static java.lang.Thread.sleep;
+import java.util.concurrent.Semaphore;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+/**
+ *
+ * @author User
+ */
+public class ProjectManager extends Thread {
+    private float salarioAcumulado;
+    private int duracionDia;
+    private int salario;
+    private int falta;
+    private int descuento;
+    private String estado;
+    private int contadorHoras;
+    private int contadorMin;
+    private int daysPassedTotal; // solo para el pm, que el lo cambie 
+    private Semaphore mutex;
+    //private Company company;
+    private Semaphore mutex2;
+    private Semaphore mutex3;
+    
+    public ProjectManager(int duracionDia, Semaphore mutex, Semaphore mutex2, Semaphore mutex3){
+        this.salarioAcumulado = 0;
+        this.duracionDia = duracionDia;
+        this.salario = 40;
+        this.falta = 0;
+        this.descuento = 0;
+        this.daysPassedTotal = 0;
+        this.estado = "Viendo One Piece";
+        this.mutex = mutex;
+        this.mutex3 = mutex3;
+        this.mutex2 = mutex2;
+        //this.company = company;
+    }
+    
+     @Override
+    public void run(){
+        while(true) {
+            try {
+                pagar();
+                // Primeras 16 horas
+                long startTime = System.currentTimeMillis();
+                while(System.currentTimeMillis() - startTime <= ((duracionDia/24)*16)){
+                    estado = "Viendo One Piece";
+                    sleep(((duracionDia/24)/2));
+
+                    estado = "Revisando";
+                    sleep(((duracionDia/24)/2));
+                }
+                
+                // Restantes 8 horas
+                estado = "Trabajando";
+               // work(); Realizar funcion para que trabaje, para esto hace falta la clase Empresa
+                setDaysPassedTotal(getDaysPassedTotal() + 1);
+                sleep((duracionDia/24)*8);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Trabajador.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }
+    
+    public void pagar() {
+        this.salarioAcumulado += this.salario * 24;
+        
+    }
+
+    public int getDaysPassedTotal() {
+        return daysPassedTotal;
+    }
+
+    public void setDaysPassedTotal(int daysPassedTotal) {
+        this.daysPassedTotal = daysPassedTotal;
+    }
+    
+    
+    
+}
