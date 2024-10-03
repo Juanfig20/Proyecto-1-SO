@@ -28,21 +28,603 @@ public class Interfaz extends javax.swing.JFrame {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
+        tituloMenu = new javax.swing.JLabel();
+        duracionDiaLabel = new javax.swing.JLabel();
+        deadlineLabel = new javax.swing.JLabel();
+        duracionDia = new javax.swing.JSpinner();
+        deadline = new javax.swing.JSpinner();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jPanel7 = new javax.swing.JPanel();
+        numPlacaBase_Apple = new javax.swing.JLabel();
+        numCPUS_Apple = new javax.swing.JLabel();
+        numRAM_Apple = new javax.swing.JLabel();
+        numFuente_Apple = new javax.swing.JLabel();
+        numTGraficas_Apple = new javax.swing.JLabel();
+        removePlacaBase_Apple = new javax.swing.JButton();
+        removeCPU_Apple = new javax.swing.JButton();
+        removeRAM_Apple = new javax.swing.JButton();
+        removeFuente_Apple = new javax.swing.JButton();
+        removeTGrafica_Apple = new javax.swing.JButton();
+        addPlacaBase_Apple = new javax.swing.JButton();
+        addCPU_Apple = new javax.swing.JButton();
+        addRAM_Apple = new javax.swing.JButton();
+        addFuente_Apple = new javax.swing.JButton();
+        addTGrafica_Apple = new javax.swing.JButton();
+        ensambladorMenu_Apple = new javax.swing.JLabel();
+        numEnsambladores_Apple = new javax.swing.JLabel();
+        removeEnsamblador_Apple = new javax.swing.JButton();
+        addEnsamblador_Apple = new javax.swing.JButton();
+        placaBaseMenu_Apple = new javax.swing.JLabel();
+        cpusMenu_Apple = new javax.swing.JLabel();
+        memoriaRAMMenu_Apple = new javax.swing.JLabel();
+        fuentesMenu_Apple = new javax.swing.JLabel();
+        tarjetaGraficaMenu_Apple = new javax.swing.JLabel();
+        jPanel8 = new javax.swing.JPanel();
+        addEnsamblador_HP = new javax.swing.JButton();
+        numEnsambladores_HP = new javax.swing.JLabel();
+        removeEnsamblador_HP = new javax.swing.JButton();
+        numPlacaBase_HP = new javax.swing.JLabel();
+        ensambladoresMenu_HP = new javax.swing.JLabel();
+        numCPUS_HP = new javax.swing.JLabel();
+        numRAM_HP = new javax.swing.JLabel();
+        numFuentes_HP = new javax.swing.JLabel();
+        numTGraficas_HP = new javax.swing.JLabel();
+        removeTGrafica_HP = new javax.swing.JButton();
+        removePlacaBase_HP = new javax.swing.JButton();
+        removeCPU_HP = new javax.swing.JButton();
+        removeRAM_HP = new javax.swing.JButton();
+        removeFuente_HP = new javax.swing.JButton();
+        addPlacaBase_HP = new javax.swing.JButton();
+        addCPU_HP = new javax.swing.JButton();
+        addRAM_HP = new javax.swing.JButton();
+        addFuente_HP = new javax.swing.JButton();
+        addTGrafica_HP = new javax.swing.JButton();
+        placaBaseMenu_HP = new javax.swing.JLabel();
+        cpusMenu_HP = new javax.swing.JLabel();
+        memoriaRAMMenu_HP = new javax.swing.JLabel();
+        fuentesMenu_HP = new javax.swing.JLabel();
+        tarjetasGraficasMenu_HP = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel30 = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jSpinner1 = new javax.swing.JSpinner();
-        jPanel2 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        placasEnStock_Apple = new javax.swing.JLabel();
+        CPUsEnStock_Apple = new javax.swing.JLabel();
+        RAMsEnStock_Apple = new javax.swing.JLabel();
+        fuentesEnStock_Apple = new javax.swing.JLabel();
+        tGraficasEnStock_Apple = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        cantCompEstandarListos_Apple = new javax.swing.JLabel();
+        compEstandarLabel_Apple = new javax.swing.JLabel();
+        compConTGLabel = new javax.swing.JLabel();
+        cantCompTGListos_Apple = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        fuentesLabel_Apple = new javax.swing.JLabel();
+        removeNumFuente_Apple = new javax.swing.JButton();
+        RAMLabel_Apple = new javax.swing.JLabel();
+        removeNumRAM_Apple = new javax.swing.JButton();
+        CPUsLabel_Apple = new javax.swing.JLabel();
+        removeNumCPUs_Apple = new javax.swing.JButton();
+        placaBaseLabel_Apple = new javax.swing.JLabel();
+        removeNumPB_Apple = new javax.swing.JButton();
+        numTrabajadoresFuente_Apple = new javax.swing.JLabel();
+        numTrabajadoresRAM_Apple = new javax.swing.JLabel();
+        numTrabajadoresCPU_Apple = new javax.swing.JLabel();
+        numTrabajadoresPB_Apple = new javax.swing.JLabel();
+        numTrabajadoresTG_Apple = new javax.swing.JLabel();
+        labelTrabajadores = new javax.swing.JLabel();
+        removeNumEnsamb_Apple = new javax.swing.JButton();
+        ensambladoresLabel_Apple = new javax.swing.JLabel();
+        addNumEnsamb_Apple = new javax.swing.JButton();
+        numTrabajadoresEnsamb_Apple = new javax.swing.JLabel();
+        addNumTG_Apple = new javax.swing.JButton();
+        addNumFuente_Apple = new javax.swing.JButton();
+        addNumRAM_Apple = new javax.swing.JButton();
+        addNumCPUs_Apple = new javax.swing.JButton();
+        removeNumTG_Apple = new javax.swing.JButton();
+        addNumPB_Apple = new javax.swing.JButton();
+        tGraficaLabel_Apple = new javax.swing.JLabel();
+        jPanel9 = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
+        estadoPMLabel_Apple = new javax.swing.JLabel();
+        nroFaltasPMLabel_Apple = new javax.swing.JLabel();
+        sueldoDescontadoPMLabel_Apple = new javax.swing.JLabel();
+        estadoPM_Apple = new javax.swing.JLabel();
+        nroFaltasPM_Apple = new javax.swing.JLabel();
+        sueldoDescontadoPM_Apple = new javax.swing.JLabel();
+        estadoDirectorLabel_Apple = new javax.swing.JLabel();
+        estadoDirector_Apple = new javax.swing.JLabel();
+        jPanel10 = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
+        ganaciasLabel_Apple = new javax.swing.JLabel();
+        costosLabel_Apple = new javax.swing.JLabel();
+        utilidadLabel_Apple = new javax.swing.JLabel();
+        diasRestantesLabel_Apple = new javax.swing.JLabel();
+        ganacias_Apple = new javax.swing.JLabel();
+        costos_Apple = new javax.swing.JLabel();
+        utilidad_Apple = new javax.swing.JLabel();
+        diasRestantes_Apple = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText("CONFIGURACIONES");
+        tituloMenu.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        tituloMenu.setText("CONFIGURACIONES");
 
-        jLabel2.setText("Duración de un día");
+        duracionDiaLabel.setText("Duración de un día");
 
-        jLabel3.setText("Días límites");
+        deadlineLabel.setText("Días límites");
+
+        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/file.jpg"))); // NOI18N
+        jLabel26.setText("jLabel26");
+
+        jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/file.png"))); // NOI18N
+        jLabel28.setText("jLabel28");
+
+        numPlacaBase_Apple.setText("0");
+
+        numCPUS_Apple.setText("0");
+
+        numRAM_Apple.setText("0");
+
+        numFuente_Apple.setText("0");
+
+        numTGraficas_Apple.setText("0");
+
+        removePlacaBase_Apple.setText("-");
+        removePlacaBase_Apple.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removePlacaBase_AppleActionPerformed(evt);
+            }
+        });
+
+        removeCPU_Apple.setText("-");
+        removeCPU_Apple.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeCPU_AppleActionPerformed(evt);
+            }
+        });
+
+        removeRAM_Apple.setText("-");
+        removeRAM_Apple.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeRAM_AppleActionPerformed(evt);
+            }
+        });
+
+        removeFuente_Apple.setText("-");
+        removeFuente_Apple.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeFuente_AppleActionPerformed(evt);
+            }
+        });
+
+        removeTGrafica_Apple.setText("-");
+        removeTGrafica_Apple.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeTGrafica_AppleActionPerformed(evt);
+            }
+        });
+
+        addPlacaBase_Apple.setText("+");
+        addPlacaBase_Apple.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addPlacaBase_AppleActionPerformed(evt);
+            }
+        });
+
+        addCPU_Apple.setText("+");
+        addCPU_Apple.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addCPU_AppleActionPerformed(evt);
+            }
+        });
+
+        addRAM_Apple.setText("+");
+        addRAM_Apple.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addRAM_AppleActionPerformed(evt);
+            }
+        });
+
+        addFuente_Apple.setText("+");
+        addFuente_Apple.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addFuente_AppleActionPerformed(evt);
+            }
+        });
+
+        addTGrafica_Apple.setText("+");
+        addTGrafica_Apple.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addTGrafica_AppleActionPerformed(evt);
+            }
+        });
+
+        ensambladorMenu_Apple.setText("Ensambladores:");
+
+        numEnsambladores_Apple.setText("0");
+
+        removeEnsamblador_Apple.setText("-");
+        removeEnsamblador_Apple.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeEnsamblador_AppleActionPerformed(evt);
+            }
+        });
+
+        addEnsamblador_Apple.setText("+");
+        addEnsamblador_Apple.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addEnsamblador_AppleActionPerformed(evt);
+            }
+        });
+
+        placaBaseMenu_Apple.setText("Productores de placas bases:");
+
+        cpusMenu_Apple.setText("Productores de CPUs:");
+
+        memoriaRAMMenu_Apple.setText("Productores de memoria RAM:");
+
+        fuentesMenu_Apple.setText("Productores de fuentes:");
+
+        tarjetaGraficaMenu_Apple.setText("Productores de tarjetas gráficas:");
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addComponent(memoriaRAMMenu_Apple)
+                        .addGap(40, 40, 40)
+                        .addComponent(removeRAM_Apple)
+                        .addGap(12, 12, 12)
+                        .addComponent(numRAM_Apple)
+                        .addGap(12, 12, 12)
+                        .addComponent(addRAM_Apple))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addComponent(fuentesMenu_Apple)
+                        .addGap(78, 78, 78)
+                        .addComponent(removeFuente_Apple)
+                        .addGap(12, 12, 12)
+                        .addComponent(numFuente_Apple)
+                        .addGap(12, 12, 12)
+                        .addComponent(addFuente_Apple))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tarjetaGraficaMenu_Apple)
+                            .addComponent(ensambladorMenu_Apple))
+                        .addGap(32, 32, 32)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addComponent(removeTGrafica_Apple)
+                                .addGap(12, 12, 12)
+                                .addComponent(numTGraficas_Apple)
+                                .addGap(12, 12, 12)
+                                .addComponent(addTGrafica_Apple))
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addComponent(removeEnsamblador_Apple)
+                                .addGap(12, 12, 12)
+                                .addComponent(numEnsambladores_Apple)
+                                .addGap(12, 12, 12)
+                                .addComponent(addEnsamblador_Apple))))
+                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(jPanel7Layout.createSequentialGroup()
+                            .addComponent(placaBaseMenu_Apple)
+                            .addGap(50, 50, 50)
+                            .addComponent(removePlacaBase_Apple)
+                            .addGap(12, 12, 12)
+                            .addComponent(numPlacaBase_Apple)
+                            .addGap(12, 12, 12)
+                            .addComponent(addPlacaBase_Apple))
+                        .addGroup(jPanel7Layout.createSequentialGroup()
+                            .addComponent(cpusMenu_Apple)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(removeCPU_Apple)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(numCPUS_Apple)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(addCPU_Apple))))
+                .addContainerGap(32, Short.MAX_VALUE))
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                .addContainerGap(35, Short.MAX_VALUE)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(removePlacaBase_Apple)
+                    .addComponent(addPlacaBase_Apple)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(placaBaseMenu_Apple)
+                            .addComponent(numPlacaBase_Apple))))
+                .addGap(17, 17, 17)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cpusMenu_Apple)
+                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(numCPUS_Apple)
+                        .addComponent(addCPU_Apple)
+                        .addComponent(removeCPU_Apple)))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(removeRAM_Apple)
+                    .addComponent(addRAM_Apple)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(memoriaRAMMenu_Apple)
+                            .addComponent(numRAM_Apple))))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(removeFuente_Apple)
+                    .addComponent(addFuente_Apple)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(fuentesMenu_Apple)
+                            .addComponent(numFuente_Apple))))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(removeTGrafica_Apple)
+                    .addComponent(addTGrafica_Apple)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tarjetaGraficaMenu_Apple)
+                            .addComponent(numTGraficas_Apple))))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ensambladorMenu_Apple)
+                    .addComponent(removeEnsamblador_Apple)
+                    .addComponent(addEnsamblador_Apple)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(numEnsambladores_Apple)))
+                .addGap(32, 32, 32))
+        );
+
+        addEnsamblador_HP.setText("+");
+        addEnsamblador_HP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addEnsamblador_HPActionPerformed(evt);
+            }
+        });
+
+        numEnsambladores_HP.setText("0");
+
+        removeEnsamblador_HP.setText("-");
+        removeEnsamblador_HP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeEnsamblador_HPActionPerformed(evt);
+            }
+        });
+
+        numPlacaBase_HP.setText("0");
+
+        ensambladoresMenu_HP.setText("Ensambladores:");
+
+        numCPUS_HP.setText("0");
+
+        numRAM_HP.setText("0");
+
+        numFuentes_HP.setText("0");
+
+        numTGraficas_HP.setText("0");
+
+        removeTGrafica_HP.setText("-");
+        removeTGrafica_HP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeTGrafica_HPActionPerformed(evt);
+            }
+        });
+
+        removePlacaBase_HP.setText("-");
+        removePlacaBase_HP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removePlacaBase_HPActionPerformed(evt);
+            }
+        });
+
+        removeCPU_HP.setText("-");
+        removeCPU_HP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeCPU_HPActionPerformed(evt);
+            }
+        });
+
+        removeRAM_HP.setText("-");
+        removeRAM_HP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeRAM_HPActionPerformed(evt);
+            }
+        });
+
+        removeFuente_HP.setText("-");
+        removeFuente_HP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeFuente_HPActionPerformed(evt);
+            }
+        });
+
+        addPlacaBase_HP.setText("+");
+        addPlacaBase_HP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addPlacaBase_HPActionPerformed(evt);
+            }
+        });
+
+        addCPU_HP.setText("+");
+        addCPU_HP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addCPU_HPActionPerformed(evt);
+            }
+        });
+
+        addRAM_HP.setText("+");
+        addRAM_HP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addRAM_HPActionPerformed(evt);
+            }
+        });
+
+        addFuente_HP.setText("+");
+        addFuente_HP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addFuente_HPActionPerformed(evt);
+            }
+        });
+
+        addTGrafica_HP.setText("+");
+        addTGrafica_HP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addTGrafica_HPActionPerformed(evt);
+            }
+        });
+
+        placaBaseMenu_HP.setText("Productores de placas bases:");
+
+        cpusMenu_HP.setText("Productores de CPUs:");
+
+        memoriaRAMMenu_HP.setText("Productores de memoria RAM:");
+
+        fuentesMenu_HP.setText("Productores de fuentes:");
+
+        tarjetasGraficasMenu_HP.setText("Productores de tarjetas gráficas:");
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addComponent(memoriaRAMMenu_HP)
+                        .addGap(40, 40, 40)
+                        .addComponent(removeRAM_HP)
+                        .addGap(12, 12, 12)
+                        .addComponent(numRAM_HP)
+                        .addGap(12, 12, 12)
+                        .addComponent(addRAM_HP))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addComponent(fuentesMenu_HP)
+                        .addGap(78, 78, 78)
+                        .addComponent(removeFuente_HP)
+                        .addGap(12, 12, 12)
+                        .addComponent(numFuentes_HP)
+                        .addGap(12, 12, 12)
+                        .addComponent(addFuente_HP))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tarjetasGraficasMenu_HP)
+                            .addComponent(ensambladoresMenu_HP))
+                        .addGap(32, 32, 32)
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel8Layout.createSequentialGroup()
+                                .addComponent(removeTGrafica_HP)
+                                .addGap(12, 12, 12)
+                                .addComponent(numTGraficas_HP)
+                                .addGap(12, 12, 12)
+                                .addComponent(addTGrafica_HP))
+                            .addGroup(jPanel8Layout.createSequentialGroup()
+                                .addComponent(removeEnsamblador_HP)
+                                .addGap(12, 12, 12)
+                                .addComponent(numEnsambladores_HP)
+                                .addGap(12, 12, 12)
+                                .addComponent(addEnsamblador_HP))))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cpusMenu_HP)
+                            .addComponent(placaBaseMenu_HP))
+                        .addGap(50, 50, 50)
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel8Layout.createSequentialGroup()
+                                .addComponent(removeCPU_HP)
+                                .addGap(12, 12, 12)
+                                .addComponent(numCPUS_HP)
+                                .addGap(12, 12, 12)
+                                .addComponent(addCPU_HP))
+                            .addGroup(jPanel8Layout.createSequentialGroup()
+                                .addComponent(removePlacaBase_HP)
+                                .addGap(12, 12, 12)
+                                .addComponent(numPlacaBase_HP)
+                                .addGap(12, 12, 12)
+                                .addComponent(addPlacaBase_HP)))))
+                .addContainerGap(29, Short.MAX_VALUE))
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(removePlacaBase_HP)
+                    .addComponent(addPlacaBase_HP)
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(placaBaseMenu_HP)
+                            .addComponent(numPlacaBase_HP))))
+                .addGap(14, 14, 14)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(removeCPU_HP)
+                        .addComponent(cpusMenu_HP))
+                    .addComponent(addCPU_HP)
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(numCPUS_HP)))
+                .addGap(22, 22, 22)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(removeRAM_HP)
+                    .addComponent(addRAM_HP)
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(memoriaRAMMenu_HP)
+                            .addComponent(numRAM_HP))))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(removeFuente_HP)
+                    .addComponent(addFuente_HP)
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(fuentesMenu_HP)
+                            .addComponent(numFuentes_HP))))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(removeTGrafica_HP)
+                    .addComponent(addTGrafica_HP)
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tarjetasGraficasMenu_HP)
+                            .addComponent(numTGraficas_HP))))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(removeEnsamblador_HP)
+                    .addComponent(addEnsamblador_HP)
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(numEnsambladores_HP))
+                    .addComponent(ensambladoresMenu_HP))
+                .addContainerGap(34, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -51,84 +633,748 @@ public class Interfaz extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(183, 183, 183)
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(137, 137, 137)
-                        .addComponent(jLabel3))
+                        .addGap(136, 136, 136)
+                        .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(193, 193, 193)
+                        .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(340, 340, 340)
-                        .addComponent(jLabel1)))
-                .addContainerGap(285, Short.MAX_VALUE))
+                        .addGap(56, 56, 56)
+                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(51, 51, 51)
+                        .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(180, 180, 180)
+                        .addComponent(duracionDiaLabel)
+                        .addGap(12, 12, 12)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tituloMenu)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(duracionDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(97, 97, 97)
+                                .addComponent(deadlineLabel)
+                                .addGap(12, 12, 12)
+                                .addComponent(deadline, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(2043, 2043, 2043))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
+                .addGap(22, 22, 22)
+                .addComponent(tituloMenu)
+                .addGap(26, 26, 26)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(duracionDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(deadline, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(duracionDiaLabel)
+                            .addComponent(deadlineLabel))))
+                .addGap(53, 53, 53)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3)
-                    .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(379, Short.MAX_VALUE))
+                    .addComponent(jLabel28)
+                    .addComponent(jLabel26))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(1913, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Menú", jPanel1);
+
+        jLabel30.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel30.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel30.setText("Apple");
+
+        jLabel1.setText("Cant. de placas bases:");
+
+        jLabel2.setText("Cant. de CPUs:");
+
+        jLabel3.setText("Cant. de memorias RAM:");
+
+        jLabel4.setText("Cant. de fuentes:");
+
+        jLabel5.setText("Cant. de tarjetas gráficas:");
+
+        jLabel6.setText("ALMACEN");
+
+        placasEnStock_Apple.setText("0");
+
+        CPUsEnStock_Apple.setText("0");
+
+        RAMsEnStock_Apple.setText("0");
+
+        fuentesEnStock_Apple.setText("0");
+
+        tGraficasEnStock_Apple.setText("0");
+
+        jLabel7.setText("Capacidad máx.:            25");
+
+        jLabel8.setText("Capacidad máx.:            20");
+
+        jLabel9.setText("Capacidad máx.:            55");
+
+        jLabel10.setText("Capacidad máx.:            35");
+
+        jLabel11.setText("Capacidad máx.:            10");
+
+        cantCompEstandarListos_Apple.setText("0");
+
+        compEstandarLabel_Apple.setText("Computadores estándar listos:");
+
+        compConTGLabel.setText("Computadores con tarjeta gráfica listos:");
+
+        cantCompTGListos_Apple.setText("0");
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel3))
+                .addGap(52, 52, 52)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(placasEnStock_Apple)
+                    .addComponent(tGraficasEnStock_Apple)
+                    .addComponent(fuentesEnStock_Apple)
+                    .addComponent(RAMsEnStock_Apple)
+                    .addComponent(CPUsEnStock_Apple))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(25, 25, 25))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel6)
+                .addGap(173, 173, 173))
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(79, 79, 79)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(compEstandarLabel_Apple)
+                    .addComponent(compConTGLabel))
+                .addGap(41, 41, 41)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(cantCompTGListos_Apple)
+                    .addComponent(cantCompEstandarListos_Apple))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(13, 13, 13)
+                .addComponent(jLabel6)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(placasEnStock_Apple)
+                    .addComponent(jLabel7))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(CPUsEnStock_Apple)
+                    .addComponent(jLabel8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(RAMsEnStock_Apple)
+                    .addComponent(jLabel9))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(fuentesEnStock_Apple)
+                    .addComponent(jLabel10))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(tGraficasEnStock_Apple)
+                    .addComponent(jLabel11))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(compEstandarLabel_Apple)
+                    .addComponent(cantCompEstandarListos_Apple))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(compConTGLabel)
+                    .addComponent(cantCompTGListos_Apple))
+                .addGap(25, 25, 25))
+        );
+
+        fuentesLabel_Apple.setText("Productores de fuentes:");
+
+        removeNumFuente_Apple.setText("-");
+        removeNumFuente_Apple.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeNumFuente_AppleActionPerformed(evt);
+            }
+        });
+
+        RAMLabel_Apple.setText("Productores de memoria RAM:");
+
+        removeNumRAM_Apple.setText("-");
+        removeNumRAM_Apple.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeNumRAM_AppleActionPerformed(evt);
+            }
+        });
+
+        CPUsLabel_Apple.setText("Productores de placas CPUs:");
+
+        removeNumCPUs_Apple.setText("-");
+        removeNumCPUs_Apple.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeNumCPUs_AppleActionPerformed(evt);
+            }
+        });
+
+        placaBaseLabel_Apple.setText("Productores de placas bases:");
+
+        removeNumPB_Apple.setText("-");
+        removeNumPB_Apple.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeNumPB_AppleActionPerformed(evt);
+            }
+        });
+
+        numTrabajadoresFuente_Apple.setText("0");
+
+        numTrabajadoresRAM_Apple.setText("0");
+
+        numTrabajadoresCPU_Apple.setText("0");
+
+        numTrabajadoresPB_Apple.setText("0");
+
+        numTrabajadoresTG_Apple.setText("0");
+
+        labelTrabajadores.setText("LISTA DE TRABAJADORES");
+
+        removeNumEnsamb_Apple.setText("-");
+        removeNumEnsamb_Apple.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeNumEnsamb_AppleActionPerformed(evt);
+            }
+        });
+
+        ensambladoresLabel_Apple.setText("Ensambladores:");
+
+        addNumEnsamb_Apple.setText("+");
+        addNumEnsamb_Apple.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addNumEnsamb_AppleActionPerformed(evt);
+            }
+        });
+
+        numTrabajadoresEnsamb_Apple.setText("0");
+
+        addNumTG_Apple.setText("+");
+        addNumTG_Apple.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addNumTG_AppleActionPerformed(evt);
+            }
+        });
+
+        addNumFuente_Apple.setText("+");
+        addNumFuente_Apple.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addNumFuente_AppleActionPerformed(evt);
+            }
+        });
+
+        addNumRAM_Apple.setText("+");
+        addNumRAM_Apple.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addNumRAM_AppleActionPerformed(evt);
+            }
+        });
+
+        addNumCPUs_Apple.setText("+");
+        addNumCPUs_Apple.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addNumCPUs_AppleActionPerformed(evt);
+            }
+        });
+
+        removeNumTG_Apple.setText("-");
+        removeNumTG_Apple.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeNumTG_AppleActionPerformed(evt);
+            }
+        });
+
+        addNumPB_Apple.setText("+");
+        addNumPB_Apple.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addNumPB_AppleActionPerformed(evt);
+            }
+        });
+
+        tGraficaLabel_Apple.setText("Productores de tarjetas gráficas:");
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addComponent(CPUsLabel_Apple)
+                        .addGap(51, 51, 51)
+                        .addComponent(removeNumCPUs_Apple)
+                        .addGap(17, 17, 17)
+                        .addComponent(numTrabajadoresCPU_Apple)
+                        .addGap(14, 14, 14)
+                        .addComponent(addNumCPUs_Apple))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addComponent(RAMLabel_Apple)
+                        .addGap(38, 38, 38)
+                        .addComponent(removeNumRAM_Apple)
+                        .addGap(17, 17, 17)
+                        .addComponent(numTrabajadoresRAM_Apple)
+                        .addGap(14, 14, 14)
+                        .addComponent(addNumRAM_Apple))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(fuentesLabel_Apple)
+                            .addComponent(tGraficaLabel_Apple)
+                            .addComponent(ensambladoresLabel_Apple))
+                        .addGap(30, 30, 30)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel6Layout.createSequentialGroup()
+                                .addComponent(removeNumFuente_Apple)
+                                .addGap(17, 17, 17)
+                                .addComponent(numTrabajadoresFuente_Apple)
+                                .addGap(14, 14, 14)
+                                .addComponent(addNumFuente_Apple))
+                            .addGroup(jPanel6Layout.createSequentialGroup()
+                                .addComponent(removeNumTG_Apple)
+                                .addGap(17, 17, 17)
+                                .addComponent(numTrabajadoresTG_Apple)
+                                .addGap(14, 14, 14)
+                                .addComponent(addNumTG_Apple))
+                            .addGroup(jPanel6Layout.createSequentialGroup()
+                                .addComponent(removeNumEnsamb_Apple)
+                                .addGap(17, 17, 17)
+                                .addComponent(numTrabajadoresEnsamb_Apple)
+                                .addGap(14, 14, 14)
+                                .addComponent(addNumEnsamb_Apple))))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel6Layout.createSequentialGroup()
+                                .addComponent(placaBaseLabel_Apple)
+                                .addGap(48, 48, 48)
+                                .addComponent(removeNumPB_Apple))
+                            .addGroup(jPanel6Layout.createSequentialGroup()
+                                .addGap(75, 75, 75)
+                                .addComponent(labelTrabajadores)))
+                        .addGap(17, 17, 17)
+                        .addComponent(numTrabajadoresPB_Apple)
+                        .addGap(14, 14, 14)
+                        .addComponent(addNumPB_Apple)))
+                .addContainerGap(38, Short.MAX_VALUE))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(labelTrabajadores)
+                .addGap(31, 31, 31)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(placaBaseLabel_Apple)
+                    .addComponent(removeNumPB_Apple)
+                    .addComponent(numTrabajadoresPB_Apple)
+                    .addComponent(addNumPB_Apple))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(CPUsLabel_Apple)
+                    .addComponent(removeNumCPUs_Apple)
+                    .addComponent(numTrabajadoresCPU_Apple)
+                    .addComponent(addNumCPUs_Apple))
+                .addGap(17, 17, 17)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(RAMLabel_Apple)
+                    .addComponent(removeNumRAM_Apple)
+                    .addComponent(numTrabajadoresRAM_Apple)
+                    .addComponent(addNumRAM_Apple))
+                .addGap(17, 17, 17)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(fuentesLabel_Apple)
+                    .addComponent(removeNumFuente_Apple)
+                    .addComponent(numTrabajadoresFuente_Apple)
+                    .addComponent(addNumFuente_Apple))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(removeNumTG_Apple)
+                        .addComponent(tGraficaLabel_Apple))
+                    .addComponent(numTrabajadoresTG_Apple)
+                    .addComponent(addNumTG_Apple))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(removeNumEnsamb_Apple)
+                        .addComponent(ensambladoresLabel_Apple))
+                    .addComponent(numTrabajadoresEnsamb_Apple)
+                    .addComponent(addNumEnsamb_Apple))
+                .addContainerGap(20, Short.MAX_VALUE))
+        );
+
+        jLabel12.setText("PROJECT MANAGER / DIRECTOR");
+
+        estadoPMLabel_Apple.setText("Estado PM:");
+
+        nroFaltasPMLabel_Apple.setText("Nro. faltas PM:");
+
+        sueldoDescontadoPMLabel_Apple.setText("Sueldo descontado:");
+
+        estadoPM_Apple.setText("...");
+
+        nroFaltasPM_Apple.setText("0");
+
+        sueldoDescontadoPM_Apple.setText("0");
+
+        estadoDirectorLabel_Apple.setText("Estado director:");
+
+        estadoDirector_Apple.setText("...");
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(estadoPMLabel_Apple)
+                            .addComponent(nroFaltasPMLabel_Apple)
+                            .addComponent(sueldoDescontadoPMLabel_Apple))
+                        .addGap(26, 26, 26)
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(sueldoDescontadoPM_Apple)
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addComponent(nroFaltasPM_Apple)
+                                .addGap(58, 58, 58)
+                                .addComponent(estadoDirectorLabel_Apple)
+                                .addGap(40, 40, 40)
+                                .addComponent(estadoDirector_Apple))
+                            .addComponent(estadoPM_Apple)))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGap(108, 108, 108)
+                        .addComponent(jLabel12)))
+                .addContainerGap(64, Short.MAX_VALUE))
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(estadoPMLabel_Apple)
+                    .addComponent(estadoPM_Apple))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nroFaltasPMLabel_Apple)
+                    .addComponent(nroFaltasPM_Apple)
+                    .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(estadoDirectorLabel_Apple)
+                        .addComponent(estadoDirector_Apple)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(sueldoDescontadoPMLabel_Apple)
+                    .addComponent(sueldoDescontadoPM_Apple))
+                .addGap(12, 12, 12))
+        );
+
+        jLabel13.setText("DATOS RELEVANTES");
+
+        ganaciasLabel_Apple.setText("Ganancias en bruto:");
+
+        costosLabel_Apple.setText("Costos operativos:");
+
+        utilidadLabel_Apple.setText("Utilidad total:");
+
+        diasRestantesLabel_Apple.setText("Días restantes para la entrega:");
+
+        ganacias_Apple.setText("0");
+
+        costos_Apple.setText("0");
+
+        utilidad_Apple.setText("0");
+
+        diasRestantes_Apple.setText("0");
+
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel13))
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addGap(44, 44, 44)
+                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(diasRestantesLabel_Apple)
+                            .addComponent(utilidadLabel_Apple)
+                            .addComponent(costosLabel_Apple)
+                            .addGroup(jPanel10Layout.createSequentialGroup()
+                                .addComponent(ganaciasLabel_Apple)
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(27, 27, 27)))
+                .addGap(9, 9, 9)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(costos_Apple, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(ganacias_Apple, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(utilidad_Apple)
+                    .addComponent(diasRestantes_Apple))
+                .addGap(76, 76, 76))
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(jLabel13)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ganaciasLabel_Apple)
+                    .addComponent(ganacias_Apple))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(costosLabel_Apple)
+                    .addComponent(costos_Apple))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(utilidadLabel_Apple)
+                    .addComponent(utilidad_Apple))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(diasRestantesLabel_Apple)
+                    .addComponent(diasRestantes_Apple))
+                .addContainerGap(28, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 844, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(15, 15, 15)
+                                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel30)
+                                .addGap(87, 87, 87)))
+                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(2007, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 465, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel30)
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(31, 31, 31)
+                        .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(1903, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Apple", jPanel2);
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 844, Short.MAX_VALUE)
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 465, Short.MAX_VALUE)
-        );
-
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jTabbedPane1.addTab("HP", jPanel3);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 844, Short.MAX_VALUE)
+            .addGap(0, 2824, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 465, Short.MAX_VALUE)
+            .addGap(0, 2435, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Gráfico", jPanel4);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
-        );
+        getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 2470));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void removePlacaBase_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removePlacaBase_AppleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_removePlacaBase_AppleActionPerformed
+
+    private void removeCPU_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeCPU_AppleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_removeCPU_AppleActionPerformed
+
+    private void removeRAM_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeRAM_AppleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_removeRAM_AppleActionPerformed
+
+    private void removeFuente_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeFuente_AppleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_removeFuente_AppleActionPerformed
+
+    private void removeTGrafica_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeTGrafica_AppleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_removeTGrafica_AppleActionPerformed
+
+    private void addPlacaBase_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPlacaBase_AppleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addPlacaBase_AppleActionPerformed
+
+    private void addCPU_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addCPU_AppleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addCPU_AppleActionPerformed
+
+    private void addRAM_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addRAM_AppleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addRAM_AppleActionPerformed
+
+    private void addFuente_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addFuente_AppleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addFuente_AppleActionPerformed
+
+    private void addTGrafica_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addTGrafica_AppleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addTGrafica_AppleActionPerformed
+
+    private void removePlacaBase_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removePlacaBase_HPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_removePlacaBase_HPActionPerformed
+
+    private void removeCPU_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeCPU_HPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_removeCPU_HPActionPerformed
+
+    private void removeRAM_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeRAM_HPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_removeRAM_HPActionPerformed
+
+    private void removeFuente_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeFuente_HPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_removeFuente_HPActionPerformed
+
+    private void addPlacaBase_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPlacaBase_HPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addPlacaBase_HPActionPerformed
+
+    private void addCPU_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addCPU_HPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addCPU_HPActionPerformed
+
+    private void addRAM_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addRAM_HPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addRAM_HPActionPerformed
+
+    private void addFuente_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addFuente_HPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addFuente_HPActionPerformed
+
+    private void removeTGrafica_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeTGrafica_HPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_removeTGrafica_HPActionPerformed
+
+    private void addTGrafica_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addTGrafica_HPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addTGrafica_HPActionPerformed
+
+    private void removeEnsamblador_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeEnsamblador_AppleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_removeEnsamblador_AppleActionPerformed
+
+    private void addEnsamblador_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addEnsamblador_AppleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addEnsamblador_AppleActionPerformed
+
+    private void addEnsamblador_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addEnsamblador_HPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addEnsamblador_HPActionPerformed
+
+    private void removeEnsamblador_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeEnsamblador_HPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_removeEnsamblador_HPActionPerformed
+
+    private void removeNumPB_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeNumPB_AppleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_removeNumPB_AppleActionPerformed
+
+    private void removeNumCPUs_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeNumCPUs_AppleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_removeNumCPUs_AppleActionPerformed
+
+    private void removeNumRAM_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeNumRAM_AppleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_removeNumRAM_AppleActionPerformed
+
+    private void removeNumFuente_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeNumFuente_AppleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_removeNumFuente_AppleActionPerformed
+
+    private void addNumPB_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNumPB_AppleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addNumPB_AppleActionPerformed
+
+    private void addNumCPUs_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNumCPUs_AppleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addNumCPUs_AppleActionPerformed
+
+    private void addNumRAM_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNumRAM_AppleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addNumRAM_AppleActionPerformed
+
+    private void addNumFuente_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNumFuente_AppleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addNumFuente_AppleActionPerformed
+
+    private void removeNumTG_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeNumTG_AppleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_removeNumTG_AppleActionPerformed
+
+    private void addNumTG_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNumTG_AppleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addNumTG_AppleActionPerformed
+
+    private void addNumEnsamb_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNumEnsamb_AppleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addNumEnsamb_AppleActionPerformed
+
+    private void removeNumEnsamb_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeNumEnsamb_AppleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_removeNumEnsamb_AppleActionPerformed
 
     /**
      * @param args the command line arguments
@@ -166,14 +1412,135 @@ public class Interfaz extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel CPUsEnStock_Apple;
+    private javax.swing.JLabel CPUsLabel_Apple;
+    private javax.swing.JLabel RAMLabel_Apple;
+    private javax.swing.JLabel RAMsEnStock_Apple;
+    private javax.swing.JButton addCPU_Apple;
+    private javax.swing.JButton addCPU_HP;
+    private javax.swing.JButton addEnsamblador_Apple;
+    private javax.swing.JButton addEnsamblador_HP;
+    private javax.swing.JButton addFuente_Apple;
+    private javax.swing.JButton addFuente_HP;
+    private javax.swing.JButton addNumCPUs_Apple;
+    private javax.swing.JButton addNumEnsamb_Apple;
+    private javax.swing.JButton addNumFuente_Apple;
+    private javax.swing.JButton addNumPB_Apple;
+    private javax.swing.JButton addNumRAM_Apple;
+    private javax.swing.JButton addNumTG_Apple;
+    private javax.swing.JButton addPlacaBase_Apple;
+    private javax.swing.JButton addPlacaBase_HP;
+    private javax.swing.JButton addRAM_Apple;
+    private javax.swing.JButton addRAM_HP;
+    private javax.swing.JButton addTGrafica_Apple;
+    private javax.swing.JButton addTGrafica_HP;
+    private javax.swing.JLabel cantCompEstandarListos_Apple;
+    private javax.swing.JLabel cantCompTGListos_Apple;
+    private javax.swing.JLabel compConTGLabel;
+    private javax.swing.JLabel compEstandarLabel_Apple;
+    private javax.swing.JLabel costosLabel_Apple;
+    private javax.swing.JLabel costos_Apple;
+    private javax.swing.JLabel cpusMenu_Apple;
+    private javax.swing.JLabel cpusMenu_HP;
+    private javax.swing.JSpinner deadline;
+    private javax.swing.JLabel deadlineLabel;
+    private javax.swing.JLabel diasRestantesLabel_Apple;
+    private javax.swing.JLabel diasRestantes_Apple;
+    private javax.swing.JSpinner duracionDia;
+    private javax.swing.JLabel duracionDiaLabel;
+    private javax.swing.JLabel ensambladorMenu_Apple;
+    private javax.swing.JLabel ensambladoresLabel_Apple;
+    private javax.swing.JLabel ensambladoresMenu_HP;
+    private javax.swing.JLabel estadoDirectorLabel_Apple;
+    private javax.swing.JLabel estadoDirector_Apple;
+    private javax.swing.JLabel estadoPMLabel_Apple;
+    private javax.swing.JLabel estadoPM_Apple;
+    private javax.swing.JLabel fuentesEnStock_Apple;
+    private javax.swing.JLabel fuentesLabel_Apple;
+    private javax.swing.JLabel fuentesMenu_Apple;
+    private javax.swing.JLabel fuentesMenu_HP;
+    private javax.swing.JLabel ganaciasLabel_Apple;
+    private javax.swing.JLabel ganacias_Apple;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JSpinner jSpinner1;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JLabel labelTrabajadores;
+    private javax.swing.JLabel memoriaRAMMenu_Apple;
+    private javax.swing.JLabel memoriaRAMMenu_HP;
+    private javax.swing.JLabel nroFaltasPMLabel_Apple;
+    private javax.swing.JLabel nroFaltasPM_Apple;
+    private javax.swing.JLabel numCPUS_Apple;
+    private javax.swing.JLabel numCPUS_HP;
+    private javax.swing.JLabel numEnsambladores_Apple;
+    private javax.swing.JLabel numEnsambladores_HP;
+    private javax.swing.JLabel numFuente_Apple;
+    private javax.swing.JLabel numFuentes_HP;
+    private javax.swing.JLabel numPlacaBase_Apple;
+    private javax.swing.JLabel numPlacaBase_HP;
+    private javax.swing.JLabel numRAM_Apple;
+    private javax.swing.JLabel numRAM_HP;
+    private javax.swing.JLabel numTGraficas_Apple;
+    private javax.swing.JLabel numTGraficas_HP;
+    private javax.swing.JLabel numTrabajadoresCPU_Apple;
+    private javax.swing.JLabel numTrabajadoresEnsamb_Apple;
+    private javax.swing.JLabel numTrabajadoresFuente_Apple;
+    private javax.swing.JLabel numTrabajadoresPB_Apple;
+    private javax.swing.JLabel numTrabajadoresRAM_Apple;
+    private javax.swing.JLabel numTrabajadoresTG_Apple;
+    private javax.swing.JLabel placaBaseLabel_Apple;
+    private javax.swing.JLabel placaBaseMenu_Apple;
+    private javax.swing.JLabel placaBaseMenu_HP;
+    private javax.swing.JLabel placasEnStock_Apple;
+    private javax.swing.JButton removeCPU_Apple;
+    private javax.swing.JButton removeCPU_HP;
+    private javax.swing.JButton removeEnsamblador_Apple;
+    private javax.swing.JButton removeEnsamblador_HP;
+    private javax.swing.JButton removeFuente_Apple;
+    private javax.swing.JButton removeFuente_HP;
+    private javax.swing.JButton removeNumCPUs_Apple;
+    private javax.swing.JButton removeNumEnsamb_Apple;
+    private javax.swing.JButton removeNumFuente_Apple;
+    private javax.swing.JButton removeNumPB_Apple;
+    private javax.swing.JButton removeNumRAM_Apple;
+    private javax.swing.JButton removeNumTG_Apple;
+    private javax.swing.JButton removePlacaBase_Apple;
+    private javax.swing.JButton removePlacaBase_HP;
+    private javax.swing.JButton removeRAM_Apple;
+    private javax.swing.JButton removeRAM_HP;
+    private javax.swing.JButton removeTGrafica_Apple;
+    private javax.swing.JButton removeTGrafica_HP;
+    private javax.swing.JLabel sueldoDescontadoPMLabel_Apple;
+    private javax.swing.JLabel sueldoDescontadoPM_Apple;
+    private javax.swing.JLabel tGraficaLabel_Apple;
+    private javax.swing.JLabel tGraficasEnStock_Apple;
+    private javax.swing.JLabel tarjetaGraficaMenu_Apple;
+    private javax.swing.JLabel tarjetasGraficasMenu_HP;
+    private javax.swing.JLabel tituloMenu;
+    private javax.swing.JLabel utilidadLabel_Apple;
+    private javax.swing.JLabel utilidad_Apple;
     // End of variables declaration//GEN-END:variables
 }
