@@ -27,7 +27,7 @@ public class Interfaz extends javax.swing.JFrame {
     private void initComponents() {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel1 = new javax.swing.JPanel();
+        ventanaMenu = new javax.swing.JPanel();
         tituloMenu = new javax.swing.JLabel();
         duracionDiaLabel = new javax.swing.JLabel();
         deadlineLabel = new javax.swing.JLabel();
@@ -85,7 +85,7 @@ public class Interfaz extends javax.swing.JFrame {
         memoriaRAMMenu_HP = new javax.swing.JLabel();
         fuentesMenu_HP = new javax.swing.JLabel();
         tarjetasGraficasMenu_HP = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
+        ventanaApple = new javax.swing.JPanel();
         jLabel30 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -155,7 +155,7 @@ public class Interfaz extends javax.swing.JFrame {
         utilidad_Apple = new javax.swing.JLabel();
         diasRestantes_Apple = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
+        ventanaHP = new javax.swing.JPanel();
         jPanel11 = new javax.swing.JPanel();
         fuentesLabel_HP = new javax.swing.JLabel();
         removeNumFuente_HP = new javax.swing.JButton();
@@ -225,34 +225,33 @@ public class Interfaz extends javax.swing.JFrame {
         estadoDirector_HP = new javax.swing.JLabel();
         jLabel31 = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
+        ventanaGrafico = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTabbedPane1.setForeground(new java.awt.Color(255, 255, 255));
+        jTabbedPane1.setForeground(new java.awt.Color(0, 0, 0));
 
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        ventanaMenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tituloMenu.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         tituloMenu.setText("CONFIGURACIONES");
-        jPanel1.add(tituloMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(283, 22, -1, -1));
+        ventanaMenu.add(tituloMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(283, 22, -1, -1));
 
         duracionDiaLabel.setText("Duración de un día");
-        jPanel1.add(duracionDiaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 83, -1, -1));
+        ventanaMenu.add(duracionDiaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 83, -1, -1));
 
         deadlineLabel.setText("Días límites");
-        jPanel1.add(deadlineLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(454, 83, -1, -1));
-        jPanel1.add(duracionDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 80, -1, -1));
-        jPanel1.add(deadline, new org.netbeans.lib.awtextra.AbsoluteConstraints(528, 80, -1, -1));
+        ventanaMenu.add(deadlineLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(454, 83, -1, -1));
+        ventanaMenu.add(duracionDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 80, -1, -1));
+        ventanaMenu.add(deadline, new org.netbeans.lib.awtextra.AbsoluteConstraints(528, 80, -1, -1));
 
         jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Logo-Apple.jpg"))); // NOI18N
         jLabel26.setText("jLabel26");
-        jPanel1.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, 179, -1));
+        ventanaMenu.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, 179, -1));
 
         jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Logo-HP.png"))); // NOI18N
         jLabel28.setText("jLabel28");
-        jPanel1.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 160, 198, -1));
+        ventanaMenu.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 160, 198, -1));
 
         numPlacaBase_Apple.setText("0");
 
@@ -479,7 +478,7 @@ public class Interfaz extends javax.swing.JFrame {
                 .addGap(32, 32, 32))
         );
 
-        jPanel1.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(56, 227, -1, -1));
+        ventanaMenu.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(56, 227, -1, -1));
 
         addEnsamblador_HP.setText("+");
         addEnsamblador_HP.addActionListener(new java.awt.event.ActionListener() {
@@ -709,16 +708,16 @@ public class Interfaz extends javax.swing.JFrame {
                 .addContainerGap(34, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(442, 227, -1, -1));
+        ventanaMenu.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(442, 227, -1, -1));
 
-        jTabbedPane1.addTab("Menú", jPanel1);
+        jTabbedPane1.addTab("Menú", ventanaMenu);
 
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        ventanaApple.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel30.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel30.setForeground(new java.awt.Color(0, 0, 0));
         jLabel30.setText("Apple");
-        jPanel2.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, -1));
+        ventanaApple.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, -1));
 
         jPanel5.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -803,13 +802,13 @@ public class Interfaz extends javax.swing.JFrame {
                     .addComponent(RAMsEnStock_Apple)
                     .addComponent(CPUsEnStock_Apple))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(25, 25, 25))
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(17, 17, 17))
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(79, 79, 79)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -867,13 +866,15 @@ public class Interfaz extends javax.swing.JFrame {
                 .addGap(25, 25, 25))
         );
 
-        jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 60, -1, -1));
+        ventanaApple.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 60, -1, -1));
 
         jPanel6.setBackground(new java.awt.Color(245, 245, 245));
         jPanel6.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         fuentesLabel_Apple.setForeground(new java.awt.Color(51, 51, 51));
         fuentesLabel_Apple.setText("Productores de fuentes:");
+        jPanel6.add(fuentesLabel_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 198, -1, -1));
 
         removeNumFuente_Apple.setText("-");
         removeNumFuente_Apple.addActionListener(new java.awt.event.ActionListener() {
@@ -881,9 +882,11 @@ public class Interfaz extends javax.swing.JFrame {
                 removeNumFuente_AppleActionPerformed(evt);
             }
         });
+        jPanel6.add(removeNumFuente_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(235, 198, -1, -1));
 
         RAMLabel_Apple.setForeground(new java.awt.Color(51, 51, 51));
         RAMLabel_Apple.setText("Productores de memoria RAM:");
+        jPanel6.add(RAMLabel_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 158, -1, -1));
 
         removeNumRAM_Apple.setText("-");
         removeNumRAM_Apple.addActionListener(new java.awt.event.ActionListener() {
@@ -891,9 +894,11 @@ public class Interfaz extends javax.swing.JFrame {
                 removeNumRAM_AppleActionPerformed(evt);
             }
         });
+        jPanel6.add(removeNumRAM_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(235, 158, -1, -1));
 
         CPUsLabel_Apple.setForeground(new java.awt.Color(51, 51, 51));
         CPUsLabel_Apple.setText("Productores de placas CPUs:");
+        jPanel6.add(CPUsLabel_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 118, -1, -1));
 
         removeNumCPUs_Apple.setText("-");
         removeNumCPUs_Apple.addActionListener(new java.awt.event.ActionListener() {
@@ -901,9 +906,11 @@ public class Interfaz extends javax.swing.JFrame {
                 removeNumCPUs_AppleActionPerformed(evt);
             }
         });
+        jPanel6.add(removeNumCPUs_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(235, 118, -1, -1));
 
         placaBaseLabel_Apple.setForeground(new java.awt.Color(51, 51, 51));
         placaBaseLabel_Apple.setText("Productores de placas bases:");
+        jPanel6.add(placaBaseLabel_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 77, -1, -1));
 
         removeNumPB_Apple.setText("-");
         removeNumPB_Apple.addActionListener(new java.awt.event.ActionListener() {
@@ -911,25 +918,32 @@ public class Interfaz extends javax.swing.JFrame {
                 removeNumPB_AppleActionPerformed(evt);
             }
         });
+        jPanel6.add(removeNumPB_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(235, 77, -1, -1));
 
         numTrabajadoresFuente_Apple.setForeground(new java.awt.Color(51, 51, 51));
         numTrabajadoresFuente_Apple.setText("0");
+        jPanel6.add(numTrabajadoresFuente_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(275, 198, -1, -1));
 
         numTrabajadoresRAM_Apple.setForeground(new java.awt.Color(51, 51, 51));
         numTrabajadoresRAM_Apple.setText("0");
+        jPanel6.add(numTrabajadoresRAM_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(275, 158, -1, -1));
 
         numTrabajadoresCPU_Apple.setForeground(new java.awt.Color(51, 51, 51));
         numTrabajadoresCPU_Apple.setText("0");
+        jPanel6.add(numTrabajadoresCPU_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(275, 118, -1, -1));
 
         numTrabajadoresPB_Apple.setForeground(new java.awt.Color(51, 51, 51));
         numTrabajadoresPB_Apple.setText("0");
+        jPanel6.add(numTrabajadoresPB_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(275, 77, -1, -1));
 
         numTrabajadoresTG_Apple.setForeground(new java.awt.Color(51, 51, 51));
         numTrabajadoresTG_Apple.setText("0");
+        jPanel6.add(numTrabajadoresTG_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(275, 239, -1, -1));
 
         labelTrabajadores.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         labelTrabajadores.setForeground(new java.awt.Color(0, 0, 0));
         labelTrabajadores.setText("LISTA DE TRABAJADORES");
+        jPanel6.add(labelTrabajadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, -1, -1));
 
         removeNumEnsamb_Apple.setText("-");
         removeNumEnsamb_Apple.addActionListener(new java.awt.event.ActionListener() {
@@ -937,9 +951,11 @@ public class Interfaz extends javax.swing.JFrame {
                 removeNumEnsamb_AppleActionPerformed(evt);
             }
         });
+        jPanel6.add(removeNumEnsamb_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(235, 280, -1, -1));
 
         ensambladoresLabel_Apple.setForeground(new java.awt.Color(51, 51, 51));
         ensambladoresLabel_Apple.setText("Ensambladores:");
+        jPanel6.add(ensambladoresLabel_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 283, -1, -1));
 
         addNumEnsamb_Apple.setText("+");
         addNumEnsamb_Apple.addActionListener(new java.awt.event.ActionListener() {
@@ -947,9 +963,11 @@ public class Interfaz extends javax.swing.JFrame {
                 addNumEnsamb_AppleActionPerformed(evt);
             }
         });
+        jPanel6.add(addNumEnsamb_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 280, -1, -1));
 
         numTrabajadoresEnsamb_Apple.setForeground(new java.awt.Color(51, 51, 51));
         numTrabajadoresEnsamb_Apple.setText("0");
+        jPanel6.add(numTrabajadoresEnsamb_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(275, 280, -1, -1));
 
         addNumTG_Apple.setText("+");
         addNumTG_Apple.addActionListener(new java.awt.event.ActionListener() {
@@ -957,6 +975,7 @@ public class Interfaz extends javax.swing.JFrame {
                 addNumTG_AppleActionPerformed(evt);
             }
         });
+        jPanel6.add(addNumTG_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 239, -1, -1));
 
         addNumFuente_Apple.setText("+");
         addNumFuente_Apple.addActionListener(new java.awt.event.ActionListener() {
@@ -964,6 +983,7 @@ public class Interfaz extends javax.swing.JFrame {
                 addNumFuente_AppleActionPerformed(evt);
             }
         });
+        jPanel6.add(addNumFuente_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 198, -1, -1));
 
         addNumRAM_Apple.setText("+");
         addNumRAM_Apple.addActionListener(new java.awt.event.ActionListener() {
@@ -971,6 +991,7 @@ public class Interfaz extends javax.swing.JFrame {
                 addNumRAM_AppleActionPerformed(evt);
             }
         });
+        jPanel6.add(addNumRAM_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 158, -1, -1));
 
         addNumCPUs_Apple.setText("+");
         addNumCPUs_Apple.addActionListener(new java.awt.event.ActionListener() {
@@ -978,6 +999,7 @@ public class Interfaz extends javax.swing.JFrame {
                 addNumCPUs_AppleActionPerformed(evt);
             }
         });
+        jPanel6.add(addNumCPUs_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 118, -1, -1));
 
         removeNumTG_Apple.setText("-");
         removeNumTG_Apple.addActionListener(new java.awt.event.ActionListener() {
@@ -985,6 +1007,7 @@ public class Interfaz extends javax.swing.JFrame {
                 removeNumTG_AppleActionPerformed(evt);
             }
         });
+        jPanel6.add(removeNumTG_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(235, 239, -1, -1));
 
         addNumPB_Apple.setText("+");
         addNumPB_Apple.addActionListener(new java.awt.event.ActionListener() {
@@ -992,120 +1015,13 @@ public class Interfaz extends javax.swing.JFrame {
                 addNumPB_AppleActionPerformed(evt);
             }
         });
+        jPanel6.add(addNumPB_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 77, -1, -1));
 
         tGraficaLabel_Apple.setForeground(new java.awt.Color(51, 51, 51));
         tGraficaLabel_Apple.setText("Productores de tarjetas gráficas:");
+        jPanel6.add(tGraficaLabel_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 242, -1, -1));
 
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(CPUsLabel_Apple)
-                        .addGap(51, 51, 51)
-                        .addComponent(removeNumCPUs_Apple)
-                        .addGap(17, 17, 17)
-                        .addComponent(numTrabajadoresCPU_Apple)
-                        .addGap(14, 14, 14)
-                        .addComponent(addNumCPUs_Apple))
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(RAMLabel_Apple)
-                        .addGap(38, 38, 38)
-                        .addComponent(removeNumRAM_Apple)
-                        .addGap(17, 17, 17)
-                        .addComponent(numTrabajadoresRAM_Apple)
-                        .addGap(14, 14, 14)
-                        .addComponent(addNumRAM_Apple))
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(fuentesLabel_Apple)
-                            .addComponent(tGraficaLabel_Apple)
-                            .addComponent(ensambladoresLabel_Apple))
-                        .addGap(30, 30, 30)
-                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel6Layout.createSequentialGroup()
-                                .addComponent(removeNumFuente_Apple)
-                                .addGap(17, 17, 17)
-                                .addComponent(numTrabajadoresFuente_Apple)
-                                .addGap(14, 14, 14)
-                                .addComponent(addNumFuente_Apple))
-                            .addGroup(jPanel6Layout.createSequentialGroup()
-                                .addComponent(removeNumTG_Apple)
-                                .addGap(17, 17, 17)
-                                .addComponent(numTrabajadoresTG_Apple)
-                                .addGap(14, 14, 14)
-                                .addComponent(addNumTG_Apple))
-                            .addGroup(jPanel6Layout.createSequentialGroup()
-                                .addComponent(removeNumEnsamb_Apple)
-                                .addGap(17, 17, 17)
-                                .addComponent(numTrabajadoresEnsamb_Apple)
-                                .addGap(14, 14, 14)
-                                .addComponent(addNumEnsamb_Apple))))
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel6Layout.createSequentialGroup()
-                                .addComponent(placaBaseLabel_Apple)
-                                .addGap(48, 48, 48)
-                                .addComponent(removeNumPB_Apple))
-                            .addGroup(jPanel6Layout.createSequentialGroup()
-                                .addGap(75, 75, 75)
-                                .addComponent(labelTrabajadores)))
-                        .addGap(17, 17, 17)
-                        .addComponent(numTrabajadoresPB_Apple)
-                        .addGap(14, 14, 14)
-                        .addComponent(addNumPB_Apple)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(labelTrabajadores)
-                .addGap(31, 31, 31)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(placaBaseLabel_Apple)
-                    .addComponent(removeNumPB_Apple)
-                    .addComponent(numTrabajadoresPB_Apple)
-                    .addComponent(addNumPB_Apple))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CPUsLabel_Apple)
-                    .addComponent(removeNumCPUs_Apple)
-                    .addComponent(numTrabajadoresCPU_Apple)
-                    .addComponent(addNumCPUs_Apple))
-                .addGap(17, 17, 17)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(RAMLabel_Apple)
-                    .addComponent(removeNumRAM_Apple)
-                    .addComponent(numTrabajadoresRAM_Apple)
-                    .addComponent(addNumRAM_Apple))
-                .addGap(17, 17, 17)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(fuentesLabel_Apple)
-                    .addComponent(removeNumFuente_Apple)
-                    .addComponent(numTrabajadoresFuente_Apple)
-                    .addComponent(addNumFuente_Apple))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(removeNumTG_Apple)
-                        .addComponent(tGraficaLabel_Apple))
-                    .addComponent(numTrabajadoresTG_Apple)
-                    .addComponent(addNumTG_Apple))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(removeNumEnsamb_Apple)
-                        .addComponent(ensambladoresLabel_Apple))
-                    .addComponent(numTrabajadoresEnsamb_Apple)
-                    .addComponent(addNumEnsamb_Apple))
-                .addContainerGap(20, Short.MAX_VALUE))
-        );
-
-        jPanel2.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 350, -1));
+        ventanaApple.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 350, 320));
 
         jPanel9.setBackground(new java.awt.Color(245, 245, 245));
 
@@ -1187,7 +1103,7 @@ public class Interfaz extends javax.swing.JFrame {
                 .addGap(12, 12, 12))
         );
 
-        jPanel2.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, -1, -1));
+        ventanaApple.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, -1, -1));
 
         jPanel10.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -1265,21 +1181,23 @@ public class Interfaz extends javax.swing.JFrame {
                 .addContainerGap(28, Short.MAX_VALUE))
         );
 
-        jPanel2.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 350, 320, -1));
+        ventanaApple.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 350, 320, -1));
 
         jLabel32.setForeground(new java.awt.Color(51, 51, 51));
         jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/White-background.jpg"))); // NOI18N
         jLabel32.setText("jLabel32");
-        jPanel2.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 840, 560));
+        ventanaApple.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 840, 560));
 
-        jTabbedPane1.addTab("Apple", jPanel2);
+        jTabbedPane1.addTab("Apple", ventanaApple);
 
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        ventanaHP.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel11.setBackground(new java.awt.Color(102, 102, 255));
+        jPanel11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         fuentesLabel_HP.setForeground(new java.awt.Color(255, 255, 255));
         fuentesLabel_HP.setText("Productores de fuentes:");
+        jPanel11.add(fuentesLabel_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 198, -1, -1));
 
         removeNumFuente_HP.setText("-");
         removeNumFuente_HP.addActionListener(new java.awt.event.ActionListener() {
@@ -1287,9 +1205,11 @@ public class Interfaz extends javax.swing.JFrame {
                 removeNumFuente_HPActionPerformed(evt);
             }
         });
+        jPanel11.add(removeNumFuente_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(235, 198, -1, -1));
 
         RAMLabel_HP.setForeground(new java.awt.Color(255, 255, 255));
         RAMLabel_HP.setText("Productores de memoria RAM:");
+        jPanel11.add(RAMLabel_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 158, -1, -1));
 
         removeNumRAM_HP.setText("-");
         removeNumRAM_HP.addActionListener(new java.awt.event.ActionListener() {
@@ -1297,9 +1217,11 @@ public class Interfaz extends javax.swing.JFrame {
                 removeNumRAM_HPActionPerformed(evt);
             }
         });
+        jPanel11.add(removeNumRAM_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(235, 158, -1, -1));
 
         CPUsLabel_HP.setForeground(new java.awt.Color(255, 255, 255));
         CPUsLabel_HP.setText("Productores de placas CPUs:");
+        jPanel11.add(CPUsLabel_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 118, -1, -1));
 
         removeNumCPUs_HP.setText("-");
         removeNumCPUs_HP.addActionListener(new java.awt.event.ActionListener() {
@@ -1307,9 +1229,11 @@ public class Interfaz extends javax.swing.JFrame {
                 removeNumCPUs_HPActionPerformed(evt);
             }
         });
+        jPanel11.add(removeNumCPUs_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(235, 118, -1, -1));
 
         placaBaseLabel_HP.setForeground(new java.awt.Color(255, 255, 255));
         placaBaseLabel_HP.setText("Productores de placas bases:");
+        jPanel11.add(placaBaseLabel_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 77, -1, -1));
 
         removeNumPB_HP.setText("-");
         removeNumPB_HP.addActionListener(new java.awt.event.ActionListener() {
@@ -1317,25 +1241,32 @@ public class Interfaz extends javax.swing.JFrame {
                 removeNumPB_HPActionPerformed(evt);
             }
         });
+        jPanel11.add(removeNumPB_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(235, 77, -1, -1));
 
         numTrabajadoresFuente_HP.setForeground(new java.awt.Color(255, 255, 255));
         numTrabajadoresFuente_HP.setText("0");
+        jPanel11.add(numTrabajadoresFuente_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(275, 198, -1, -1));
 
         numTrabajadoresRAM_HP.setForeground(new java.awt.Color(255, 255, 255));
         numTrabajadoresRAM_HP.setText("0");
+        jPanel11.add(numTrabajadoresRAM_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(275, 158, -1, -1));
 
         numTrabajadoresCPU_HP.setForeground(new java.awt.Color(255, 255, 255));
         numTrabajadoresCPU_HP.setText("0");
+        jPanel11.add(numTrabajadoresCPU_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(275, 118, -1, -1));
 
         numTrabajadoresPB_HP.setForeground(new java.awt.Color(255, 255, 255));
         numTrabajadoresPB_HP.setText("0");
+        jPanel11.add(numTrabajadoresPB_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(275, 77, -1, -1));
 
         numTrabajadoresTG_HP.setForeground(new java.awt.Color(255, 255, 255));
         numTrabajadoresTG_HP.setText("0");
+        jPanel11.add(numTrabajadoresTG_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(275, 239, -1, -1));
 
         labelTrabajadores1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         labelTrabajadores1.setForeground(new java.awt.Color(255, 255, 255));
         labelTrabajadores1.setText("LISTA DE TRABAJADORES");
+        jPanel11.add(labelTrabajadores1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, -1, -1));
 
         removeNumEnsamb_HP.setText("-");
         removeNumEnsamb_HP.addActionListener(new java.awt.event.ActionListener() {
@@ -1343,9 +1274,11 @@ public class Interfaz extends javax.swing.JFrame {
                 removeNumEnsamb_HPActionPerformed(evt);
             }
         });
+        jPanel11.add(removeNumEnsamb_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(235, 280, -1, -1));
 
         ensambladoresLabel_HP.setForeground(new java.awt.Color(255, 255, 255));
         ensambladoresLabel_HP.setText("Ensambladores:");
+        jPanel11.add(ensambladoresLabel_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 283, -1, -1));
 
         addNumEnsamb_HP.setText("+");
         addNumEnsamb_HP.addActionListener(new java.awt.event.ActionListener() {
@@ -1353,9 +1286,11 @@ public class Interfaz extends javax.swing.JFrame {
                 addNumEnsamb_HPActionPerformed(evt);
             }
         });
+        jPanel11.add(addNumEnsamb_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 280, -1, -1));
 
         numTrabajadoresEnsamb_HP.setForeground(new java.awt.Color(255, 255, 255));
         numTrabajadoresEnsamb_HP.setText("0");
+        jPanel11.add(numTrabajadoresEnsamb_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(275, 280, -1, -1));
 
         addNumTG_HP.setText("+");
         addNumTG_HP.addActionListener(new java.awt.event.ActionListener() {
@@ -1363,6 +1298,7 @@ public class Interfaz extends javax.swing.JFrame {
                 addNumTG_HPActionPerformed(evt);
             }
         });
+        jPanel11.add(addNumTG_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 239, -1, -1));
 
         addNumFuente_HP.setText("+");
         addNumFuente_HP.addActionListener(new java.awt.event.ActionListener() {
@@ -1370,6 +1306,7 @@ public class Interfaz extends javax.swing.JFrame {
                 addNumFuente_HPActionPerformed(evt);
             }
         });
+        jPanel11.add(addNumFuente_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 198, -1, -1));
 
         addNumRAM_HP.setText("+");
         addNumRAM_HP.addActionListener(new java.awt.event.ActionListener() {
@@ -1377,6 +1314,7 @@ public class Interfaz extends javax.swing.JFrame {
                 addNumRAM_HPActionPerformed(evt);
             }
         });
+        jPanel11.add(addNumRAM_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 158, -1, -1));
 
         addNumCPUs_HP.setText("+");
         addNumCPUs_HP.addActionListener(new java.awt.event.ActionListener() {
@@ -1384,6 +1322,7 @@ public class Interfaz extends javax.swing.JFrame {
                 addNumCPUs_HPActionPerformed(evt);
             }
         });
+        jPanel11.add(addNumCPUs_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 118, -1, -1));
 
         removeNumTG_HP.setText("-");
         removeNumTG_HP.addActionListener(new java.awt.event.ActionListener() {
@@ -1391,6 +1330,7 @@ public class Interfaz extends javax.swing.JFrame {
                 removeNumTG_HPActionPerformed(evt);
             }
         });
+        jPanel11.add(removeNumTG_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(235, 239, -1, -1));
 
         addNumPB_HP.setText("+");
         addNumPB_HP.addActionListener(new java.awt.event.ActionListener() {
@@ -1398,456 +1338,218 @@ public class Interfaz extends javax.swing.JFrame {
                 addNumPB_HPActionPerformed(evt);
             }
         });
+        jPanel11.add(addNumPB_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 77, -1, -1));
 
         tGraficaLabel_HP.setForeground(new java.awt.Color(255, 255, 255));
         tGraficaLabel_HP.setText("Productores de tarjetas gráficas:");
+        jPanel11.add(tGraficaLabel_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 242, -1, -1));
 
-        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
-        jPanel11.setLayout(jPanel11Layout);
-        jPanel11Layout.setHorizontalGroup(
-            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel11Layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addComponent(CPUsLabel_HP)
-                        .addGap(51, 51, 51)
-                        .addComponent(removeNumCPUs_HP)
-                        .addGap(17, 17, 17)
-                        .addComponent(numTrabajadoresCPU_HP)
-                        .addGap(14, 14, 14)
-                        .addComponent(addNumCPUs_HP))
-                    .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addComponent(RAMLabel_HP)
-                        .addGap(38, 38, 38)
-                        .addComponent(removeNumRAM_HP)
-                        .addGap(17, 17, 17)
-                        .addComponent(numTrabajadoresRAM_HP)
-                        .addGap(14, 14, 14)
-                        .addComponent(addNumRAM_HP))
-                    .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(fuentesLabel_HP)
-                            .addComponent(tGraficaLabel_HP)
-                            .addComponent(ensambladoresLabel_HP))
-                        .addGap(30, 30, 30)
-                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel11Layout.createSequentialGroup()
-                                .addComponent(removeNumFuente_HP)
-                                .addGap(17, 17, 17)
-                                .addComponent(numTrabajadoresFuente_HP)
-                                .addGap(14, 14, 14)
-                                .addComponent(addNumFuente_HP))
-                            .addGroup(jPanel11Layout.createSequentialGroup()
-                                .addComponent(removeNumTG_HP)
-                                .addGap(17, 17, 17)
-                                .addComponent(numTrabajadoresTG_HP)
-                                .addGap(14, 14, 14)
-                                .addComponent(addNumTG_HP))
-                            .addGroup(jPanel11Layout.createSequentialGroup()
-                                .addComponent(removeNumEnsamb_HP)
-                                .addGap(17, 17, 17)
-                                .addComponent(numTrabajadoresEnsamb_HP)
-                                .addGap(14, 14, 14)
-                                .addComponent(addNumEnsamb_HP))))
-                    .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel11Layout.createSequentialGroup()
-                                .addComponent(placaBaseLabel_HP)
-                                .addGap(48, 48, 48)
-                                .addComponent(removeNumPB_HP))
-                            .addGroup(jPanel11Layout.createSequentialGroup()
-                                .addGap(75, 75, 75)
-                                .addComponent(labelTrabajadores1)))
-                        .addGap(17, 17, 17)
-                        .addComponent(numTrabajadoresPB_HP)
-                        .addGap(14, 14, 14)
-                        .addComponent(addNumPB_HP)))
-                .addContainerGap(38, Short.MAX_VALUE))
-        );
-        jPanel11Layout.setVerticalGroup(
-            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel11Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(labelTrabajadores1)
-                .addGap(31, 31, 31)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(placaBaseLabel_HP)
-                    .addComponent(removeNumPB_HP)
-                    .addComponent(numTrabajadoresPB_HP)
-                    .addComponent(addNumPB_HP))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CPUsLabel_HP)
-                    .addComponent(removeNumCPUs_HP)
-                    .addComponent(numTrabajadoresCPU_HP)
-                    .addComponent(addNumCPUs_HP))
-                .addGap(17, 17, 17)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(RAMLabel_HP)
-                    .addComponent(removeNumRAM_HP)
-                    .addComponent(numTrabajadoresRAM_HP)
-                    .addComponent(addNumRAM_HP))
-                .addGap(17, 17, 17)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(fuentesLabel_HP)
-                    .addComponent(removeNumFuente_HP)
-                    .addComponent(numTrabajadoresFuente_HP)
-                    .addComponent(addNumFuente_HP))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(removeNumTG_HP)
-                        .addComponent(tGraficaLabel_HP))
-                    .addComponent(numTrabajadoresTG_HP)
-                    .addComponent(addNumTG_HP))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(removeNumEnsamb_HP)
-                        .addComponent(ensambladoresLabel_HP))
-                    .addComponent(numTrabajadoresEnsamb_HP)
-                    .addComponent(addNumEnsamb_HP))
-                .addContainerGap(20, Short.MAX_VALUE))
-        );
-
-        jPanel3.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, -1, -1));
+        ventanaHP.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 350, 320));
 
         jPanel12.setBackground(new java.awt.Color(158, 143, 255));
+        jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("Cant. de placas bases:");
+        jPanel12.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 47, -1, -1));
 
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("Cant. de CPUs:");
+        jPanel12.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 75, -1, -1));
 
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("Cant. de memorias RAM:");
+        jPanel12.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 103, -1, -1));
 
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("Cant. de fuentes:");
+        jPanel12.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 131, -1, -1));
 
         jLabel18.setForeground(new java.awt.Color(255, 255, 255));
         jLabel18.setText("Cant. de tarjetas gráficas:");
+        jPanel12.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 159, -1, -1));
 
         jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(255, 255, 255));
         jLabel19.setText("ALMACEN");
+        jPanel12.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(189, 13, -1, -1));
 
         placasEnStock_HP.setForeground(new java.awt.Color(255, 255, 255));
         placasEnStock_HP.setText("0");
+        jPanel12.add(placasEnStock_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(209, 47, -1, -1));
 
         CPUsEnStock_HP.setForeground(new java.awt.Color(255, 255, 255));
         CPUsEnStock_HP.setText("0");
+        jPanel12.add(CPUsEnStock_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(209, 75, -1, -1));
 
         RAMsEnStock_HP.setForeground(new java.awt.Color(255, 255, 255));
         RAMsEnStock_HP.setText("0");
+        jPanel12.add(RAMsEnStock_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(209, 103, -1, -1));
 
         fuentesEnStock_HP.setForeground(new java.awt.Color(255, 255, 255));
         fuentesEnStock_HP.setText("0");
+        jPanel12.add(fuentesEnStock_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(209, 131, -1, -1));
 
         tGraficasEnStock_HP.setForeground(new java.awt.Color(255, 255, 255));
         tGraficasEnStock_HP.setText("0");
+        jPanel12.add(tGraficasEnStock_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(209, 159, -1, -1));
 
         jLabel20.setForeground(new java.awt.Color(255, 255, 255));
         jLabel20.setText("Capacidad máx.:            25");
+        jPanel12.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(263, 47, 150, -1));
 
         jLabel21.setForeground(new java.awt.Color(255, 255, 255));
         jLabel21.setText("Capacidad máx.:            20");
+        jPanel12.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(263, 75, 150, -1));
 
         jLabel22.setForeground(new java.awt.Color(255, 255, 255));
         jLabel22.setText("Capacidad máx.:            55");
+        jPanel12.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(263, 103, 150, -1));
 
         jLabel23.setForeground(new java.awt.Color(255, 255, 255));
         jLabel23.setText("Capacidad máx.:            35");
+        jPanel12.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(263, 131, 150, -1));
 
         jLabel24.setForeground(new java.awt.Color(255, 255, 255));
         jLabel24.setText("Capacidad máx.:            10");
+        jPanel12.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(263, 159, 150, -1));
 
         cantCompEstandarListos_HP.setForeground(new java.awt.Color(255, 255, 255));
         cantCompEstandarListos_HP.setText("0");
+        jPanel12.add(cantCompEstandarListos_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(331, 203, -1, -1));
 
         compEstandarLabel_HP.setForeground(new java.awt.Color(255, 255, 255));
         compEstandarLabel_HP.setText("Computadores estándar listos:");
+        jPanel12.add(compEstandarLabel_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(79, 203, -1, -1));
 
         compConTGLabel_HP.setForeground(new java.awt.Color(255, 255, 255));
         compConTGLabel_HP.setText("Computadores con tarjeta gráfica listos:");
+        jPanel12.add(compConTGLabel_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(79, 231, -1, -1));
 
         cantCompTGListos_HP.setForeground(new java.awt.Color(255, 255, 255));
         cantCompTGListos_HP.setText("0");
+        jPanel12.add(cantCompTGListos_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(331, 231, -1, -1));
 
-        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
-        jPanel12.setLayout(jPanel12Layout);
-        jPanel12Layout.setHorizontalGroup(
-            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel12Layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel14)
-                    .addComponent(jLabel15)
-                    .addComponent(jLabel17)
-                    .addComponent(jLabel18)
-                    .addComponent(jLabel16))
-                .addGap(52, 52, 52)
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(placasEnStock_HP)
-                    .addComponent(tGraficasEnStock_HP)
-                    .addComponent(fuentesEnStock_HP)
-                    .addComponent(RAMsEnStock_HP)
-                    .addComponent(CPUsEnStock_HP))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(25, 25, 25))
-            .addGroup(jPanel12Layout.createSequentialGroup()
-                .addGap(79, 79, 79)
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(compEstandarLabel_HP)
-                    .addComponent(compConTGLabel_HP))
-                .addGap(41, 41, 41)
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(cantCompTGListos_HP)
-                    .addComponent(cantCompEstandarListos_HP))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel19)
-                .addGap(181, 181, 181))
-        );
-        jPanel12Layout.setVerticalGroup(
-            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel12Layout.createSequentialGroup()
-                .addGap(13, 13, 13)
-                .addComponent(jLabel19)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel14)
-                    .addComponent(placasEnStock_HP)
-                    .addComponent(jLabel20))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CPUsEnStock_HP)
-                    .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel15)
-                        .addComponent(jLabel21)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel16)
-                    .addComponent(RAMsEnStock_HP)
-                    .addComponent(jLabel22))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel17)
-                    .addComponent(fuentesEnStock_HP)
-                    .addComponent(jLabel23))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel18)
-                    .addComponent(tGraficasEnStock_HP)
-                    .addComponent(jLabel24))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(compEstandarLabel_HP)
-                    .addComponent(cantCompEstandarListos_HP))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(compConTGLabel_HP)
-                    .addComponent(cantCompTGListos_HP))
-                .addGap(25, 25, 25))
-        );
-
-        jPanel3.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 60, -1, -1));
+        ventanaHP.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 60, 420, 260));
 
         jPanel13.setBackground(new java.awt.Color(153, 153, 255));
+        jPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel25.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel25.setForeground(new java.awt.Color(255, 255, 255));
         jLabel25.setText("DATOS RELEVANTES");
+        jPanel13.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(112, 19, -1, -1));
 
         ganaciasLabel_HP.setForeground(new java.awt.Color(255, 255, 255));
         ganaciasLabel_HP.setText("Ganancias en bruto:");
+        jPanel13.add(ganaciasLabel_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 53, -1, -1));
 
         costosLabel_HP.setForeground(new java.awt.Color(255, 255, 255));
         costosLabel_HP.setText("Costos operativos:");
+        jPanel13.add(costosLabel_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 87, -1, -1));
 
         utilidadLabel_HP.setForeground(new java.awt.Color(255, 255, 255));
         utilidadLabel_HP.setText("Utilidad total:");
+        jPanel13.add(utilidadLabel_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 121, -1, -1));
 
         diasRestantesLabel_HP.setForeground(new java.awt.Color(255, 255, 255));
         diasRestantesLabel_HP.setText("Días restantes para la entrega:");
+        jPanel13.add(diasRestantesLabel_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 155, -1, -1));
 
         ganacias_HP.setForeground(new java.awt.Color(255, 255, 255));
         ganacias_HP.setText("0");
+        jPanel13.add(ganacias_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(244, 53, 31, -1));
 
         costos_HP.setForeground(new java.awt.Color(255, 255, 255));
         costos_HP.setText("0");
+        jPanel13.add(costos_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(244, 87, 31, -1));
 
         utilidad_HP.setForeground(new java.awt.Color(255, 255, 255));
         utilidad_HP.setText("0");
+        jPanel13.add(utilidad_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(244, 121, -1, -1));
 
         diasRestantes_HP.setForeground(new java.awt.Color(255, 255, 255));
         diasRestantes_HP.setText("0");
+        jPanel13.add(diasRestantes_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(244, 155, -1, -1));
 
-        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
-        jPanel13.setLayout(jPanel13Layout);
-        jPanel13Layout.setHorizontalGroup(
-            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel13Layout.createSequentialGroup()
-                .addContainerGap(51, Short.MAX_VALUE)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(diasRestantesLabel_HP)
-                    .addComponent(utilidadLabel_HP)
-                    .addComponent(costosLabel_HP)
-                    .addComponent(ganaciasLabel_HP))
-                .addGap(33, 33, 33)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(costos_HP, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
-                        .addComponent(ganacias_HP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(utilidad_HP)
-                    .addComponent(diasRestantes_HP))
-                .addGap(45, 45, 45))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel25)
-                .addGap(91, 91, 91))
-        );
-        jPanel13Layout.setVerticalGroup(
-            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel13Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(jLabel25)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ganaciasLabel_HP)
-                    .addComponent(ganacias_HP))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(costosLabel_HP)
-                    .addComponent(costos_HP))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(utilidadLabel_HP)
-                    .addComponent(utilidad_HP))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(diasRestantesLabel_HP)
-                    .addComponent(diasRestantes_HP))
-                .addContainerGap(28, Short.MAX_VALUE))
-        );
-
-        jPanel3.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 350, 320, -1));
+        ventanaHP.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 350, 320, 190));
 
         jPanel14.setBackground(new java.awt.Color(102, 102, 255));
+        jPanel14.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel27.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel27.setForeground(new java.awt.Color(255, 255, 255));
         jLabel27.setText("PROJECT MANAGER / DIRECTOR");
+        jPanel14.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(108, 6, -1, -1));
 
         estadoPMLabel_HP.setForeground(new java.awt.Color(255, 255, 255));
         estadoPMLabel_HP.setText("Estado PM:");
+        jPanel14.add(estadoPMLabel_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 34, -1, -1));
 
         nroFaltasPMLabel_HP.setForeground(new java.awt.Color(255, 255, 255));
         nroFaltasPMLabel_HP.setText("Nro. faltas PM:");
+        jPanel14.add(nroFaltasPMLabel_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 62, -1, -1));
 
         sueldoDescontadoPMLabel_HP.setForeground(new java.awt.Color(255, 255, 255));
         sueldoDescontadoPMLabel_HP.setText("Sueldo descontado:");
+        jPanel14.add(sueldoDescontadoPMLabel_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 89, -1, -1));
 
         estadoPM_HP.setForeground(new java.awt.Color(255, 255, 255));
         estadoPM_HP.setText("...");
+        jPanel14.add(estadoPM_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(148, 34, -1, -1));
 
         nroFaltasPM_HP.setForeground(new java.awt.Color(255, 255, 255));
         nroFaltasPM_HP.setText("0");
+        jPanel14.add(nroFaltasPM_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(148, 62, -1, -1));
 
         sueldoDescontadoPM_HP.setForeground(new java.awt.Color(255, 255, 255));
         sueldoDescontadoPM_HP.setText("0");
+        jPanel14.add(sueldoDescontadoPM_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(148, 89, -1, -1));
 
         estadoDirectorLabel_HP.setForeground(new java.awt.Color(255, 255, 255));
         estadoDirectorLabel_HP.setText("Estado director:");
+        jPanel14.add(estadoDirectorLabel_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(212, 62, -1, -1));
 
         estadoDirector_HP.setForeground(new java.awt.Color(255, 255, 255));
         estadoDirector_HP.setText("...");
+        jPanel14.add(estadoDirector_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(335, 62, -1, -1));
 
-        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
-        jPanel14.setLayout(jPanel14Layout);
-        jPanel14Layout.setHorizontalGroup(
-            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel14Layout.createSequentialGroup()
-                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel14Layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(estadoPMLabel_HP)
-                            .addComponent(nroFaltasPMLabel_HP)
-                            .addComponent(sueldoDescontadoPMLabel_HP))
-                        .addGap(26, 26, 26)
-                        .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(sueldoDescontadoPM_HP)
-                            .addGroup(jPanel14Layout.createSequentialGroup()
-                                .addComponent(nroFaltasPM_HP)
-                                .addGap(58, 58, 58)
-                                .addComponent(estadoDirectorLabel_HP)
-                                .addGap(40, 40, 40)
-                                .addComponent(estadoDirector_HP))
-                            .addComponent(estadoPM_HP)))
-                    .addGroup(jPanel14Layout.createSequentialGroup()
-                        .addGap(108, 108, 108)
-                        .addComponent(jLabel27)))
-                .addContainerGap(64, Short.MAX_VALUE))
-        );
-        jPanel14Layout.setVerticalGroup(
-            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel14Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(estadoPMLabel_HP)
-                    .addComponent(estadoPM_HP))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nroFaltasPMLabel_HP)
-                    .addComponent(nroFaltasPM_HP)
-                    .addComponent(estadoDirectorLabel_HP)
-                    .addComponent(estadoDirector_HP))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
-                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(sueldoDescontadoPMLabel_HP)
-                    .addComponent(sueldoDescontadoPM_HP))
-                .addGap(12, 12, 12))
-        );
-
-        jPanel3.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, -1, -1));
+        ventanaHP.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, 380, 120));
 
         jLabel31.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel31.setForeground(new java.awt.Color(0, 0, 0));
         jLabel31.setText("HP");
-        jPanel3.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, -1, -1));
+        ventanaHP.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, -1, -1));
 
         jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Blue-background.jpg"))); // NOI18N
         jLabel29.setText("jLabel29");
-        jPanel3.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 840, 560));
+        ventanaHP.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 840, 560));
 
-        jTabbedPane1.addTab("HP", jPanel3);
+        jTabbedPane1.addTab("HP", ventanaHP);
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 2824, Short.MAX_VALUE)
+        javax.swing.GroupLayout ventanaGraficoLayout = new javax.swing.GroupLayout(ventanaGrafico);
+        ventanaGrafico.setLayout(ventanaGraficoLayout);
+        ventanaGraficoLayout.setHorizontalGroup(
+            ventanaGraficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 840, Short.MAX_VALUE)
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 2435, Short.MAX_VALUE)
+        ventanaGraficoLayout.setVerticalGroup(
+            ventanaGraficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 560, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("Gráfico", jPanel4);
+        jTabbedPane1.addTab("Gráfico", ventanaGrafico);
 
-        getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 2470));
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -2188,15 +1890,11 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
@@ -2280,5 +1978,9 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel utilidadLabel_HP;
     private javax.swing.JLabel utilidad_Apple;
     private javax.swing.JLabel utilidad_HP;
+    private javax.swing.JPanel ventanaApple;
+    private javax.swing.JPanel ventanaGrafico;
+    private javax.swing.JPanel ventanaHP;
+    private javax.swing.JPanel ventanaMenu;
     // End of variables declaration//GEN-END:variables
 }
