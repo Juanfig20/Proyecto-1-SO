@@ -8,6 +8,7 @@ import static java.lang.Thread.sleep;
 import java.util.concurrent.Semaphore;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -88,11 +89,21 @@ public class Trabajador extends Thread{
         }
     }
     
-    
-    public void paySalary(){
+    public void pagarSalario() {
         this.setSalarioAcumulado(this.getSalarioAcumulado() + ((this.getSalario() * 24)) * this.getCantidadTrabajadores());
     }
     
+    public void removerTrabajador() {
+        if (getCantidadTrabajadores() != 1) {
+            setCantidadTrabajadores(getCantidadTrabajadores() - 1);
+        } else {
+            JOptionPane.showMessageDialog(null, "Cada departamento debe tener al menos 1 trabajador");
+        }
+    }
+    
+    public void añadirTrabajador() {
+        setCantidadTrabajadores(getCantidadTrabajadores() + 1);
+    }
     
 
     public int getTipoTrabajador() {

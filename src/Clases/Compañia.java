@@ -5,6 +5,7 @@
 package Clases;
 
 import java.util.concurrent.Semaphore;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -29,6 +30,44 @@ public class Compañia extends Thread{
     private Semaphore mutex;
     private Almacen almacen;
 
+    //Añadir constructor de la clase Compañia
+    
+    public void calcularCostos() {
+        setCostos((int) (productorPlacaBase.getSalarioAcumulado() + productorCPUs.getSalarioAcumulado() + productorRAM.getSalarioAcumulado() + productorFuente.getSalarioAcumulado() + productorTGrafica.getSalarioAcumulado() + ensamblador.getSalarioAcumulado())); //Falta salario de PM y director
+    }
+    
+    public void calcularUtilidad() {
+        setUtilidad(getGanancias() - getCostos());
+    }
+    
+    public void añadirTrabajadores(int type) {
+        int cantidadTrabajadoresActuales = (productorPlacaBase.getCantidadTrabajadores() + productorCPUs.getCantidadTrabajadores() + productorRAM.getCantidadTrabajadores() + productorFuente.getCantidadTrabajadores() + productorTGrafica.getCantidadTrabajadores());
+        
+        if (cantidadTrabajadoresActuales < getMaxTrabajadores()) {
+            if (type == 0) {
+                productorPlacaBase.añadirTrabajador();
+            }
+            if (type == 1) {
+                productorCPUs.añadirTrabajador();
+            }
+            if (type == 2) {
+                productorRAM.añadirTrabajador();
+            }
+            if (type == 3) {
+                productorFuente.añadirTrabajador();
+            }
+            if (type == 4) {
+                productorTGrafica.añadirTrabajador();
+            }
+            if (type == 5) {
+                ensamblador.añadirTrabajador();
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Se ha alcanzado el limite de trabajadores");        }
+    }
+    
+    
+    
     public Trabajador getProductorPlacaBase() {
         return productorPlacaBase;
     }
