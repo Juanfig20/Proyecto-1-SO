@@ -24,7 +24,7 @@ public class Almacen {
     private int ramEnsamblaje;
     private int fuenteAlimentacionEnsamblaje;
     private int tarjetaGraficaEnsamblaje;
-    private int cantidad;
+    private int cantidad; // Esta es la cantidad de computadoras necesaria para crear una con tarjeta grafica
     private int contadorcompus;
     private String name;
 
@@ -44,6 +44,7 @@ public class Almacen {
         this.cantidad = cantidad;
         this.contadorcompus = 0;
         this.name = name;
+        //Las de nombre ensamblaje son lacantidad necesaria para ensamblar una compania 
     }
     
     public void addPart(int type, int cantidad) {
@@ -102,12 +103,14 @@ public class Almacen {
         this.cpu -= this.cpuEnsamblaje;
         this.ram -= this.ramEnsamblaje;
         this.fuenteAlimentacion -= this.fuenteAlimentacionEnsamblaje;
-        this.computadora += 1;  // Se ensamblan computadoras
+        this.computadora ++;  // Se ensamblan computadoras
+        this.contadorcompus ++ ;
 
         // Verificar si hay tarjetas gráficas para computadoras premium
-        if (this.tarjetaGrafica >= this.tarjetaGraficaEnsamblaje) {
+        if (this.tarjetaGrafica >= this.tarjetaGraficaEnsamblaje && this.contadorcompus >= this.cantidad) {
             this.tarjetaGrafica -= this.tarjetaGraficaEnsamblaje;
             this.computadoraPremium += 1;  // Se ensamblan computadoras premium
+            this.contadorcompus = 0 ;
         }
     }
 }
