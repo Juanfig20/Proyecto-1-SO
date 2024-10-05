@@ -1,4 +1,4 @@
-deadline, 5
-duracionDia, 5000
-cantidadApple, 3, 3, 3, 4, 5, 1 
+deadline, 2
+duracionDia, 2000
+cantidadApple, 2, 2, 2, 2, 2, 2
 cantidadHP, 4, 4, 4, 4, 3, 1

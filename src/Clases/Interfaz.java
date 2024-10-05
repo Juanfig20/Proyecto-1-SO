@@ -4,6 +4,8 @@
  */
 package Clases;
 
+import java.io.File;
+import java.io.PrintWriter;
 import javax.swing.JOptionPane;
 
 /**
@@ -1982,6 +1984,18 @@ public class Interfaz extends javax.swing.JFrame {
 
     private void guardarCambiosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarCambiosActionPerformed
         // TODO add your handling code here:
+        String configuraciones = "deadline, " + deadline.getValue() + "\n" + "duracionDia, " + duracionDia.getValue() + "\n" + "cantidadApple, " + numPlacaBase_Apple.getText() + ", " + numCPUS_Apple.getText() + ", " + numRAM_Apple.getText() + ", " + numFuente_Apple.getText() + ", " + numTGraficas_Apple.getText() + ", " + numEnsambladores_Apple.getText() + "\n" + "cantidadHP, " + numPlacaBase_HP.getText() + ", " + numCPUS_HP.getText() + ", " + numRAM_HP.getText() + ", " + numFuentes_HP.getText() + ", " +numTGraficas_HP.getText() + ", " + numEnsambladores_HP.getText();
+        
+        File fichero = new File("src\\Archivo\\Configuraciones.txt");
+        String contenido = "";
+        
+        try{
+            PrintWriter salida = new PrintWriter(fichero);
+            salida.print(configuraciones);
+            salida.close();
+        }catch(Exception e){
+            System.out.println(e);
+        }
     }//GEN-LAST:event_guardarCambiosActionPerformed
 
     private void iniciarSimulacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarSimulacionActionPerformed
