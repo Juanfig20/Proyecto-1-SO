@@ -23,12 +23,13 @@ public class Empresa extends Thread{
     private Trabajador ensamblador;
     private ProjectManager pm;    
     private Director director;    
-     private int duracion; // Duracion dia
+    private int duracion;   // Duracion dia
     private int deadline;
     private int ganancia;   //Ganancia de los capitulos sin gastos
     private int costos;
-    private int maxTrabajadores;
     private int utilidad;
+    private int maxTrabajadores;
+    private int [] numTrabajadoresIniciales;
     private Almacen almacen;
     private int precioCompu;
     private int precioPremium;
@@ -37,20 +38,21 @@ public class Empresa extends Thread{
     private Semaphore mutex3;
    
 
-    public Empresa( Almacen almacen,int duracion, int deadline, int maxtrabajadores,int precioCompu, int precioPremium) {
+    public Empresa(Almacen almacen, int [] numTrabajadoresIniciales, int duracion, int deadline, int maxtrabajadores, int precioCompu, int precioPremium) {
         this.ganancia = 0;
         this.costos = 0;
-        this.duracion = duracion;
         this.utilidad = 0;
+        this.duracion = duracion;
+        this.deadline = deadline;
         this.precioCompu = precioCompu;
         this.precioPremium = precioPremium;
         this.maxTrabajadores = maxTrabajadores;
+        this.numTrabajadoresIniciales = numTrabajadoresIniciales;
         this.mutex = new Semaphore(1);
         this.mutex2 = new Semaphore(1);
         this.mutex3 = new Semaphore(1);
         this.almacen = almacen;
         empleados ();
-      
     }
     
     // Hay que ver como poner la cantidad inicial de trabajadores, es el segundo atributo en el constructor trabajador

@@ -29,7 +29,7 @@ public class Almacen {
     private String name;
     private Empresa empresa;
 
-    public Almacen(String name, int placaBaseEnsamblaje, int cpuEnsamblaje, int ramEnsamblaje, int fuenteAlimentacionEnsamblaje, int tarjetaGraficaEnsamblaje, int cantidad) {
+    public Almacen(int placaBaseEnsamblaje, int cpuEnsamblaje, int ramEnsamblaje, int fuenteAlimentacionEnsamblaje, int tarjetaGraficaEnsamblaje, int cantidad) {
         this.placaBase = 0;
         this.cpu = 0;
         this.ram = 0;
@@ -44,7 +44,6 @@ public class Almacen {
         this.tarjetaGraficaEnsamblaje = tarjetaGraficaEnsamblaje;
         this.cantidad = cantidad;
         this.contadorcompus = 0;
-        this.name = name;
         this.empresa = empresa;
         //Las de nombre ensamblaje son lacantidad necesaria para ensamblar una compania 
     }

@@ -9,12 +9,46 @@ package Clases;
  * @author manza
  */
 public class Interfaz extends javax.swing.JFrame {
-
+    
+    static Empresa apple;
+    static Empresa hp;
+    
     /**
      * Creates new form Interfaz
      */
-    public Interfaz() {
+    
+    public Interfaz(Empresa apple, Empresa hp, int [] numTrabajadoresInicialesA, int [] numTrabajadoresInicialesH) {
         initComponents();
+        this.apple = apple;
+        this.hp = hp;
+        
+        // ---------------------- Interfaz Ventana: Menú ----------------------
+        
+        //Deadline
+        this.deadline.setValue(apple.getDeadline());
+        
+        //Duración del día
+        this.duracionDia.setValue(apple.getDuracion());
+        
+        //Trabajadores iniciales Apple
+        this.numPlacaBase_Apple.setText(String.valueOf(numTrabajadoresInicialesA[0]));
+        this.numCPUS_Apple.setText(String.valueOf(numTrabajadoresInicialesA[1]));
+        this.numRAM_Apple.setText(String.valueOf(numTrabajadoresInicialesA[2]));
+        this.numFuente_Apple.setText(String.valueOf(numTrabajadoresInicialesA[3]));
+        this.numTGraficas_Apple.setText(String.valueOf(numTrabajadoresInicialesA[4]));
+        this.numEnsambladores_Apple.setText(String.valueOf(numTrabajadoresInicialesA[5]));
+        
+        //Trabajadores iniciales HP
+        this.numPlacaBase_HP.setText(String.valueOf(numTrabajadoresInicialesH[0]));
+        this.numCPUS_HP.setText(String.valueOf(numTrabajadoresInicialesH[1]));
+        this.numRAM_HP.setText(String.valueOf(numTrabajadoresInicialesH[2]));
+        this.numFuentes_HP.setText(String.valueOf(numTrabajadoresInicialesH[3]));
+        this.numTGraficas_HP.setText(String.valueOf(numTrabajadoresInicialesH[4]));
+        this.numEnsambladores_HP.setText(String.valueOf(numTrabajadoresInicialesH[5]));
+        
+        
+        
+        
     }
 
     /**
