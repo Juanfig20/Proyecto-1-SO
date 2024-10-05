@@ -61,9 +61,9 @@ public class Director extends Thread {
                     sleep((this.duracionDia*random)/24);
                     
                     estado = "Revisando Project Manager";
-                    //checkPM();
+                    checkPM();
                     sleep((duracionDia*30)/(24*60));
-                    //checkPM();
+                    checkPM();
                     sleep((duracionDia*5)/(24*60));                    
                     
                     estado = "Labores Administrativas";
@@ -110,21 +110,19 @@ public class Director extends Thread {
         }   
     }
     
-    /*public void checkPM(){
-        if (company.getPm().getStatus().equals("Viendo One Piece (anime)")){
-            company.getPm().setFault(company.getPm().getFault() + 1);
-            this.labels[2].setText(Integer.toString(company.getPm().getFault()));
-            company.getPm().setDiscounted(company.getPm().getDiscounted() + 100); 
-            this.labels[3].setText(Integer.toString(company.getPm().getDiscounted()));
+    public void checkPM(){
+        if (empresa.getPm().getEstado().equals("Viendo One Piece")){
+            empresa.getPm().setFalta(empresa.getPm().getFalta() + 1);
+            empresa.getPm().setDescuento(empresa.getPm().getDescuento() + 100); 
             try {
                 this.mutex3.acquire(); //wait
-                company.getPm().setSalaryAcumulate(company.getPm().getSalaryAcumulate() - 100);//critica   
+                empresa.getPm().setSalarioAcumulado(empresa.getPm().getSalarioAcumulado() - 100);   
                 this.mutex3.release(); // signal
             } catch (InterruptedException ex) {
-                Logger.getLogger(Worker.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Trabajador.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-    }*/
+    }
 
     public float getSalarioAcumulado() {
         return salarioAcumulado;

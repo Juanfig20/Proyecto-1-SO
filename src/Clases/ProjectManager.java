@@ -92,6 +92,46 @@ public class ProjectManager extends Thread {
     public void setDaysPassedTotal(int daysPassedTotal) {
         this.daysPassedTotal = daysPassedTotal;
     }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public int getFalta() {
+        return falta;
+    }
+
+    public void setFalta(int falta) {
+        this.falta = falta;
+    }
+
+    public int getDescuento() {
+        return descuento;
+    }
+
+    public void setDescuento(int descuento) {
+        this.descuento = descuento;
+    }
+
+    public int getSalario() {
+        return salario;
+    }
+
+    public void setSalario(int salario) {
+        this.salario = salario;
+    }
+
+    public float getSalarioAcumulado() {
+        return salarioAcumulado;
+    }
+
+    public void setSalarioAcumulado(float salarioAcumulado) {
+        this.salarioAcumulado = salarioAcumulado;
+    }
     
     
     
