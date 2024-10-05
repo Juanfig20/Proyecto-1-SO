@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package proyecto1.so;
+package Clases;
 
 import static java.lang.Thread.sleep;
 import java.util.concurrent.Semaphore;
@@ -74,7 +74,6 @@ public class Trabajador extends Thread{
         }
     }
     
-    
     public void pagar(){
         this.setSalarioAcumulado(this.getSalarioAcumulado() + ((this.getSalario() * 24)) * this.getCantidadTrabajadores());
     }
@@ -120,8 +119,7 @@ public class Trabajador extends Thread{
     public void contratar(){
         this.setCantidadTrabajadores(cantidadTrabajadores + 1);
     }
-    
-    
+     
 
     public int getTipoTrabajador() {
         return tipoTrabajador;
