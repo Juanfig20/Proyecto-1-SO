@@ -24,7 +24,7 @@ public class ProjectManager extends Thread {
     private int contadorMin;
     private int daysPassedTotal; // solo para el pm, que el lo cambie 
     private Semaphore mutex;
-    //private Company company;
+    private Empresa empresa;
     private Semaphore mutex2;
     private Semaphore mutex3;
     
@@ -39,7 +39,7 @@ public class ProjectManager extends Thread {
         this.mutex = mutex;
         this.mutex3 = mutex3;
         this.mutex2 = mutex2;
-        //this.company = company;
+        this.empresa = empresa;
     }
     
      @Override
@@ -59,7 +59,7 @@ public class ProjectManager extends Thread {
                 
                 // Restantes 8 horas
                 estado = "Trabajando";
-               // work(); Realizar funcion para que trabaje, para esto hace falta la clase Empresa
+                work(); 
                 setDaysPassedTotal(getDaysPassedTotal() + 1);
                 sleep((duracionDia/24)*8);
             } catch (InterruptedException ex) {
@@ -67,6 +67,18 @@ public class ProjectManager extends Thread {
             }
         }
     }
+    
+    public void work(){
+        try {
+            this.mutex2.acquire(); //wait
+            this.empresa.setDeadline(this.empresa.getDeadline() - 1); 
+            this.mutex2.release(); // signal
+        } catch (InterruptedException ex) {
+            Logger.getLogger(Trabajador.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }
+    
     
     public void pagar() {
         this.salarioAcumulado += this.salario * 24;

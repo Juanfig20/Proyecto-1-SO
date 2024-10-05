@@ -27,6 +27,7 @@ public class Almacen {
     private int cantidad; // Esta es la cantidad de computadoras necesaria para crear una con tarjeta grafica
     private int contadorcompus;
     private String name;
+    private Empresa empresa;
 
     public Almacen(String name, int placaBaseEnsamblaje, int cpuEnsamblaje, int ramEnsamblaje, int fuenteAlimentacionEnsamblaje, int tarjetaGraficaEnsamblaje, int cantidad) {
         this.placaBase = 0;
@@ -44,6 +45,7 @@ public class Almacen {
         this.cantidad = cantidad;
         this.contadorcompus = 0;
         this.name = name;
+        this.empresa = empresa;
         //Las de nombre ensamblaje son lacantidad necesaria para ensamblar una compania 
     }
     
@@ -114,6 +116,13 @@ public class Almacen {
         }
     }
 }
-    
+     public void mandarCompus() {
+        this.empresa.setGanancia(this.empresa.getGanancia() + (this.empresa.getPrecioCompu()*computadora));
+        this.empresa.setGanancia(this.empresa.getGanancia() + this.empresa.getPrecioPremium()*computadoraPremium);
+   
+        computadora = 0;
+        computadoraPremium = 0;
+   
+    }
     
 }
