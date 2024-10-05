@@ -48,8 +48,27 @@ public class Interfaz extends javax.swing.JFrame {
         this.numTGraficas_HP.setText(String.valueOf(numTrabajadoresInicialesH[4]));
         this.numEnsambladores_HP.setText(String.valueOf(numTrabajadoresInicialesH[5]));
         
+        // ---------------------- Interfaz Ventana: Apple ----------------------
+        
+        //Lista de trabajadores
+        this.numTrabajadoresPB_Apple.setText(String.valueOf(numTrabajadoresInicialesA[0]));
+        this.numTrabajadoresCPU_Apple.setText(String.valueOf(numTrabajadoresInicialesA[1]));
+        this.numTrabajadoresRAM_Apple.setText(String.valueOf(numTrabajadoresInicialesA[2]));
+        this.numTrabajadoresFuente_Apple.setText(String.valueOf(numTrabajadoresInicialesA[3]));
+        this.numTrabajadoresTG_Apple.setText(String.valueOf(numTrabajadoresInicialesA[4]));
+        this.numTrabajadoresEnsamb_Apple.setText(String.valueOf(numTrabajadoresInicialesA[5]));
         
         
+        
+        // ---------------------- Interfaz Ventana: HP ----------------------
+        
+        //Lista de trabajadores
+        this.numTrabajadoresPB_HP.setText(String.valueOf(numTrabajadoresInicialesH[0]));
+        this.numTrabajadoresCPU_HP.setText(String.valueOf(numTrabajadoresInicialesH[1]));
+        this.numTrabajadoresRAM_HP.setText(String.valueOf(numTrabajadoresInicialesH[2]));
+        this.numTrabajadoresFuente_HP.setText(String.valueOf(numTrabajadoresInicialesH[3]));
+        this.numTrabajadoresTG_HP.setText(String.valueOf(numTrabajadoresInicialesH[4]));
+        this.numTrabajadoresEnsamb_HP.setText(String.valueOf(numTrabajadoresInicialesH[5]));
         
     }
 
@@ -121,6 +140,8 @@ public class Interfaz extends javax.swing.JFrame {
         memoriaRAMMenu_HP = new javax.swing.JLabel();
         fuentesMenu_HP = new javax.swing.JLabel();
         tarjetasGraficasMenu_HP = new javax.swing.JLabel();
+        guardarCambios = new javax.swing.JButton();
+        iniciarSimulacion = new javax.swing.JButton();
         ventanaApple = new javax.swing.JPanel();
         jLabel30 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
@@ -749,6 +770,25 @@ public class Interfaz extends javax.swing.JFrame {
         );
 
         ventanaMenu.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(442, 227, -1, -1));
+
+        guardarCambios.setBackground(new java.awt.Color(255, 255, 255));
+        guardarCambios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/guardar-el-archivo.png"))); // NOI18N
+        guardarCambios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                guardarCambiosActionPerformed(evt);
+            }
+        });
+        ventanaMenu.add(guardarCambios, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 20, 30, 30));
+
+        iniciarSimulacion.setBackground(new java.awt.Color(255, 255, 255));
+        iniciarSimulacion.setForeground(new java.awt.Color(255, 255, 255));
+        iniciarSimulacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/boton-de-play.png"))); // NOI18N
+        iniciarSimulacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                iniciarSimulacionActionPerformed(evt);
+            }
+        });
+        ventanaMenu.add(iniciarSimulacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 20, 30, 30));
 
         jTabbedPane1.addTab("Menú", ventanaMenu);
 
@@ -1939,6 +1979,14 @@ public class Interfaz extends javax.swing.JFrame {
     private void addNumPB_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNumPB_HPActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_addNumPB_HPActionPerformed
+
+    private void guardarCambiosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarCambiosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_guardarCambiosActionPerformed
+
+    private void iniciarSimulacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarSimulacionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_iniciarSimulacionActionPerformed
     
     /**
      * @param args the command line arguments
@@ -2052,6 +2100,8 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel ganaciasLabel_HP;
     private javax.swing.JLabel ganacias_Apple;
     private javax.swing.JLabel ganacias_HP;
+    private javax.swing.JButton guardarCambios;
+    private javax.swing.JButton iniciarSimulacion;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
