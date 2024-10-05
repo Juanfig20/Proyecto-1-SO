@@ -21,8 +21,8 @@ public class Empresa extends Thread{
     private Trabajador productorFuente;
     private Trabajador productorTGrafica;
     private Trabajador ensamblador;
-    //private ProjectManager pm;    Faltan Getters y Setters
-    //private Director director;    Faltan Getters y Setters
+    private ProjectManager pm;    
+    private Director director;    
      private int duracion; // Duracion dia
     private int deadline;
     private int ganancia;   //Ganancia de los capitulos sin gastos
@@ -33,6 +33,8 @@ public class Empresa extends Thread{
     private int precioCompu;
     private int precioPremium;
     private Semaphore mutex;
+    private Semaphore mutex2;
+    private Semaphore mutex3;
    
 
     public Empresa( Almacen almacen,int duracion, int deadline, int maxtrabajadores,int precioCompu, int precioPremium) {
@@ -44,6 +46,8 @@ public class Empresa extends Thread{
         this.precioPremium = precioPremium;
         this.maxTrabajadores = maxTrabajadores;
         this.mutex = new Semaphore(1);
+        this.mutex2 = new Semaphore(1);
+        this.mutex3 = new Semaphore(1);
         this.almacen = almacen;
         empleados ();
       
@@ -57,8 +61,8 @@ public class Empresa extends Thread{
         productorFuente = new Trabajador(3,  1, duracion, almacen, mutex);
         productorTGrafica = new Trabajador(4,  1, duracion, almacen, mutex);
         ensamblador= new Trabajador(5,  1, duracion, almacen, mutex);
-        //pm = new PM();
-        //director = new Director();
+        pm = new ProjectManager(duracion,  mutex,  mutex2,  mutex3);
+        director = new Director( duracion, almacen,  mutex,  mutex2,  mutex3, this);
     }
     
     @Override
@@ -242,6 +246,22 @@ public class Empresa extends Thread{
 
     public void setDeadline(int deadline) {
         this.deadline = deadline;
+    }
+
+    public ProjectManager getPm() {
+        return pm;
+    }
+
+    public void setPm(ProjectManager pm) {
+        this.pm = pm;
+    }
+
+    public Director getDirector() {
+        return director;
+    }
+
+    public void setDirector(Director director) {
+        this.director = director;
     }
     
     
