@@ -79,9 +79,24 @@ public class Trabajador extends Thread{
         this.setSalarioAcumulado(this.getSalarioAcumulado() + ((this.getSalario() * 24)) * this.getCantidadTrabajadores());
     }
     
-    public void trabajar(){
-        this.setContadorDias(this.getContadorDias() + 1);
-        if (this.getContadorDias() == this.getDiasRestantes()){ // ese valor de 2 depende de la compania
+    public void trabajar() {
+    this.setContadorDias(this.getContadorDias() + 1);
+    
+    if (this.tipoTrabajador == 5) { // Solo los ensambladores (tipo 5) ensamblan computadoras
+        // Ensamblaje de computadoras
+        if (this.getContadorDias() >= this.getDiasRestantes()) { //Dias restantes depende de la compania
+            try {
+                this.getMutex().acquire(); //wait
+                this.getAlmacen().ensamblar(); // Método ensamblar computadora en la clase Almacen
+                this.getMutex().release(); // signal
+                this.setContadorDias(0);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Trabajador.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    } else {
+        // Lógica para otros trabajadores que producen partes
+        if (this.getContadorDias() >= this.getDiasRestantes()) {
             try {
                 this.getMutex().acquire(); //wait
                 this.getAlmacen().addPart(this.getTipoTrabajador(), this.getCantidadTrabajadores()); 
@@ -90,8 +105,9 @@ public class Trabajador extends Thread{
             } catch (InterruptedException ex) {
                 Logger.getLogger(Trabajador.class.getName()).log(Level.SEVERE, null, ex);
             }
-        }   
+        }
     }
+}
     
      public void despedir() {
         if (this.getCantidadTrabajadores() != 1) {

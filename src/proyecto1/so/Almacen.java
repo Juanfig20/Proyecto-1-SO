@@ -91,4 +91,26 @@ public class Almacen {
         }
     }
 
+    public void ensamblar() {
+    if (this.placaBase >= this.placaBaseEnsamblaje 
+        && this.cpu >= this.cpuEnsamblaje
+        && this.ram >= this.ramEnsamblaje
+        && this.fuenteAlimentacion >= this.fuenteAlimentacionEnsamblaje) {
+        
+        // Ensamblar computadoras normales
+        this.placaBase -= this.placaBaseEnsamblaje;
+        this.cpu -= this.cpuEnsamblaje;
+        this.ram -= this.ramEnsamblaje;
+        this.fuenteAlimentacion -= this.fuenteAlimentacionEnsamblaje;
+        this.computadora += 1;  // Se ensamblan computadoras
+
+        // Verificar si hay tarjetas gráficas para computadoras premium
+        if (this.tarjetaGrafica >= this.tarjetaGraficaEnsamblaje) {
+            this.tarjetaGrafica -= this.tarjetaGraficaEnsamblaje;
+            this.computadoraPremium += 1;  // Se ensamblan computadoras premium
+        }
+    }
+}
+    
+    
 }
