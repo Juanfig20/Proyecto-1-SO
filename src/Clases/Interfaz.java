@@ -4,6 +4,8 @@
  */
 package Clases;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author manza
@@ -276,8 +278,12 @@ public class Interfaz extends javax.swing.JFrame {
 
         deadlineLabel.setText("Días límites");
         ventanaMenu.add(deadlineLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(454, 83, -1, -1));
-        ventanaMenu.add(duracionDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 80, -1, -1));
-        ventanaMenu.add(deadline, new org.netbeans.lib.awtextra.AbsoluteConstraints(528, 80, -1, -1));
+
+        duracionDia.setModel(new javax.swing.SpinnerNumberModel(1000, 1000, null, 1000));
+        ventanaMenu.add(duracionDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 80, 80, -1));
+
+        deadline.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+        ventanaMenu.add(deadline, new org.netbeans.lib.awtextra.AbsoluteConstraints(528, 80, 80, -1));
 
         jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Logo-Apple.jpg"))); // NOI18N
         jLabel26.setText("jLabel26");
@@ -1590,98 +1596,252 @@ public class Interfaz extends javax.swing.JFrame {
 
     private void removePlacaBase_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removePlacaBase_AppleActionPerformed
         // TODO add your handling code here:
+        if (Integer.parseInt(numPlacaBase_Apple.getText()) == 1){
+            JOptionPane.showMessageDialog(null, "No pueden quedar áreas sin empelados");
+        } else{
+            int nuevaCantidad = Integer.parseInt(numPlacaBase_Apple.getText())-1;
+            numPlacaBase_Apple.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_removePlacaBase_AppleActionPerformed
 
     private void removeCPU_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeCPU_AppleActionPerformed
         // TODO add your handling code here:
+        if (Integer.parseInt(numCPUS_Apple.getText()) == 1){
+            JOptionPane.showMessageDialog(null, "No pueden quedar áreas sin empelados");
+        } else{
+            int nuevaCantidad = Integer.parseInt(numCPUS_Apple.getText())-1;
+            numCPUS_Apple.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_removeCPU_AppleActionPerformed
 
     private void removeRAM_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeRAM_AppleActionPerformed
         // TODO add your handling code here:
+        if (Integer.parseInt(numRAM_Apple.getText()) == 1){
+            JOptionPane.showMessageDialog(null, "No pueden quedar áreas sin empelados");
+        } else{
+            int nuevaCantidad = Integer.parseInt(numRAM_Apple.getText())-1;
+            numRAM_Apple.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_removeRAM_AppleActionPerformed
 
     private void removeFuente_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeFuente_AppleActionPerformed
         // TODO add your handling code here:
+        if (Integer.parseInt(numFuente_Apple.getText()) == 1){
+            JOptionPane.showMessageDialog(null, "No pueden quedar áreas sin empelados");
+        } else{
+            int nuevaCantidad = Integer.parseInt(numFuente_Apple.getText())-1;
+            numFuente_Apple.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_removeFuente_AppleActionPerformed
 
     private void removeTGrafica_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeTGrafica_AppleActionPerformed
         // TODO add your handling code here:
+        if (Integer.parseInt(numTGraficas_Apple.getText()) == 1){
+            JOptionPane.showMessageDialog(null, "No pueden quedar áreas sin empelados");
+        } else{
+            int nuevaCantidad = Integer.parseInt(numTGraficas_Apple.getText())-1;
+            numTGraficas_Apple.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_removeTGrafica_AppleActionPerformed
 
+    private int calcularCantidadTrabajadoresApple() {
+        int cantidad = (Integer.parseInt(numPlacaBase_Apple.getText()) + Integer.parseInt(numCPUS_Apple.getText()) + Integer.parseInt(numRAM_Apple.getText()) + Integer.parseInt(numFuente_Apple.getText()) + Integer.parseInt(numTGraficas_Apple.getText()) + Integer.parseInt(numEnsambladores_Apple.getText()));
+        return cantidad;
+    }
+    
+    private int calcularCantidadTrabajadoresHP() {
+        int cantidad = (Integer.parseInt(numPlacaBase_HP.getText()) + Integer.parseInt(numCPUS_HP.getText()) + Integer.parseInt(numRAM_HP.getText()) + Integer.parseInt(numFuentes_HP.getText()) + Integer.parseInt(numTGraficas_HP.getText()) + Integer.parseInt(numEnsambladores_HP.getText()));
+        return cantidad;
+    }
+    
     private void addPlacaBase_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPlacaBase_AppleActionPerformed
         // TODO add your handling code here:
+        if (calcularCantidadTrabajadoresApple()== 19){
+            JOptionPane.showMessageDialog(null, "Se ha alcanzado el límite de trabajadores para Apple");
+        } else {
+            int nuevaCantidad = Integer.parseInt(numPlacaBase_Apple.getText())+1;
+            numPlacaBase_Apple.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_addPlacaBase_AppleActionPerformed
 
     private void addCPU_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addCPU_AppleActionPerformed
         // TODO add your handling code here:
+        if (calcularCantidadTrabajadoresApple()== 19){
+            JOptionPane.showMessageDialog(null, "Se ha alcanzado el límite de trabajadores para Apple");
+        } else {
+            int nuevaCantidad = Integer.parseInt(numCPUS_Apple.getText())+1;
+            numCPUS_Apple.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_addCPU_AppleActionPerformed
 
     private void addRAM_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addRAM_AppleActionPerformed
         // TODO add your handling code here:
+        if (calcularCantidadTrabajadoresApple()== 19){
+            JOptionPane.showMessageDialog(null, "Se ha alcanzado el límite de trabajadores para Apple");
+        } else {
+            int nuevaCantidad = Integer.parseInt(numRAM_Apple.getText())+1;
+            numRAM_Apple.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_addRAM_AppleActionPerformed
 
     private void addFuente_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addFuente_AppleActionPerformed
         // TODO add your handling code here:
+        if (calcularCantidadTrabajadoresApple()== 19){
+            JOptionPane.showMessageDialog(null, "Se ha alcanzado el límite de trabajadores para Apple");
+        } else {
+            int nuevaCantidad = Integer.parseInt(numFuente_Apple.getText())+1;
+            numFuente_Apple.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_addFuente_AppleActionPerformed
 
     private void addTGrafica_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addTGrafica_AppleActionPerformed
         // TODO add your handling code here:
+        if (calcularCantidadTrabajadoresApple()== 19){
+            JOptionPane.showMessageDialog(null, "Se ha alcanzado el límite de trabajadores para Apple");
+        } else {
+            int nuevaCantidad = Integer.parseInt(numTGraficas_Apple.getText())+1;
+            numTGraficas_Apple.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_addTGrafica_AppleActionPerformed
 
     private void removePlacaBase_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removePlacaBase_HPActionPerformed
         // TODO add your handling code here:
+        if (Integer.parseInt(numPlacaBase_HP.getText()) == 1){
+            JOptionPane.showMessageDialog(null, "No pueden quedar áreas sin empelados");
+        } else{
+            int nuevaCantidad = Integer.parseInt(numPlacaBase_HP.getText())-1;
+            numPlacaBase_HP.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_removePlacaBase_HPActionPerformed
 
     private void removeCPU_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeCPU_HPActionPerformed
         // TODO add your handling code here:
+        if (Integer.parseInt(numCPUS_HP.getText()) == 1){
+            JOptionPane.showMessageDialog(null, "No pueden quedar áreas sin empelados");
+        } else{
+            int nuevaCantidad = Integer.parseInt(numCPUS_HP.getText())-1;
+            numCPUS_HP.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_removeCPU_HPActionPerformed
 
     private void removeRAM_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeRAM_HPActionPerformed
         // TODO add your handling code here:
+        if (Integer.parseInt(numRAM_HP.getText()) == 1){
+            JOptionPane.showMessageDialog(null, "No pueden quedar áreas sin empelados");
+        } else{
+            int nuevaCantidad = Integer.parseInt(numRAM_HP.getText())-1;
+            numRAM_HP.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_removeRAM_HPActionPerformed
 
     private void removeFuente_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeFuente_HPActionPerformed
         // TODO add your handling code here:
+        if (Integer.parseInt(numFuentes_HP.getText()) == 1){
+            JOptionPane.showMessageDialog(null, "No pueden quedar áreas sin empelados");
+        } else{
+            int nuevaCantidad = Integer.parseInt(numFuentes_HP.getText())-1;
+            numFuentes_HP.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_removeFuente_HPActionPerformed
 
     private void addPlacaBase_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPlacaBase_HPActionPerformed
         // TODO add your handling code here:
+        if (calcularCantidadTrabajadoresHP()== 20){
+            JOptionPane.showMessageDialog(null, "Se ha alcanzado el límite de trabajadores para HP");
+        } else {
+            int nuevaCantidad = Integer.parseInt(numPlacaBase_HP.getText())+1;
+            numPlacaBase_HP.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_addPlacaBase_HPActionPerformed
 
     private void addCPU_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addCPU_HPActionPerformed
         // TODO add your handling code here:
+        if (calcularCantidadTrabajadoresHP()== 20){
+            JOptionPane.showMessageDialog(null, "Se ha alcanzado el límite de trabajadores para HP");
+        } else {
+            int nuevaCantidad = Integer.parseInt(numCPUS_HP.getText())+1;
+            numCPUS_HP.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_addCPU_HPActionPerformed
 
     private void addRAM_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addRAM_HPActionPerformed
         // TODO add your handling code here:
+        if (calcularCantidadTrabajadoresHP()== 20){
+            JOptionPane.showMessageDialog(null, "Se ha alcanzado el límite de trabajadores para HP");
+        } else {
+            int nuevaCantidad = Integer.parseInt(numRAM_HP.getText())+1;
+            numRAM_HP.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_addRAM_HPActionPerformed
 
     private void addFuente_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addFuente_HPActionPerformed
         // TODO add your handling code here:
+        if (calcularCantidadTrabajadoresHP()== 20){
+            JOptionPane.showMessageDialog(null, "Se ha alcanzado el límite de trabajadores para HP");
+        } else {
+            int nuevaCantidad = Integer.parseInt(numFuentes_HP.getText())+1;
+            numFuentes_HP.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_addFuente_HPActionPerformed
 
     private void removeTGrafica_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeTGrafica_HPActionPerformed
         // TODO add your handling code here:
+        if (Integer.parseInt(numTGraficas_HP.getText()) == 1){
+            JOptionPane.showMessageDialog(null, "No pueden quedar áreas sin empelados");
+        } else{
+            int nuevaCantidad = Integer.parseInt(numTGraficas_HP.getText())-1;
+            numTGraficas_HP.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_removeTGrafica_HPActionPerformed
 
     private void addTGrafica_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addTGrafica_HPActionPerformed
         // TODO add your handling code here:
+        if (calcularCantidadTrabajadoresHP()== 20){
+            JOptionPane.showMessageDialog(null, "Se ha alcanzado el límite de trabajadores para HP");
+        } else {
+            int nuevaCantidad = Integer.parseInt(numTGraficas_HP.getText())+1;
+            numTGraficas_HP.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_addTGrafica_HPActionPerformed
 
     private void removeEnsamblador_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeEnsamblador_AppleActionPerformed
         // TODO add your handling code here:
+        if (Integer.parseInt(numEnsambladores_Apple.getText()) == 1){
+            JOptionPane.showMessageDialog(null, "No pueden quedar áreas sin empelados");
+        } else{
+            int nuevaCantidad = Integer.parseInt(numEnsambladores_Apple.getText())-1;
+            numEnsambladores_Apple.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_removeEnsamblador_AppleActionPerformed
 
     private void addEnsamblador_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addEnsamblador_AppleActionPerformed
         // TODO add your handling code here:
+        if (calcularCantidadTrabajadoresApple()== 19){
+            JOptionPane.showMessageDialog(null, "Se ha alcanzado el límite de trabajadores para Apple");
+        } else {
+            int nuevaCantidad = Integer.parseInt(numEnsambladores_Apple.getText())+1;
+            numEnsambladores_Apple.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_addEnsamblador_AppleActionPerformed
 
     private void addEnsamblador_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addEnsamblador_HPActionPerformed
         // TODO add your handling code here:
+        if (calcularCantidadTrabajadoresHP()== 20){
+            JOptionPane.showMessageDialog(null, "Se ha alcanzado el límite de trabajadores para HP");
+        } else {
+            int nuevaCantidad = Integer.parseInt(numEnsambladores_HP.getText())+1;
+            numEnsambladores_HP.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_addEnsamblador_HPActionPerformed
 
     private void removeEnsamblador_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeEnsamblador_HPActionPerformed
         // TODO add your handling code here:
+        if (Integer.parseInt(numEnsambladores_HP.getText()) == 1){
+            JOptionPane.showMessageDialog(null, "No pueden quedar áreas sin empelados");
+        } else{
+            int nuevaCantidad = Integer.parseInt(numEnsambladores_HP.getText())-1;
+            numEnsambladores_HP.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_removeEnsamblador_HPActionPerformed
 
     private void removeNumPB_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeNumPB_AppleActionPerformed
@@ -1779,7 +1939,7 @@ public class Interfaz extends javax.swing.JFrame {
     private void addNumPB_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNumPB_HPActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_addNumPB_HPActionPerformed
-
+    
     /**
      * @param args the command line arguments
      */

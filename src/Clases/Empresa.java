@@ -57,12 +57,12 @@ public class Empresa extends Thread{
     
     // Hay que ver como poner la cantidad inicial de trabajadores, es el segundo atributo en el constructor trabajador
     public void empleados(){
-        productorPlacaBase = new Trabajador(0,  1, duracion, almacen, mutex) ;
-        productorCPUs = new Trabajador(1,  1, duracion, almacen, mutex);
-        productorRAM = new Trabajador(2,  1, duracion, almacen, mutex);
-        productorFuente = new Trabajador(3,  1, duracion, almacen, mutex);
-        productorTGrafica = new Trabajador(4,  1, duracion, almacen, mutex);
-        ensamblador= new Trabajador(5,  1, duracion, almacen, mutex);
+        productorPlacaBase = new Trabajador(0,  numTrabajadoresIniciales[0], duracion, almacen, mutex) ;
+        productorCPUs = new Trabajador(1,  numTrabajadoresIniciales[1], duracion, almacen, mutex);
+        productorRAM = new Trabajador(2,  numTrabajadoresIniciales[2], duracion, almacen, mutex);
+        productorFuente = new Trabajador(3,  numTrabajadoresIniciales[3], duracion, almacen, mutex);
+        productorTGrafica = new Trabajador(4,  numTrabajadoresIniciales[4], duracion, almacen, mutex);
+        ensamblador= new Trabajador(5,  numTrabajadoresIniciales[5], duracion, almacen, mutex);
         pm = new ProjectManager(duracion,  mutex,  mutex2,  mutex3);
         director = new Director( duracion, almacen,  mutex,  mutex2,  mutex3, this);
     }
