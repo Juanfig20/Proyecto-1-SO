@@ -115,7 +115,7 @@
             <Component class="javax.swing.JLabel" name="jLabel26">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Im&#xe1;genes/Logo-Apple.jpg"/>
+                  <Image iconType="3" name="/Im&#xe1;genes/LogoApple.jpg"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="jLabel26"/>
               </Properties>
@@ -128,7 +128,7 @@
             <Component class="javax.swing.JLabel" name="jLabel28">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Im&#xe1;genes/Logo-HP.png"/>
+                  <Image iconType="3" name="/Im&#xe1;genes/LogoHP.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="jLabel28"/>
               </Properties>
@@ -776,7 +776,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Im&#xe1;genes/guardar-el-archivo.png"/>
+                  <Image iconType="3" name="/Im&#xe1;genes/BotonGuardar.png"/>
                 </Property>
               </Properties>
               <Events>
@@ -797,7 +797,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Im&#xe1;genes/boton-de-play.png"/>
+                  <Image iconType="3" name="/Im&#xe1;genes/BotonPlay.png"/>
                 </Property>
               </Properties>
               <Events>
@@ -1773,7 +1773,7 @@
                   <Color blue="33" green="33" red="33" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Im&#xe1;genes/White-background.jpg"/>
+                  <Image iconType="3" name="/Im&#xe1;genes/WhiteBackground.jpg"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="jLabel32"/>
               </Properties>
@@ -2720,7 +2720,7 @@
             <Component class="javax.swing.JLabel" name="jLabel29">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Im&#xe1;genes/Blue-background.jpg"/>
+                  <Image iconType="3" name="/Im&#xe1;genes/BlueBackground.jpg"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="jLabel29"/>
               </Properties>

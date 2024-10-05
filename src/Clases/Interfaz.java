@@ -306,11 +306,11 @@ public class Interfaz extends javax.swing.JFrame {
         deadline.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
         ventanaMenu.add(deadline, new org.netbeans.lib.awtextra.AbsoluteConstraints(528, 80, 80, -1));
 
-        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Logo-Apple.jpg"))); // NOI18N
+        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/LogoApple.jpg"))); // NOI18N
         jLabel26.setText("jLabel26");
         ventanaMenu.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, 179, -1));
 
-        jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Logo-HP.png"))); // NOI18N
+        jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/LogoHP.png"))); // NOI18N
         jLabel28.setText("jLabel28");
         ventanaMenu.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 160, 198, -1));
 
@@ -772,7 +772,7 @@ public class Interfaz extends javax.swing.JFrame {
         ventanaMenu.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(442, 227, -1, -1));
 
         guardarCambios.setBackground(new java.awt.Color(255, 255, 255));
-        guardarCambios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/guardar-el-archivo.png"))); // NOI18N
+        guardarCambios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/BotonGuardar.png"))); // NOI18N
         guardarCambios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 guardarCambiosActionPerformed(evt);
@@ -782,7 +782,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         iniciarSimulacion.setBackground(new java.awt.Color(255, 255, 255));
         iniciarSimulacion.setForeground(new java.awt.Color(255, 255, 255));
-        iniciarSimulacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/boton-de-play.png"))); // NOI18N
+        iniciarSimulacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/BotonPlay.png"))); // NOI18N
         iniciarSimulacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 iniciarSimulacionActionPerformed(evt);
@@ -1264,7 +1264,7 @@ public class Interfaz extends javax.swing.JFrame {
         ventanaApple.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 350, 320, -1));
 
         jLabel32.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/White-background.jpg"))); // NOI18N
+        jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/WhiteBackground.jpg"))); // NOI18N
         jLabel32.setText("jLabel32");
         ventanaApple.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 840, 560));
 
@@ -1601,7 +1601,7 @@ public class Interfaz extends javax.swing.JFrame {
         jLabel31.setText("HP");
         ventanaHP.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, -1, -1));
 
-        jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Blue-background.jpg"))); // NOI18N
+        jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/BlueBackground.jpg"))); // NOI18N
         jLabel29.setText("jLabel29");
         ventanaHP.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 840, 560));
 
