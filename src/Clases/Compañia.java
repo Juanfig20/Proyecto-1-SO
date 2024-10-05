@@ -29,8 +29,25 @@ public class Compañia extends Thread{
     private int diasParaDeadline;
     private Semaphore mutex;
     private Almacen almacen;
+    private int [] piezasNecesarias;
+    private int [] diasParaProducir;
+    private int [] cantidadTrabajadores;
 
-    //Añadir constructor de la clase Compañia
+    public Compañia(int[] piezasNecesarias, int[] diasParaProducir, int[] cantidadTrabajadores, int precioComputadorEst, int precioComputadorConTG, int maxTrabajadores, int diasParaDeadline) {
+        this.ganancias = 0;
+        this.costos = 0;
+        this.utilidad = 0;
+        this.precioComputadorEst = precioComputadorEst;
+        this.precioComputadorConTG = precioComputadorConTG;
+        this.maxTrabajadores = maxTrabajadores;
+        this.diasParaDeadline = diasParaDeadline;
+        this.mutex = new Semaphore(1);
+        this.almacen = almacen;
+        this.piezasNecesarias = piezasNecesarias;
+        this.diasParaProducir = diasParaProducir;
+        this.cantidadTrabajadores = cantidadTrabajadores;
+    }
+
     
     public void calcularCostos() {
         setCostos((int) (productorPlacaBase.getSalarioAcumulado() + productorCPUs.getSalarioAcumulado() + productorRAM.getSalarioAcumulado() + productorFuente.getSalarioAcumulado() + productorTGrafica.getSalarioAcumulado() + ensamblador.getSalarioAcumulado())); //Falta salario de PM y director
@@ -45,22 +62,22 @@ public class Compañia extends Thread{
         
         if (cantidadTrabajadoresActuales < getMaxTrabajadores()) {
             if (type == 0) {
-                productorPlacaBase.añadirTrabajador();
+                productorPlacaBase.contratar();
             }
             if (type == 1) {
-                productorCPUs.añadirTrabajador();
+                productorCPUs.contratar();
             }
             if (type == 2) {
-                productorRAM.añadirTrabajador();
+                productorRAM.contratar();
             }
             if (type == 3) {
-                productorFuente.añadirTrabajador();
+                productorFuente.contratar();
             }
             if (type == 4) {
-                productorTGrafica.añadirTrabajador();
+                productorTGrafica.contratar();
             }
             if (type == 5) {
-                ensamblador.añadirTrabajador();
+                ensamblador.contratar();
             }
         } else {
             JOptionPane.showMessageDialog(null, "Se ha alcanzado el limite de trabajadores");        }

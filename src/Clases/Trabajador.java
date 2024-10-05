@@ -23,7 +23,6 @@ public class Trabajador extends Thread{
     private int diasRestantes;
     private int contadorDias;
     private Almacen almacen;
-    private float valor;
     private Semaphore mutex;
 
     public Trabajador(int tipo, int salario, float salarioAcumulado, int cantidadTrabajadores, int duracionDia, int diasRestantes, int contadorDias, Almacen almacen, Semaphore mutex) {
@@ -36,7 +35,6 @@ public class Trabajador extends Thread{
         this.contadorDias = contadorDias;
         this.almacen = almacen;
         this.mutex = mutex;
-        this.valor = valor;
         
          /* 
       Si type = 0, Productores de Placa Base  
@@ -46,21 +44,7 @@ public class Trabajador extends Thread{
       Si type =4, Productors de tarjetas graficas    
       Si type =5, Ensamblador            
          */
-        
-        if (tipoTrabajador == 0) {
-            valor += 1;
-        } else if (tipoTrabajador == 1){
-            valor += 0.34;
-        } else if (tipoTrabajador == 2 ) {
-            valor += 0.34;
-        } else if (tipoTrabajador == 3) {
-            valor += 1;
-        } else if (tipoTrabajador == 4) { 
-            valor += 0.34;
-        } else if (tipoTrabajador == 5){
-            valor += 0.5;
-        }
-
+      
         if (tipoTrabajador == 0) {
             salario += 20;
         } else if (tipoTrabajador == 1) {
@@ -80,7 +64,8 @@ public class Trabajador extends Thread{
     public void run() {
         while (true) {
             try {
-              //Aqui se ponen las funciones para los trabajdores
+                pagar();
+                trabajar ();
                 sleep((this.duracionDia)*1000);
             } catch (InterruptedException ex) {
                 Logger.getLogger(Trabajador.class.getName()).log(Level.SEVERE, null, ex);
@@ -89,22 +74,52 @@ public class Trabajador extends Thread{
         }
     }
     
-    public void pagarSalario() {
+    public void pagar(){
         this.setSalarioAcumulado(this.getSalarioAcumulado() + ((this.getSalario() * 24)) * this.getCantidadTrabajadores());
     }
     
-    public void removerTrabajador() {
-        if (getCantidadTrabajadores() != 1) {
-            setCantidadTrabajadores(getCantidadTrabajadores() - 1);
+    public void trabajar() {
+    this.setContadorDias(this.getContadorDias() + 1);
+    
+    if (this.tipoTrabajador == 5) { // Solo los ensambladores (tipo 5) ensamblan computadoras
+        // Ensamblaje de computadoras
+        if (this.getContadorDias() >= this.getDiasRestantes()) { //Dias restantes depende de la compania
+            try {
+                this.getMutex().acquire(); //wait
+                this.getAlmacen().ensamblar(); // Método ensamblar computadora en la clase Almacen
+                this.getMutex().release(); // signal
+                this.setContadorDias(0);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Trabajador.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    } else {
+        // Lógica para otros trabajadores que producen partes
+        if (this.getContadorDias() >= this.getDiasRestantes()) {
+            try {
+                this.getMutex().acquire(); //wait
+                this.getAlmacen().addPart(this.getTipoTrabajador(), this.getCantidadTrabajadores()); 
+                this.getMutex().release(); // signal
+                this.setContadorDias(0);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Trabajador.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }
+}
+    
+     public void despedir() {
+        if (this.getCantidadTrabajadores() != 1) {
+            this.setCantidadTrabajadores(this.cantidadTrabajadores - 1);
         } else {
-            JOptionPane.showMessageDialog(null, "Cada departamento debe tener al menos 1 trabajador");
+            JOptionPane.showMessageDialog(null, "NO SE PUEDE DEJAR UN DEPARTAMENTO SIN TRABAJADORES");
         }
     }
     
-    public void añadirTrabajador() {
-        setCantidadTrabajadores(getCantidadTrabajadores() + 1);
+    public void contratar(){
+        this.setCantidadTrabajadores(cantidadTrabajadores + 1);
     }
-    
+     
 
     public int getTipoTrabajador() {
         return tipoTrabajador;
@@ -168,6 +183,10 @@ public class Trabajador extends Thread{
 
     public void setAlmacen(Almacen almacen) {
         this.almacen = almacen;
+    }
+
+    public Semaphore getMutex() {
+        return mutex;
     }
     
     
