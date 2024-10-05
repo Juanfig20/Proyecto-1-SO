@@ -148,7 +148,6 @@ public class Director extends Thread {
         this.almacen = almacen;
     }
 
-    
 }
 
 
