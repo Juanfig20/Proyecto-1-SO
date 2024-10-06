@@ -66,7 +66,7 @@ public class Director extends Thread {
                     checkPM();
                     sleep((duracionDia*5)/(24*60));                    
                     
-                    estado = "Labores Administrativas";
+                    estado = "Labores administrativas";
                     sleep((duracionDia*25)/(60*24));
                     sleep((this.duracionDia*(23-random))/24);
                 }
@@ -84,12 +84,12 @@ public class Director extends Thread {
 
     public void checkDeadline(){
         try {
-            this.mutex2.acquire(); //wait
+            this.mutex2.acquire();
             if (this.empresa.getDeadline() == 0) {
                 directorMode = true;
                 this.empresa.setDeadline(reinicioDeadline);
             }
-            this.mutex2.release(); // signal
+            this.mutex2.release();
         } catch (InterruptedException ex) {
             Logger.getLogger(Trabajador.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -97,11 +97,11 @@ public class Director extends Thread {
     
     public void work(){
         this.contadorDias = this.contadorDias + 1;
-        if (this.contadorDias == this.diasTerminar){ // ese valor de 2 depende de la compania
+        if (this.contadorDias == this.diasTerminar){
             try {
-                this.mutex.acquire(); //wait
+                this.mutex.acquire();
                 getAlmacen().mandarCompus();
-                this.mutex.release(); // signal
+                this.mutex.release();
                 this.contadorDias = 0;
                 directorMode = false;
             } catch (InterruptedException ex) {
@@ -115,9 +115,9 @@ public class Director extends Thread {
             empresa.getPm().setFalta(empresa.getPm().getFalta() + 1);
             empresa.getPm().setDescuento(empresa.getPm().getDescuento() + 100); 
             try {
-                this.mutex3.acquire(); //wait
+                this.mutex3.acquire();
                 empresa.getPm().setSalarioAcumulado(empresa.getPm().getSalarioAcumulado() - 100);   
-                this.mutex3.release(); // signal
+                this.mutex3.release();
             } catch (InterruptedException ex) {
                 Logger.getLogger(Trabajador.class.getName()).log(Level.SEVERE, null, ex);
             }

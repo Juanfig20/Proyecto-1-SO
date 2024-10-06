@@ -145,7 +145,6 @@ public class Interfaz extends javax.swing.JFrame {
         guardarCambios = new javax.swing.JButton();
         iniciarSimulacion = new javax.swing.JButton();
         ventanaApple = new javax.swing.JPanel();
-        jLabel30 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -213,6 +212,9 @@ public class Interfaz extends javax.swing.JFrame {
         costos_Apple = new javax.swing.JLabel();
         utilidad_Apple = new javax.swing.JLabel();
         diasRestantes_Apple = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        iconHP1 = new javax.swing.JLabel();
+        title1 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
         ventanaHP = new javax.swing.JPanel();
         jPanel11 = new javax.swing.JPanel();
@@ -282,9 +284,12 @@ public class Interfaz extends javax.swing.JFrame {
         sueldoDescontadoPM_HP = new javax.swing.JLabel();
         estadoDirectorLabel_HP = new javax.swing.JLabel();
         estadoDirector_HP = new javax.swing.JLabel();
-        jLabel31 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        iconHP = new javax.swing.JLabel();
+        title = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
         ventanaGrafico = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -796,12 +801,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         ventanaApple.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel30.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel30.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel30.setText("Apple");
-        ventanaApple.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, -1));
-
-        jPanel5.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel5.setBackground(new java.awt.Color(224, 224, 224));
 
         jLabel1.setForeground(new java.awt.Color(51, 51, 51));
         jLabel1.setText("Cant. de placas bases:");
@@ -1103,7 +1103,7 @@ public class Interfaz extends javax.swing.JFrame {
         tGraficaLabel_Apple.setText("Productores de tarjetas gráficas:");
         jPanel6.add(tGraficaLabel_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 242, -1, -1));
 
-        ventanaApple.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 350, 320));
+        ventanaApple.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 350, 320));
 
         jPanel9.setBackground(new java.awt.Color(245, 245, 245));
 
@@ -1187,7 +1187,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         ventanaApple.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, -1, -1));
 
-        jPanel10.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel10.setBackground(new java.awt.Color(224, 224, 224));
 
         jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(51, 51, 51));
@@ -1264,6 +1264,40 @@ public class Interfaz extends javax.swing.JFrame {
         );
 
         ventanaApple.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 350, 320, -1));
+
+        jPanel3.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel3.setForeground(new java.awt.Color(0, 0, 0));
+
+        iconHP1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/IconApple.png"))); // NOI18N
+
+        title1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        title1.setForeground(new java.awt.Color(0, 0, 0));
+        title1.setText("Apple");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(iconHP1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addComponent(title1)
+                .addGap(23, 23, 23))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(title1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(10, Short.MAX_VALUE)
+                .addComponent(iconHP1)
+                .addContainerGap())
+        );
+
+        ventanaApple.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 240, 80));
 
         jLabel32.setForeground(new java.awt.Color(51, 51, 51));
         jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/WhiteBackground.jpg"))); // NOI18N
@@ -1426,7 +1460,7 @@ public class Interfaz extends javax.swing.JFrame {
         tGraficaLabel_HP.setText("Productores de tarjetas gráficas:");
         jPanel11.add(tGraficaLabel_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 242, -1, -1));
 
-        ventanaHP.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 350, 320));
+        ventanaHP.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 350, 320));
 
         jPanel12.setBackground(new java.awt.Color(158, 143, 255));
         jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -1598,10 +1632,39 @@ public class Interfaz extends javax.swing.JFrame {
 
         ventanaHP.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, 380, 120));
 
-        jLabel31.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel31.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel31.setText("HP");
-        ventanaHP.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, -1, -1));
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+
+        iconHP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/IconHP.png"))); // NOI18N
+
+        title.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        title.setForeground(new java.awt.Color(0, 0, 0));
+        title.setText("HP");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(iconHP)
+                .addGap(33, 33, 33)
+                .addComponent(title)
+                .addContainerGap(34, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(iconHP))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addComponent(title)))
+                .addContainerGap(10, Short.MAX_VALUE))
+        );
+
+        ventanaHP.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 200, 80));
 
         jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/BlueBackground.jpg"))); // NOI18N
         jLabel29.setText("jLabel29");
@@ -1609,15 +1672,34 @@ public class Interfaz extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("HP", ventanaHP);
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 558, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 377, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout ventanaGraficoLayout = new javax.swing.GroupLayout(ventanaGrafico);
         ventanaGrafico.setLayout(ventanaGraficoLayout);
         ventanaGraficoLayout.setHorizontalGroup(
             ventanaGraficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 840, Short.MAX_VALUE)
+            .addGroup(ventanaGraficoLayout.createSequentialGroup()
+                .addGap(127, 127, 127)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(155, Short.MAX_VALUE))
         );
         ventanaGraficoLayout.setVerticalGroup(
             ventanaGraficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 560, Short.MAX_VALUE)
+            .addGroup(ventanaGraficoLayout.createSequentialGroup()
+                .addGap(71, 71, 71)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(112, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Gráfico", ventanaGrafico);
@@ -2115,6 +2197,8 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel ganacias_Apple;
     private javax.swing.JLabel ganacias_HP;
     private javax.swing.JButton guardarCambios;
+    private javax.swing.JLabel iconHP;
+    private javax.swing.JLabel iconHP1;
     private javax.swing.JButton iniciarSimulacion;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -2139,8 +2223,6 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -2148,11 +2230,14 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
@@ -2231,6 +2316,8 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel tGraficasEnStock_HP;
     private javax.swing.JLabel tarjetaGraficaMenu_Apple;
     private javax.swing.JLabel tarjetasGraficasMenu_HP;
+    private javax.swing.JLabel title;
+    private javax.swing.JLabel title1;
     private javax.swing.JLabel tituloMenu;
     private javax.swing.JLabel utilidadLabel_Apple;
     private javax.swing.JLabel utilidadLabel_HP;
