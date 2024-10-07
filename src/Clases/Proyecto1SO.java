@@ -55,11 +55,13 @@ public class Proyecto1SO {
                 }
             }
             
-            Almacen almacen = null;
+            Empresa apple = new Empresa(numTrabajadoresIniciales_Apple, duracionDia, deadline, 19, 100000, 150000);
             
-            Empresa apple = new Empresa(almacen, numTrabajadoresIniciales_Apple, duracionDia, deadline, 19, 100000, 150000);
+            Empresa hp = new Empresa(numTrabajadoresIniciales_HP, duracionDia, deadline, 20, 90000, 140000);
             
-            Empresa hp = new Empresa(almacen, numTrabajadoresIniciales_HP, duracionDia, deadline, 20, 90000, 140000);
+            Almacen almacenApple = new Almacen(apple, 2, 1, 4, 4, 2, 5);
+            
+            Almacen almacenHP = new Almacen(hp, 1, 1, 2, 4, 3, 2);
             
             Interfaz interfaz = new Interfaz(apple, hp, numTrabajadoresIniciales_Apple, numTrabajadoresIniciales_HP);
             interfaz.setLocationRelativeTo(null);

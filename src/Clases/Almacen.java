@@ -9,6 +9,7 @@ package Clases;
  * @author User
  */
 import java.util.concurrent.Semaphore;
+import javax.swing.JLabel;
 
 public class Almacen {
     
@@ -26,10 +27,10 @@ public class Almacen {
     private int tarjetaGraficaEnsamblaje;
     private int cantidad; // Esta es la cantidad de computadoras necesaria para crear una con tarjeta grafica
     private int contadorcompus;
-    private String name;
     private Empresa empresa;
+    private JLabel [] labels;
 
-    public Almacen(int placaBaseEnsamblaje, int cpuEnsamblaje, int ramEnsamblaje, int fuenteAlimentacionEnsamblaje, int tarjetaGraficaEnsamblaje, int cantidad) {
+    public Almacen(Empresa empresa,int placaBaseEnsamblaje, int cpuEnsamblaje, int ramEnsamblaje, int fuenteAlimentacionEnsamblaje, int tarjetaGraficaEnsamblaje, int cantidad) {
         this.placaBase = 0;
         this.cpu = 0;
         this.ram = 0;
@@ -45,12 +46,12 @@ public class Almacen {
         this.cantidad = cantidad;
         this.contadorcompus = 0;
         this.empresa = empresa;
-        //Las de nombre ensamblaje son lacantidad necesaria para ensamblar una compania 
+        //Las de nombre ensamblaje son la cantidad necesaria para ensamblar una compania 
     }
     
-    public void addPart(int type, int cantidad) {
+    public void añadirParte(int tipo, int cantidad) {
 
-        switch (type) {
+        switch (tipo) {
             case 0 -> {
                 
                     if (this.placaBase <= 25 && (this.placaBase + cantidad) <= 25) {
@@ -123,4 +124,14 @@ public class Almacen {
         computadoraPremium = 0;
    
     }
+
+    public JLabel[] getLabels() {
+        return labels;
+    }
+
+    public void setLabels(JLabel[] labels) {
+        this.labels = labels;
+    }
+     
+     
 }

@@ -6,6 +6,7 @@ package Clases;
 
 import java.io.File;
 import java.io.PrintWriter;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 /**
@@ -60,6 +61,14 @@ public class Interfaz extends javax.swing.JFrame {
         this.numTrabajadoresTG_Apple.setText(String.valueOf(numTrabajadoresInicialesA[4]));
         this.numTrabajadoresEnsamb_Apple.setText(String.valueOf(numTrabajadoresInicialesA[5]));
         
+        //Almacen
+        JLabel [] piezasAlmacen_Apple = {placasEnStock_Apple, CPUsEnStock_Apple, RAMsEnStock_Apple, fuentesEnStock_Apple, tGraficasEnStock_Apple, cantCompEstandarListos_Apple, cantCompTGListos_Apple};
+        
+        //Datos relevantes
+        JLabel [] datosRelevantes_Apple = {};
+        
+        //Project Manager / Director
+        JLabel [] datosPMDirector_Apple = {};
         
         
         // ---------------------- Interfaz Ventana: HP ----------------------
@@ -71,6 +80,16 @@ public class Interfaz extends javax.swing.JFrame {
         this.numTrabajadoresFuente_HP.setText(String.valueOf(numTrabajadoresInicialesH[3]));
         this.numTrabajadoresTG_HP.setText(String.valueOf(numTrabajadoresInicialesH[4]));
         this.numTrabajadoresEnsamb_HP.setText(String.valueOf(numTrabajadoresInicialesH[5]));
+        
+        //Almacen
+        JLabel [] piezasAlmacen_HP = {placasEnStock_HP, CPUsEnStock_HP, RAMsEnStock_HP, fuentesEnStock_HP, tGraficasEnStock_HP, cantCompEstandarListos_HP, cantCompTGListos_HP, };
+        
+        //Datos relevantes
+        JLabel [] datosRelevantes_HP = {};
+        
+        //Project Manager / Director
+        JLabel [] datosPMDirector_HP = {};
+
         
     }
 
@@ -1970,98 +1989,146 @@ public class Interfaz extends javax.swing.JFrame {
 
     private void removeNumPB_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeNumPB_AppleActionPerformed
         // TODO add your handling code here:
+        apple.getProductorPlacaBase().despedir();
+        numTrabajadoresPB_Apple.setText(Integer.toString(apple.getProductorPlacaBase().getCantidadTrabajadores()));
     }//GEN-LAST:event_removeNumPB_AppleActionPerformed
 
     private void removeNumCPUs_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeNumCPUs_AppleActionPerformed
         // TODO add your handling code here:
+        apple.getProductorCPUs().despedir();
+        numTrabajadoresCPU_Apple.setText(Integer.toString(apple.getProductorCPUs().getCantidadTrabajadores()));
     }//GEN-LAST:event_removeNumCPUs_AppleActionPerformed
 
     private void removeNumRAM_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeNumRAM_AppleActionPerformed
         // TODO add your handling code here:
+        apple.getProductorRAM().despedir();
+        numTrabajadoresRAM_Apple.setText(Integer.toString(apple.getProductorRAM().getCantidadTrabajadores()));
     }//GEN-LAST:event_removeNumRAM_AppleActionPerformed
 
     private void removeNumFuente_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeNumFuente_AppleActionPerformed
         // TODO add your handling code here:
+        apple.getProductorFuente().despedir();
+        numTrabajadoresFuente_Apple.setText(Integer.toString(apple.getProductorFuente().getCantidadTrabajadores()));
     }//GEN-LAST:event_removeNumFuente_AppleActionPerformed
 
     private void addNumPB_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNumPB_AppleActionPerformed
         // TODO add your handling code here:
+        apple.añadirTrabajadores(0);
+        numTrabajadoresPB_Apple.setText(Integer.toString(apple.getProductorPlacaBase().getCantidadTrabajadores()));
     }//GEN-LAST:event_addNumPB_AppleActionPerformed
 
     private void addNumCPUs_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNumCPUs_AppleActionPerformed
         // TODO add your handling code here:
+        apple.añadirTrabajadores(1);
+        numTrabajadoresCPU_Apple.setText(Integer.toString(apple.getProductorCPUs().getCantidadTrabajadores()));
     }//GEN-LAST:event_addNumCPUs_AppleActionPerformed
 
     private void addNumRAM_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNumRAM_AppleActionPerformed
         // TODO add your handling code here:
+        apple.añadirTrabajadores(2);
+        numTrabajadoresRAM_Apple.setText(Integer.toString(apple.getProductorRAM().getCantidadTrabajadores()));
     }//GEN-LAST:event_addNumRAM_AppleActionPerformed
 
     private void addNumFuente_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNumFuente_AppleActionPerformed
         // TODO add your handling code here:
+        apple.añadirTrabajadores(3);
+        numTrabajadoresFuente_Apple.setText(Integer.toString(apple.getProductorFuente().getCantidadTrabajadores()));
     }//GEN-LAST:event_addNumFuente_AppleActionPerformed
 
     private void removeNumTG_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeNumTG_AppleActionPerformed
         // TODO add your handling code here:
+        apple.getProductorTGrafica().despedir();
+        numTrabajadoresTG_Apple.setText(Integer.toString(apple.getProductorTGrafica().getCantidadTrabajadores()));
     }//GEN-LAST:event_removeNumTG_AppleActionPerformed
 
     private void addNumTG_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNumTG_AppleActionPerformed
         // TODO add your handling code here:
+        apple.añadirTrabajadores(4);
+        numTrabajadoresTG_Apple.setText(Integer.toString(apple.getProductorTGrafica().getCantidadTrabajadores()));
     }//GEN-LAST:event_addNumTG_AppleActionPerformed
 
     private void addNumEnsamb_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNumEnsamb_AppleActionPerformed
         // TODO add your handling code here:
+        apple.añadirTrabajadores(5);
+        numTrabajadoresEnsamb_Apple.setText(Integer.toString(apple.getEnsamblador().getCantidadTrabajadores()));
     }//GEN-LAST:event_addNumEnsamb_AppleActionPerformed
 
     private void removeNumEnsamb_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeNumEnsamb_AppleActionPerformed
         // TODO add your handling code here:
+        apple.getEnsamblador().despedir();
+        numTrabajadoresEnsamb_Apple.setText(Integer.toString(apple.getEnsamblador().getCantidadTrabajadores()));
     }//GEN-LAST:event_removeNumEnsamb_AppleActionPerformed
 
     private void removeNumFuente_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeNumFuente_HPActionPerformed
         // TODO add your handling code here:
+        hp.getProductorFuente().despedir();
+        numTrabajadoresFuente_HP.setText(Integer.toString(hp.getProductorFuente().getCantidadTrabajadores()));
     }//GEN-LAST:event_removeNumFuente_HPActionPerformed
 
     private void removeNumRAM_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeNumRAM_HPActionPerformed
         // TODO add your handling code here:
+        hp.getProductorRAM().despedir();
+        numTrabajadoresRAM_HP.setText(Integer.toString(hp.getProductorRAM().getCantidadTrabajadores()));
     }//GEN-LAST:event_removeNumRAM_HPActionPerformed
 
     private void removeNumCPUs_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeNumCPUs_HPActionPerformed
         // TODO add your handling code here:
+        hp.getProductorCPUs().despedir();
+        numTrabajadoresCPU_HP.setText(Integer.toString(hp.getProductorCPUs().getCantidadTrabajadores()));
     }//GEN-LAST:event_removeNumCPUs_HPActionPerformed
 
     private void removeNumPB_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeNumPB_HPActionPerformed
         // TODO add your handling code here:
+        hp.getProductorPlacaBase().despedir();
+        numTrabajadoresPB_HP.setText(Integer.toString(hp.getProductorPlacaBase().getCantidadTrabajadores()));
     }//GEN-LAST:event_removeNumPB_HPActionPerformed
 
     private void removeNumEnsamb_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeNumEnsamb_HPActionPerformed
         // TODO add your handling code here:
+        hp.getEnsamblador().despedir();
+        numTrabajadoresEnsamb_HP.setText(Integer.toString(hp.getEnsamblador().getCantidadTrabajadores()));
     }//GEN-LAST:event_removeNumEnsamb_HPActionPerformed
 
     private void addNumEnsamb_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNumEnsamb_HPActionPerformed
         // TODO add your handling code here:
+        hp.añadirTrabajadores(5);
+        numTrabajadoresEnsamb_HP.setText(Integer.toString(hp.getEnsamblador().getCantidadTrabajadores()));
     }//GEN-LAST:event_addNumEnsamb_HPActionPerformed
 
     private void addNumTG_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNumTG_HPActionPerformed
         // TODO add your handling code here:
+        hp.añadirTrabajadores(4);
+        numTrabajadoresTG_HP.setText(Integer.toString(hp.getProductorTGrafica().getCantidadTrabajadores()));
     }//GEN-LAST:event_addNumTG_HPActionPerformed
 
     private void addNumFuente_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNumFuente_HPActionPerformed
         // TODO add your handling code here:
+        hp.añadirTrabajadores(3);
+        numTrabajadoresFuente_HP.setText(Integer.toString(hp.getProductorFuente().getCantidadTrabajadores()));
     }//GEN-LAST:event_addNumFuente_HPActionPerformed
 
     private void addNumRAM_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNumRAM_HPActionPerformed
         // TODO add your handling code here:
+        hp.añadirTrabajadores(2);
+        numTrabajadoresRAM_HP.setText(Integer.toString(hp.getProductorRAM().getCantidadTrabajadores()));
     }//GEN-LAST:event_addNumRAM_HPActionPerformed
 
     private void addNumCPUs_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNumCPUs_HPActionPerformed
         // TODO add your handling code here:
+        hp.añadirTrabajadores(1);
+        numTrabajadoresCPU_HP.setText(Integer.toString(hp.getProductorCPUs().getCantidadTrabajadores()));
     }//GEN-LAST:event_addNumCPUs_HPActionPerformed
 
     private void removeNumTG_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeNumTG_HPActionPerformed
         // TODO add your handling code here:
+        hp.getProductorTGrafica().despedir();
+        numTrabajadoresTG_HP.setText(Integer.toString(hp.getProductorTGrafica().getCantidadTrabajadores()));
     }//GEN-LAST:event_removeNumTG_HPActionPerformed
 
     private void addNumPB_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNumPB_HPActionPerformed
         // TODO add your handling code here:
+        hp.añadirTrabajadores(0);
+        numTrabajadoresPB_HP.setText(Integer.toString(hp.getProductorPlacaBase().getCantidadTrabajadores()));
     }//GEN-LAST:event_addNumPB_HPActionPerformed
 
     private void guardarCambiosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarCambiosActionPerformed

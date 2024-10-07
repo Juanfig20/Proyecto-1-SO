@@ -36,9 +36,16 @@ public class Empresa extends Thread{
     private Semaphore mutex;
     private Semaphore mutex2;
     private Semaphore mutex3;
+    //Pruebita
+    private int placaBaseEnsamblaje;
+    private int cpuEnsamblaje;
+    private int ramEnsamblaje;
+    private int fuenteAlimentacionEnsamblaje;
+    private int tarjetaGraficaEnsamblaje;
+    private int cantidad;
    
 
-    public Empresa(Almacen almacen, int [] numTrabajadoresIniciales, int duracion, int deadline, int maxtrabajadores, int precioCompu, int precioPremium) {
+    public Empresa(int [] numTrabajadoresIniciales, int duracion, int deadline, int maxTrabajadores, int precioCompu, int precioPremium) {
         this.ganancia = 0;
         this.costos = 0;
         this.utilidad = 0;
@@ -51,8 +58,8 @@ public class Empresa extends Thread{
         this.mutex = new Semaphore(1);
         this.mutex2 = new Semaphore(1);
         this.mutex3 = new Semaphore(1);
-        this.almacen = almacen;
-        empleados ();
+        this.almacen = new Almacen(this, placaBaseEnsamblaje, cpuEnsamblaje, ramEnsamblaje, fuenteAlimentacionEnsamblaje, tarjetaGraficaEnsamblaje, cantidad);
+        empleados();
     }
     
     // Hay que ver como poner la cantidad inicial de trabajadores, es el segundo atributo en el constructor trabajador
@@ -83,7 +90,7 @@ public class Empresa extends Thread{
 
     
     public void calcularCostos() {
-        setCostos((int) (productorPlacaBase.getSalarioAcumulado() + productorCPUs.getSalarioAcumulado() + productorRAM.getSalarioAcumulado() + productorFuente.getSalarioAcumulado() + productorTGrafica.getSalarioAcumulado() + ensamblador.getSalarioAcumulado())); //Falta salario de PM y director
+        setCostos((int) (productorPlacaBase.getSalarioAcumulado() + productorCPUs.getSalarioAcumulado() + productorRAM.getSalarioAcumulado() + productorFuente.getSalarioAcumulado() + productorTGrafica.getSalarioAcumulado() + ensamblador.getSalarioAcumulado() + pm.getSalarioAcumulado() + director.getSalarioAcumulado()));
     }
     
     public void calcularUtilidad() {
@@ -93,8 +100,8 @@ public class Empresa extends Thread{
     //Falta ver como calcular la ganancia
     
     public void añadirTrabajadores(int type) {
-        int cantidadTrabajadoresActuales = (productorPlacaBase.getCantidadTrabajadores() + productorCPUs.getCantidadTrabajadores() + productorRAM.getCantidadTrabajadores() + productorFuente.getCantidadTrabajadores() + productorTGrafica.getCantidadTrabajadores());
-        
+        int cantidadTrabajadoresActuales = (productorPlacaBase.getCantidadTrabajadores() + productorCPUs.getCantidadTrabajadores() + productorRAM.getCantidadTrabajadores() + productorFuente.getCantidadTrabajadores() + productorTGrafica.getCantidadTrabajadores() + ensamblador.getCantidadTrabajadores());
+
         if (cantidadTrabajadoresActuales < getMaxTrabajadores()) {
             if (type == 0) {
                 productorPlacaBase.contratar();
@@ -115,7 +122,8 @@ public class Empresa extends Thread{
                 ensamblador.contratar();
             }
         } else {
-            JOptionPane.showMessageDialog(null, "Se ha alcanzado el limite de trabajadores");        }
+            JOptionPane.showMessageDialog(null, "Se ha alcanzado el límite de trabajadores");        
+        }
     }
     
     

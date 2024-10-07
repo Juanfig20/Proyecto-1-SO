@@ -1,4 +1,4 @@
 deadline, 2
 duracionDia, 2000
-cantidadApple, 9, 2, 2, 2, 2, 2
-cantidadHP, 4, 4, 4, 4, 3, 1
+cantidadApple, 3, 3, 3, 4, 2, 3
+cantidadHP, 1, 4, 4, 4, 3, 1

@@ -148,6 +148,14 @@ public class Director extends Thread {
         this.almacen = almacen;
     }
 
+    public JLabel[] getLabels() {
+        return labels;
+    }
+
+    public void setLabels(JLabel[] labels) {
+        this.labels = labels;
+    }
+
 }
 
 
