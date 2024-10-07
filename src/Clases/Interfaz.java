@@ -68,7 +68,7 @@ public class Interfaz extends javax.swing.JFrame {
         JLabel [] datosRelevantes_Apple = {};
         
         //Project Manager / Director
-        JLabel [] datosPMDirector_Apple = {};
+        JLabel [] datosPMDirector_Apple = {estadoPM_Apple, nroFaltasPM_Apple, sueldoDescontadoPM_Apple,estadoDirector_Apple};
         
         
         // ---------------------- Interfaz Ventana: HP ----------------------
@@ -88,7 +88,7 @@ public class Interfaz extends javax.swing.JFrame {
         JLabel [] datosRelevantes_HP = {};
         
         //Project Manager / Director
-        JLabel [] datosPMDirector_HP = {};
+        JLabel [] datosPMDirector_HP = {estadoPM_HP, nroFaltasPM_HP, sueldoDescontadoPM_HP,estadoDirector_HP};
 
         
     }

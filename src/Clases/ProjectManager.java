@@ -53,14 +53,17 @@ public class ProjectManager extends Thread {
                 long startTime = System.currentTimeMillis();
                 while(System.currentTimeMillis() - startTime <= ((duracionDia/24)*16)){
                     estado = "Viendo One Piece";
+                    this.labels[0].setText(estado);
                     sleep(((duracionDia/24)/2));
 
                     estado = "Revisando";
+                    this.labels[0].setText(estado);
                     sleep(((duracionDia/24)/2));
                 }
                 
                 // Restantes 8 horas
                 estado = "Trabajando";
+                this.labels[0].setText(estado);
                 work(); 
                 setDaysPassedTotal(getDaysPassedTotal() + 1);
                 sleep((duracionDia/24)*8);
