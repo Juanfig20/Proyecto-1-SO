@@ -64,7 +64,7 @@ public class ProjectManager extends Thread {
                 // Restantes 8 horas
                 estado = "Trabajando";
                 this.labels[0].setText(estado);
-                work(); 
+                trabajar(); 
                 setDaysPassedTotal(getDaysPassedTotal() + 1);
                 sleep((duracionDia/24)*8);
             } catch (InterruptedException ex) {
@@ -73,17 +73,29 @@ public class ProjectManager extends Thread {
         }
     }
     
-    public void work(){
+    public void trabajar(){
         try {
-            this.mutex2.acquire(); //wait
+            this.mutex2.acquire();
             this.empresa.setDeadline(this.empresa.getDeadline() - 1); 
-            this.mutex2.release(); // signal
+            this.mutex2.release();
         } catch (InterruptedException ex) {
             Logger.getLogger(Trabajador.class.getName()).log(Level.SEVERE, null, ex);
         }
         
     }
     
+    public void operacionesEmpresa(){
+         try {
+            this.mutex3.acquire();
+            this.empresa.calcularCostos();
+            this.labels[1].setText(Integer.toString(this.empresa.getCostos()));
+            this.empresa.calcularUtilidad();
+            this.labels[2].setText(Integer.toString(this.empresa.getUtilidad()));
+            this.mutex3.release();
+        } catch (InterruptedException ex) {
+            Logger.getLogger(Trabajador.class.getName()).log(Level.SEVERE, null, ex);
+        }
+     }
     
     public void pagar() {
         this.salarioAcumulado += this.salario * 24;
@@ -145,6 +157,7 @@ public class ProjectManager extends Thread {
     public void setLabels(JLabel[] labels) {
         this.labels = labels;
     }
+
     
     
 }

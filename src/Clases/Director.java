@@ -53,7 +53,7 @@ public class Director extends Thread {
                 checkDeadline();
                 if (directorMode) {
                     estado = "Enviando Computadoras";
-                    this.labels[3].setText(estado);
+                    this.labels[2].setText(estado);
                     work();
                     sleep(this.duracionDia);
                 }else{
@@ -62,14 +62,14 @@ public class Director extends Thread {
                     sleep((this.duracionDia*random)/24);
                     
                     estado = "Revisando Project Manager";
-                    this.labels[3].setText(estado);
+                    this.labels[2].setText(estado);
                     checkPM();
                     sleep((duracionDia*30)/(24*60));
                     checkPM();
                     sleep((duracionDia*5)/(24*60));                    
                     
                     estado = "Labores administrativas";
-                    this.labels[3].setText(estado);
+                    this.labels[2].setText(estado);
                     sleep((duracionDia*25)/(60*24));
                     sleep((this.duracionDia*(23-random))/24);
                 }
@@ -116,9 +116,9 @@ public class Director extends Thread {
     public void checkPM(){
         if (empresa.getPm().getEstado().equals("Viendo One Piece")){
             empresa.getPm().setFalta(empresa.getPm().getFalta() + 1);
-            this.labels[1].setText(Integer.toString(empresa.getPm().getFalta()));
+            this.labels[0].setText(Integer.toString(empresa.getPm().getFalta()));
             empresa.getPm().setDescuento(empresa.getPm().getDescuento() + 100); 
-            this.labels[2].setText(Integer.toString(empresa.getPm().getDescuento()));
+            this.labels[1].setText(Integer.toString(empresa.getPm().getDescuento()));
             try {
                 this.mutex3.acquire();
                 empresa.getPm().setSalarioAcumulado(empresa.getPm().getSalarioAcumulado() - 100);   
