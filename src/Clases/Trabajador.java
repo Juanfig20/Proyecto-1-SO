@@ -98,7 +98,7 @@ public class Trabajador extends Thread{
         if (this.getContadorDias() >= this.getDiasRestantes()) {
             try {
                 this.getMutex().acquire(); //wait
-                this.getAlmacen().addPart(this.getTipoTrabajador(), this.getCantidadTrabajadores()); 
+                this.getAlmacen().añadirParte(this.getTipoTrabajador(), this.getCantidadTrabajadores()); 
                 this.getMutex().release(); // signal
                 this.setContadorDias(0);
             } catch (InterruptedException ex) {
@@ -112,7 +112,7 @@ public class Trabajador extends Thread{
         if (this.getCantidadTrabajadores() != 1) {
             this.setCantidadTrabajadores(this.cantidadTrabajadores - 1);
         } else {
-            JOptionPane.showMessageDialog(null, "NO SE PUEDE DEJAR UN DEPARTAMENTO SIN TRABAJADORES");
+            JOptionPane.showMessageDialog(null, "No pueden quedar áreas sin empelados");
         }
     }
     

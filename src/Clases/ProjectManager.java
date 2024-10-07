@@ -8,6 +8,7 @@ import static java.lang.Thread.sleep;
 import java.util.concurrent.Semaphore;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JLabel;
 
 /**
  *
@@ -22,11 +23,12 @@ public class ProjectManager extends Thread {
     private String estado;
     private int contadorHoras;
     private int contadorMin;
-    private int daysPassedTotal; // solo para el pm, que el lo cambie 
+    private int daysPassedTotal;
     private Semaphore mutex;
     private Empresa empresa;
     private Semaphore mutex2;
     private Semaphore mutex3;
+    private JLabel [] labels;
     
     public ProjectManager(int duracionDia, Semaphore mutex, Semaphore mutex2, Semaphore mutex3){
         this.salarioAcumulado = 0;
@@ -132,7 +134,14 @@ public class ProjectManager extends Thread {
     public void setSalarioAcumulado(float salarioAcumulado) {
         this.salarioAcumulado = salarioAcumulado;
     }
-    
+
+    public JLabel[] getLabels() {
+        return labels;
+    }
+
+    public void setLabels(JLabel[] labels) {
+        this.labels = labels;
+    }
     
     
 }

@@ -4,17 +4,93 @@
  */
 package Clases;
 
+import java.io.File;
+import java.io.PrintWriter;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author manza
  */
 public class Interfaz extends javax.swing.JFrame {
-
+    
+    static Empresa apple;
+    static Empresa hp;
+    
     /**
      * Creates new form Interfaz
      */
-    public Interfaz() {
+    
+    public Interfaz(Empresa apple, Empresa hp, int [] numTrabajadoresInicialesA, int [] numTrabajadoresInicialesH) {
         initComponents();
+        this.apple = apple;
+        this.hp = hp;
+        
+        // ---------------------- Interfaz Ventana: Menú ----------------------
+        
+        //Deadline
+        this.deadline.setValue(apple.getDeadline());
+        
+        //Duración del día
+        this.duracionDia.setValue(apple.getDuracion());
+        
+        //Trabajadores iniciales Apple
+        this.numPlacaBase_Apple.setText(String.valueOf(numTrabajadoresInicialesA[0]));
+        this.numCPUS_Apple.setText(String.valueOf(numTrabajadoresInicialesA[1]));
+        this.numRAM_Apple.setText(String.valueOf(numTrabajadoresInicialesA[2]));
+        this.numFuente_Apple.setText(String.valueOf(numTrabajadoresInicialesA[3]));
+        this.numTGraficas_Apple.setText(String.valueOf(numTrabajadoresInicialesA[4]));
+        this.numEnsambladores_Apple.setText(String.valueOf(numTrabajadoresInicialesA[5]));
+        
+        //Trabajadores iniciales HP
+        this.numPlacaBase_HP.setText(String.valueOf(numTrabajadoresInicialesH[0]));
+        this.numCPUS_HP.setText(String.valueOf(numTrabajadoresInicialesH[1]));
+        this.numRAM_HP.setText(String.valueOf(numTrabajadoresInicialesH[2]));
+        this.numFuentes_HP.setText(String.valueOf(numTrabajadoresInicialesH[3]));
+        this.numTGraficas_HP.setText(String.valueOf(numTrabajadoresInicialesH[4]));
+        this.numEnsambladores_HP.setText(String.valueOf(numTrabajadoresInicialesH[5]));
+        
+        // ---------------------- Interfaz Ventana: Apple ----------------------
+        
+        //Lista de trabajadores
+        this.numTrabajadoresPB_Apple.setText(String.valueOf(numTrabajadoresInicialesA[0]));
+        this.numTrabajadoresCPU_Apple.setText(String.valueOf(numTrabajadoresInicialesA[1]));
+        this.numTrabajadoresRAM_Apple.setText(String.valueOf(numTrabajadoresInicialesA[2]));
+        this.numTrabajadoresFuente_Apple.setText(String.valueOf(numTrabajadoresInicialesA[3]));
+        this.numTrabajadoresTG_Apple.setText(String.valueOf(numTrabajadoresInicialesA[4]));
+        this.numTrabajadoresEnsamb_Apple.setText(String.valueOf(numTrabajadoresInicialesA[5]));
+        
+        //Almacen
+        JLabel [] piezasAlmacen_Apple = {placasEnStock_Apple, CPUsEnStock_Apple, RAMsEnStock_Apple, fuentesEnStock_Apple, tGraficasEnStock_Apple, cantCompEstandarListos_Apple, cantCompTGListos_Apple};
+        
+        //Datos relevantes
+        JLabel [] datosRelevantes_Apple = {};
+        
+        //Project Manager / Director
+        JLabel [] datosPMDirector_Apple = {};
+        
+        
+        // ---------------------- Interfaz Ventana: HP ----------------------
+        
+        //Lista de trabajadores
+        this.numTrabajadoresPB_HP.setText(String.valueOf(numTrabajadoresInicialesH[0]));
+        this.numTrabajadoresCPU_HP.setText(String.valueOf(numTrabajadoresInicialesH[1]));
+        this.numTrabajadoresRAM_HP.setText(String.valueOf(numTrabajadoresInicialesH[2]));
+        this.numTrabajadoresFuente_HP.setText(String.valueOf(numTrabajadoresInicialesH[3]));
+        this.numTrabajadoresTG_HP.setText(String.valueOf(numTrabajadoresInicialesH[4]));
+        this.numTrabajadoresEnsamb_HP.setText(String.valueOf(numTrabajadoresInicialesH[5]));
+        
+        //Almacen
+        JLabel [] piezasAlmacen_HP = {placasEnStock_HP, CPUsEnStock_HP, RAMsEnStock_HP, fuentesEnStock_HP, tGraficasEnStock_HP, cantCompEstandarListos_HP, cantCompTGListos_HP, };
+        
+        //Datos relevantes
+        JLabel [] datosRelevantes_HP = {};
+        
+        //Project Manager / Director
+        JLabel [] datosPMDirector_HP = {};
+
+        
     }
 
     /**
@@ -85,8 +161,9 @@ public class Interfaz extends javax.swing.JFrame {
         memoriaRAMMenu_HP = new javax.swing.JLabel();
         fuentesMenu_HP = new javax.swing.JLabel();
         tarjetasGraficasMenu_HP = new javax.swing.JLabel();
+        guardarCambios = new javax.swing.JButton();
+        iniciarSimulacion = new javax.swing.JButton();
         ventanaApple = new javax.swing.JPanel();
-        jLabel30 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -154,6 +231,9 @@ public class Interfaz extends javax.swing.JFrame {
         costos_Apple = new javax.swing.JLabel();
         utilidad_Apple = new javax.swing.JLabel();
         diasRestantes_Apple = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        iconHP1 = new javax.swing.JLabel();
+        title1 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
         ventanaHP = new javax.swing.JPanel();
         jPanel11 = new javax.swing.JPanel();
@@ -223,9 +303,12 @@ public class Interfaz extends javax.swing.JFrame {
         sueldoDescontadoPM_HP = new javax.swing.JLabel();
         estadoDirectorLabel_HP = new javax.swing.JLabel();
         estadoDirector_HP = new javax.swing.JLabel();
-        jLabel31 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        iconHP = new javax.swing.JLabel();
+        title = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
         ventanaGrafico = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -242,14 +325,18 @@ public class Interfaz extends javax.swing.JFrame {
 
         deadlineLabel.setText("Días límites");
         ventanaMenu.add(deadlineLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(454, 83, -1, -1));
-        ventanaMenu.add(duracionDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 80, -1, -1));
-        ventanaMenu.add(deadline, new org.netbeans.lib.awtextra.AbsoluteConstraints(528, 80, -1, -1));
 
-        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Logo-Apple.jpg"))); // NOI18N
+        duracionDia.setModel(new javax.swing.SpinnerNumberModel(1000, 1000, null, 1000));
+        ventanaMenu.add(duracionDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 80, 80, -1));
+
+        deadline.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+        ventanaMenu.add(deadline, new org.netbeans.lib.awtextra.AbsoluteConstraints(528, 80, 80, -1));
+
+        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/LogoApple.jpg"))); // NOI18N
         jLabel26.setText("jLabel26");
         ventanaMenu.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, 179, -1));
 
-        jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Logo-HP.png"))); // NOI18N
+        jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/LogoHP.png"))); // NOI18N
         jLabel28.setText("jLabel28");
         ventanaMenu.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 160, 198, -1));
 
@@ -710,16 +797,30 @@ public class Interfaz extends javax.swing.JFrame {
 
         ventanaMenu.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(442, 227, -1, -1));
 
+        guardarCambios.setBackground(new java.awt.Color(255, 255, 255));
+        guardarCambios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/BotonGuardar.png"))); // NOI18N
+        guardarCambios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                guardarCambiosActionPerformed(evt);
+            }
+        });
+        ventanaMenu.add(guardarCambios, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 20, 30, 30));
+
+        iniciarSimulacion.setBackground(new java.awt.Color(255, 255, 255));
+        iniciarSimulacion.setForeground(new java.awt.Color(255, 255, 255));
+        iniciarSimulacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/BotonPlay.png"))); // NOI18N
+        iniciarSimulacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                iniciarSimulacionActionPerformed(evt);
+            }
+        });
+        ventanaMenu.add(iniciarSimulacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 20, 30, 30));
+
         jTabbedPane1.addTab("Menú", ventanaMenu);
 
         ventanaApple.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel30.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel30.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel30.setText("Apple");
-        ventanaApple.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, -1));
-
-        jPanel5.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel5.setBackground(new java.awt.Color(224, 224, 224));
 
         jLabel1.setForeground(new java.awt.Color(51, 51, 51));
         jLabel1.setText("Cant. de placas bases:");
@@ -1021,7 +1122,7 @@ public class Interfaz extends javax.swing.JFrame {
         tGraficaLabel_Apple.setText("Productores de tarjetas gráficas:");
         jPanel6.add(tGraficaLabel_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 242, -1, -1));
 
-        ventanaApple.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 350, 320));
+        ventanaApple.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 350, 320));
 
         jPanel9.setBackground(new java.awt.Color(245, 245, 245));
 
@@ -1105,7 +1206,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         ventanaApple.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, -1, -1));
 
-        jPanel10.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel10.setBackground(new java.awt.Color(224, 224, 224));
 
         jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(51, 51, 51));
@@ -1183,8 +1284,42 @@ public class Interfaz extends javax.swing.JFrame {
 
         ventanaApple.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 350, 320, -1));
 
+        jPanel3.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel3.setForeground(new java.awt.Color(0, 0, 0));
+
+        iconHP1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/IconApple.png"))); // NOI18N
+
+        title1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        title1.setForeground(new java.awt.Color(0, 0, 0));
+        title1.setText("Apple");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(iconHP1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addComponent(title1)
+                .addGap(23, 23, 23))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(title1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(10, Short.MAX_VALUE)
+                .addComponent(iconHP1)
+                .addContainerGap())
+        );
+
+        ventanaApple.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 240, 80));
+
         jLabel32.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/White-background.jpg"))); // NOI18N
+        jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/WhiteBackground.jpg"))); // NOI18N
         jLabel32.setText("jLabel32");
         ventanaApple.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 840, 560));
 
@@ -1344,7 +1479,7 @@ public class Interfaz extends javax.swing.JFrame {
         tGraficaLabel_HP.setText("Productores de tarjetas gráficas:");
         jPanel11.add(tGraficaLabel_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 242, -1, -1));
 
-        ventanaHP.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 350, 320));
+        ventanaHP.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 350, 320));
 
         jPanel12.setBackground(new java.awt.Color(158, 143, 255));
         jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -1516,26 +1651,74 @@ public class Interfaz extends javax.swing.JFrame {
 
         ventanaHP.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, 380, 120));
 
-        jLabel31.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel31.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel31.setText("HP");
-        ventanaHP.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, -1, -1));
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/Blue-background.jpg"))); // NOI18N
+        iconHP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/IconHP.png"))); // NOI18N
+
+        title.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        title.setForeground(new java.awt.Color(0, 0, 0));
+        title.setText("HP");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(iconHP)
+                .addGap(33, 33, 33)
+                .addComponent(title)
+                .addContainerGap(34, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(iconHP))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addComponent(title)))
+                .addContainerGap(10, Short.MAX_VALUE))
+        );
+
+        ventanaHP.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 200, 80));
+
+        jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/BlueBackground.jpg"))); // NOI18N
         jLabel29.setText("jLabel29");
         ventanaHP.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 840, 560));
 
         jTabbedPane1.addTab("HP", ventanaHP);
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 558, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 377, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout ventanaGraficoLayout = new javax.swing.GroupLayout(ventanaGrafico);
         ventanaGrafico.setLayout(ventanaGraficoLayout);
         ventanaGraficoLayout.setHorizontalGroup(
             ventanaGraficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 840, Short.MAX_VALUE)
+            .addGroup(ventanaGraficoLayout.createSequentialGroup()
+                .addGap(127, 127, 127)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(155, Short.MAX_VALUE))
         );
         ventanaGraficoLayout.setVerticalGroup(
             ventanaGraficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 560, Short.MAX_VALUE)
+            .addGroup(ventanaGraficoLayout.createSequentialGroup()
+                .addGap(71, 71, 71)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(112, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Gráfico", ventanaGrafico);
@@ -1556,196 +1739,418 @@ public class Interfaz extends javax.swing.JFrame {
 
     private void removePlacaBase_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removePlacaBase_AppleActionPerformed
         // TODO add your handling code here:
+        if (Integer.parseInt(numPlacaBase_Apple.getText()) == 1){
+            JOptionPane.showMessageDialog(null, "No pueden quedar áreas sin empelados");
+        } else{
+            int nuevaCantidad = Integer.parseInt(numPlacaBase_Apple.getText())-1;
+            numPlacaBase_Apple.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_removePlacaBase_AppleActionPerformed
 
     private void removeCPU_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeCPU_AppleActionPerformed
         // TODO add your handling code here:
+        if (Integer.parseInt(numCPUS_Apple.getText()) == 1){
+            JOptionPane.showMessageDialog(null, "No pueden quedar áreas sin empelados");
+        } else{
+            int nuevaCantidad = Integer.parseInt(numCPUS_Apple.getText())-1;
+            numCPUS_Apple.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_removeCPU_AppleActionPerformed
 
     private void removeRAM_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeRAM_AppleActionPerformed
         // TODO add your handling code here:
+        if (Integer.parseInt(numRAM_Apple.getText()) == 1){
+            JOptionPane.showMessageDialog(null, "No pueden quedar áreas sin empelados");
+        } else{
+            int nuevaCantidad = Integer.parseInt(numRAM_Apple.getText())-1;
+            numRAM_Apple.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_removeRAM_AppleActionPerformed
 
     private void removeFuente_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeFuente_AppleActionPerformed
         // TODO add your handling code here:
+        if (Integer.parseInt(numFuente_Apple.getText()) == 1){
+            JOptionPane.showMessageDialog(null, "No pueden quedar áreas sin empelados");
+        } else{
+            int nuevaCantidad = Integer.parseInt(numFuente_Apple.getText())-1;
+            numFuente_Apple.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_removeFuente_AppleActionPerformed
 
     private void removeTGrafica_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeTGrafica_AppleActionPerformed
         // TODO add your handling code here:
+        if (Integer.parseInt(numTGraficas_Apple.getText()) == 1){
+            JOptionPane.showMessageDialog(null, "No pueden quedar áreas sin empelados");
+        } else{
+            int nuevaCantidad = Integer.parseInt(numTGraficas_Apple.getText())-1;
+            numTGraficas_Apple.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_removeTGrafica_AppleActionPerformed
 
+    private int calcularCantidadTrabajadoresApple() {
+        int cantidad = (Integer.parseInt(numPlacaBase_Apple.getText()) + Integer.parseInt(numCPUS_Apple.getText()) + Integer.parseInt(numRAM_Apple.getText()) + Integer.parseInt(numFuente_Apple.getText()) + Integer.parseInt(numTGraficas_Apple.getText()) + Integer.parseInt(numEnsambladores_Apple.getText()));
+        return cantidad;
+    }
+    
+    private int calcularCantidadTrabajadoresHP() {
+        int cantidad = (Integer.parseInt(numPlacaBase_HP.getText()) + Integer.parseInt(numCPUS_HP.getText()) + Integer.parseInt(numRAM_HP.getText()) + Integer.parseInt(numFuentes_HP.getText()) + Integer.parseInt(numTGraficas_HP.getText()) + Integer.parseInt(numEnsambladores_HP.getText()));
+        return cantidad;
+    }
+    
     private void addPlacaBase_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPlacaBase_AppleActionPerformed
         // TODO add your handling code here:
+        if (calcularCantidadTrabajadoresApple()== 19){
+            JOptionPane.showMessageDialog(null, "Se ha alcanzado el límite de trabajadores para Apple");
+        } else {
+            int nuevaCantidad = Integer.parseInt(numPlacaBase_Apple.getText())+1;
+            numPlacaBase_Apple.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_addPlacaBase_AppleActionPerformed
 
     private void addCPU_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addCPU_AppleActionPerformed
         // TODO add your handling code here:
+        if (calcularCantidadTrabajadoresApple()== 19){
+            JOptionPane.showMessageDialog(null, "Se ha alcanzado el límite de trabajadores para Apple");
+        } else {
+            int nuevaCantidad = Integer.parseInt(numCPUS_Apple.getText())+1;
+            numCPUS_Apple.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_addCPU_AppleActionPerformed
 
     private void addRAM_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addRAM_AppleActionPerformed
         // TODO add your handling code here:
+        if (calcularCantidadTrabajadoresApple()== 19){
+            JOptionPane.showMessageDialog(null, "Se ha alcanzado el límite de trabajadores para Apple");
+        } else {
+            int nuevaCantidad = Integer.parseInt(numRAM_Apple.getText())+1;
+            numRAM_Apple.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_addRAM_AppleActionPerformed
 
     private void addFuente_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addFuente_AppleActionPerformed
         // TODO add your handling code here:
+        if (calcularCantidadTrabajadoresApple()== 19){
+            JOptionPane.showMessageDialog(null, "Se ha alcanzado el límite de trabajadores para Apple");
+        } else {
+            int nuevaCantidad = Integer.parseInt(numFuente_Apple.getText())+1;
+            numFuente_Apple.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_addFuente_AppleActionPerformed
 
     private void addTGrafica_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addTGrafica_AppleActionPerformed
         // TODO add your handling code here:
+        if (calcularCantidadTrabajadoresApple()== 19){
+            JOptionPane.showMessageDialog(null, "Se ha alcanzado el límite de trabajadores para Apple");
+        } else {
+            int nuevaCantidad = Integer.parseInt(numTGraficas_Apple.getText())+1;
+            numTGraficas_Apple.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_addTGrafica_AppleActionPerformed
 
     private void removePlacaBase_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removePlacaBase_HPActionPerformed
         // TODO add your handling code here:
+        if (Integer.parseInt(numPlacaBase_HP.getText()) == 1){
+            JOptionPane.showMessageDialog(null, "No pueden quedar áreas sin empelados");
+        } else{
+            int nuevaCantidad = Integer.parseInt(numPlacaBase_HP.getText())-1;
+            numPlacaBase_HP.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_removePlacaBase_HPActionPerformed
 
     private void removeCPU_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeCPU_HPActionPerformed
         // TODO add your handling code here:
+        if (Integer.parseInt(numCPUS_HP.getText()) == 1){
+            JOptionPane.showMessageDialog(null, "No pueden quedar áreas sin empelados");
+        } else{
+            int nuevaCantidad = Integer.parseInt(numCPUS_HP.getText())-1;
+            numCPUS_HP.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_removeCPU_HPActionPerformed
 
     private void removeRAM_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeRAM_HPActionPerformed
         // TODO add your handling code here:
+        if (Integer.parseInt(numRAM_HP.getText()) == 1){
+            JOptionPane.showMessageDialog(null, "No pueden quedar áreas sin empelados");
+        } else{
+            int nuevaCantidad = Integer.parseInt(numRAM_HP.getText())-1;
+            numRAM_HP.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_removeRAM_HPActionPerformed
 
     private void removeFuente_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeFuente_HPActionPerformed
         // TODO add your handling code here:
+        if (Integer.parseInt(numFuentes_HP.getText()) == 1){
+            JOptionPane.showMessageDialog(null, "No pueden quedar áreas sin empelados");
+        } else{
+            int nuevaCantidad = Integer.parseInt(numFuentes_HP.getText())-1;
+            numFuentes_HP.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_removeFuente_HPActionPerformed
 
     private void addPlacaBase_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPlacaBase_HPActionPerformed
         // TODO add your handling code here:
+        if (calcularCantidadTrabajadoresHP()== 20){
+            JOptionPane.showMessageDialog(null, "Se ha alcanzado el límite de trabajadores para HP");
+        } else {
+            int nuevaCantidad = Integer.parseInt(numPlacaBase_HP.getText())+1;
+            numPlacaBase_HP.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_addPlacaBase_HPActionPerformed
 
     private void addCPU_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addCPU_HPActionPerformed
         // TODO add your handling code here:
+        if (calcularCantidadTrabajadoresHP()== 20){
+            JOptionPane.showMessageDialog(null, "Se ha alcanzado el límite de trabajadores para HP");
+        } else {
+            int nuevaCantidad = Integer.parseInt(numCPUS_HP.getText())+1;
+            numCPUS_HP.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_addCPU_HPActionPerformed
 
     private void addRAM_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addRAM_HPActionPerformed
         // TODO add your handling code here:
+        if (calcularCantidadTrabajadoresHP()== 20){
+            JOptionPane.showMessageDialog(null, "Se ha alcanzado el límite de trabajadores para HP");
+        } else {
+            int nuevaCantidad = Integer.parseInt(numRAM_HP.getText())+1;
+            numRAM_HP.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_addRAM_HPActionPerformed
 
     private void addFuente_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addFuente_HPActionPerformed
         // TODO add your handling code here:
+        if (calcularCantidadTrabajadoresHP()== 20){
+            JOptionPane.showMessageDialog(null, "Se ha alcanzado el límite de trabajadores para HP");
+        } else {
+            int nuevaCantidad = Integer.parseInt(numFuentes_HP.getText())+1;
+            numFuentes_HP.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_addFuente_HPActionPerformed
 
     private void removeTGrafica_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeTGrafica_HPActionPerformed
         // TODO add your handling code here:
+        if (Integer.parseInt(numTGraficas_HP.getText()) == 1){
+            JOptionPane.showMessageDialog(null, "No pueden quedar áreas sin empelados");
+        } else{
+            int nuevaCantidad = Integer.parseInt(numTGraficas_HP.getText())-1;
+            numTGraficas_HP.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_removeTGrafica_HPActionPerformed
 
     private void addTGrafica_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addTGrafica_HPActionPerformed
         // TODO add your handling code here:
+        if (calcularCantidadTrabajadoresHP()== 20){
+            JOptionPane.showMessageDialog(null, "Se ha alcanzado el límite de trabajadores para HP");
+        } else {
+            int nuevaCantidad = Integer.parseInt(numTGraficas_HP.getText())+1;
+            numTGraficas_HP.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_addTGrafica_HPActionPerformed
 
     private void removeEnsamblador_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeEnsamblador_AppleActionPerformed
         // TODO add your handling code here:
+        if (Integer.parseInt(numEnsambladores_Apple.getText()) == 1){
+            JOptionPane.showMessageDialog(null, "No pueden quedar áreas sin empelados");
+        } else{
+            int nuevaCantidad = Integer.parseInt(numEnsambladores_Apple.getText())-1;
+            numEnsambladores_Apple.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_removeEnsamblador_AppleActionPerformed
 
     private void addEnsamblador_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addEnsamblador_AppleActionPerformed
         // TODO add your handling code here:
+        if (calcularCantidadTrabajadoresApple()== 19){
+            JOptionPane.showMessageDialog(null, "Se ha alcanzado el límite de trabajadores para Apple");
+        } else {
+            int nuevaCantidad = Integer.parseInt(numEnsambladores_Apple.getText())+1;
+            numEnsambladores_Apple.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_addEnsamblador_AppleActionPerformed
 
     private void addEnsamblador_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addEnsamblador_HPActionPerformed
         // TODO add your handling code here:
+        if (calcularCantidadTrabajadoresHP()== 20){
+            JOptionPane.showMessageDialog(null, "Se ha alcanzado el límite de trabajadores para HP");
+        } else {
+            int nuevaCantidad = Integer.parseInt(numEnsambladores_HP.getText())+1;
+            numEnsambladores_HP.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_addEnsamblador_HPActionPerformed
 
     private void removeEnsamblador_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeEnsamblador_HPActionPerformed
         // TODO add your handling code here:
+        if (Integer.parseInt(numEnsambladores_HP.getText()) == 1){
+            JOptionPane.showMessageDialog(null, "No pueden quedar áreas sin empelados");
+        } else{
+            int nuevaCantidad = Integer.parseInt(numEnsambladores_HP.getText())-1;
+            numEnsambladores_HP.setText(String.valueOf(nuevaCantidad));
+        }
     }//GEN-LAST:event_removeEnsamblador_HPActionPerformed
 
     private void removeNumPB_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeNumPB_AppleActionPerformed
         // TODO add your handling code here:
+        apple.getProductorPlacaBase().despedir();
+        numTrabajadoresPB_Apple.setText(Integer.toString(apple.getProductorPlacaBase().getCantidadTrabajadores()));
     }//GEN-LAST:event_removeNumPB_AppleActionPerformed
 
     private void removeNumCPUs_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeNumCPUs_AppleActionPerformed
         // TODO add your handling code here:
+        apple.getProductorCPUs().despedir();
+        numTrabajadoresCPU_Apple.setText(Integer.toString(apple.getProductorCPUs().getCantidadTrabajadores()));
     }//GEN-LAST:event_removeNumCPUs_AppleActionPerformed
 
     private void removeNumRAM_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeNumRAM_AppleActionPerformed
         // TODO add your handling code here:
+        apple.getProductorRAM().despedir();
+        numTrabajadoresRAM_Apple.setText(Integer.toString(apple.getProductorRAM().getCantidadTrabajadores()));
     }//GEN-LAST:event_removeNumRAM_AppleActionPerformed
 
     private void removeNumFuente_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeNumFuente_AppleActionPerformed
         // TODO add your handling code here:
+        apple.getProductorFuente().despedir();
+        numTrabajadoresFuente_Apple.setText(Integer.toString(apple.getProductorFuente().getCantidadTrabajadores()));
     }//GEN-LAST:event_removeNumFuente_AppleActionPerformed
 
     private void addNumPB_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNumPB_AppleActionPerformed
         // TODO add your handling code here:
+        apple.añadirTrabajadores(0);
+        numTrabajadoresPB_Apple.setText(Integer.toString(apple.getProductorPlacaBase().getCantidadTrabajadores()));
     }//GEN-LAST:event_addNumPB_AppleActionPerformed
 
     private void addNumCPUs_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNumCPUs_AppleActionPerformed
         // TODO add your handling code here:
+        apple.añadirTrabajadores(1);
+        numTrabajadoresCPU_Apple.setText(Integer.toString(apple.getProductorCPUs().getCantidadTrabajadores()));
     }//GEN-LAST:event_addNumCPUs_AppleActionPerformed
 
     private void addNumRAM_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNumRAM_AppleActionPerformed
         // TODO add your handling code here:
+        apple.añadirTrabajadores(2);
+        numTrabajadoresRAM_Apple.setText(Integer.toString(apple.getProductorRAM().getCantidadTrabajadores()));
     }//GEN-LAST:event_addNumRAM_AppleActionPerformed
 
     private void addNumFuente_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNumFuente_AppleActionPerformed
         // TODO add your handling code here:
+        apple.añadirTrabajadores(3);
+        numTrabajadoresFuente_Apple.setText(Integer.toString(apple.getProductorFuente().getCantidadTrabajadores()));
     }//GEN-LAST:event_addNumFuente_AppleActionPerformed
 
     private void removeNumTG_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeNumTG_AppleActionPerformed
         // TODO add your handling code here:
+        apple.getProductorTGrafica().despedir();
+        numTrabajadoresTG_Apple.setText(Integer.toString(apple.getProductorTGrafica().getCantidadTrabajadores()));
     }//GEN-LAST:event_removeNumTG_AppleActionPerformed
 
     private void addNumTG_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNumTG_AppleActionPerformed
         // TODO add your handling code here:
+        apple.añadirTrabajadores(4);
+        numTrabajadoresTG_Apple.setText(Integer.toString(apple.getProductorTGrafica().getCantidadTrabajadores()));
     }//GEN-LAST:event_addNumTG_AppleActionPerformed
 
     private void addNumEnsamb_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNumEnsamb_AppleActionPerformed
         // TODO add your handling code here:
+        apple.añadirTrabajadores(5);
+        numTrabajadoresEnsamb_Apple.setText(Integer.toString(apple.getEnsamblador().getCantidadTrabajadores()));
     }//GEN-LAST:event_addNumEnsamb_AppleActionPerformed
 
     private void removeNumEnsamb_AppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeNumEnsamb_AppleActionPerformed
         // TODO add your handling code here:
+        apple.getEnsamblador().despedir();
+        numTrabajadoresEnsamb_Apple.setText(Integer.toString(apple.getEnsamblador().getCantidadTrabajadores()));
     }//GEN-LAST:event_removeNumEnsamb_AppleActionPerformed
 
     private void removeNumFuente_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeNumFuente_HPActionPerformed
         // TODO add your handling code here:
+        hp.getProductorFuente().despedir();
+        numTrabajadoresFuente_HP.setText(Integer.toString(hp.getProductorFuente().getCantidadTrabajadores()));
     }//GEN-LAST:event_removeNumFuente_HPActionPerformed
 
     private void removeNumRAM_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeNumRAM_HPActionPerformed
         // TODO add your handling code here:
+        hp.getProductorRAM().despedir();
+        numTrabajadoresRAM_HP.setText(Integer.toString(hp.getProductorRAM().getCantidadTrabajadores()));
     }//GEN-LAST:event_removeNumRAM_HPActionPerformed
 
     private void removeNumCPUs_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeNumCPUs_HPActionPerformed
         // TODO add your handling code here:
+        hp.getProductorCPUs().despedir();
+        numTrabajadoresCPU_HP.setText(Integer.toString(hp.getProductorCPUs().getCantidadTrabajadores()));
     }//GEN-LAST:event_removeNumCPUs_HPActionPerformed
 
     private void removeNumPB_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeNumPB_HPActionPerformed
         // TODO add your handling code here:
+        hp.getProductorPlacaBase().despedir();
+        numTrabajadoresPB_HP.setText(Integer.toString(hp.getProductorPlacaBase().getCantidadTrabajadores()));
     }//GEN-LAST:event_removeNumPB_HPActionPerformed
 
     private void removeNumEnsamb_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeNumEnsamb_HPActionPerformed
         // TODO add your handling code here:
+        hp.getEnsamblador().despedir();
+        numTrabajadoresEnsamb_HP.setText(Integer.toString(hp.getEnsamblador().getCantidadTrabajadores()));
     }//GEN-LAST:event_removeNumEnsamb_HPActionPerformed
 
     private void addNumEnsamb_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNumEnsamb_HPActionPerformed
         // TODO add your handling code here:
+        hp.añadirTrabajadores(5);
+        numTrabajadoresEnsamb_HP.setText(Integer.toString(hp.getEnsamblador().getCantidadTrabajadores()));
     }//GEN-LAST:event_addNumEnsamb_HPActionPerformed
 
     private void addNumTG_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNumTG_HPActionPerformed
         // TODO add your handling code here:
+        hp.añadirTrabajadores(4);
+        numTrabajadoresTG_HP.setText(Integer.toString(hp.getProductorTGrafica().getCantidadTrabajadores()));
     }//GEN-LAST:event_addNumTG_HPActionPerformed
 
     private void addNumFuente_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNumFuente_HPActionPerformed
         // TODO add your handling code here:
+        hp.añadirTrabajadores(3);
+        numTrabajadoresFuente_HP.setText(Integer.toString(hp.getProductorFuente().getCantidadTrabajadores()));
     }//GEN-LAST:event_addNumFuente_HPActionPerformed
 
     private void addNumRAM_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNumRAM_HPActionPerformed
         // TODO add your handling code here:
+        hp.añadirTrabajadores(2);
+        numTrabajadoresRAM_HP.setText(Integer.toString(hp.getProductorRAM().getCantidadTrabajadores()));
     }//GEN-LAST:event_addNumRAM_HPActionPerformed
 
     private void addNumCPUs_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNumCPUs_HPActionPerformed
         // TODO add your handling code here:
+        hp.añadirTrabajadores(1);
+        numTrabajadoresCPU_HP.setText(Integer.toString(hp.getProductorCPUs().getCantidadTrabajadores()));
     }//GEN-LAST:event_addNumCPUs_HPActionPerformed
 
     private void removeNumTG_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeNumTG_HPActionPerformed
         // TODO add your handling code here:
+        hp.getProductorTGrafica().despedir();
+        numTrabajadoresTG_HP.setText(Integer.toString(hp.getProductorTGrafica().getCantidadTrabajadores()));
     }//GEN-LAST:event_removeNumTG_HPActionPerformed
 
     private void addNumPB_HPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNumPB_HPActionPerformed
         // TODO add your handling code here:
+        hp.añadirTrabajadores(0);
+        numTrabajadoresPB_HP.setText(Integer.toString(hp.getProductorPlacaBase().getCantidadTrabajadores()));
     }//GEN-LAST:event_addNumPB_HPActionPerformed
 
+    private void guardarCambiosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarCambiosActionPerformed
+        // TODO add your handling code here:
+        String configuraciones = "deadline, " + deadline.getValue() + "\n" + "duracionDia, " + duracionDia.getValue() + "\n" + "cantidadApple, " + numPlacaBase_Apple.getText() + ", " + numCPUS_Apple.getText() + ", " + numRAM_Apple.getText() + ", " + numFuente_Apple.getText() + ", " + numTGraficas_Apple.getText() + ", " + numEnsambladores_Apple.getText() + "\n" + "cantidadHP, " + numPlacaBase_HP.getText() + ", " + numCPUS_HP.getText() + ", " + numRAM_HP.getText() + ", " + numFuentes_HP.getText() + ", " +numTGraficas_HP.getText() + ", " + numEnsambladores_HP.getText();
+        
+        File fichero = new File("src\\Archivo\\Configuraciones.txt");
+        String contenido = "";
+        
+        try{
+            PrintWriter salida = new PrintWriter(fichero);
+            salida.print(configuraciones);
+            salida.close();
+        }catch(Exception e){
+            System.out.println(e);
+        }
+    }//GEN-LAST:event_guardarCambiosActionPerformed
+
+    private void iniciarSimulacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarSimulacionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_iniciarSimulacionActionPerformed
+    
     /**
      * @param args the command line arguments
      */
@@ -1858,6 +2263,10 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel ganaciasLabel_HP;
     private javax.swing.JLabel ganacias_Apple;
     private javax.swing.JLabel ganacias_HP;
+    private javax.swing.JButton guardarCambios;
+    private javax.swing.JLabel iconHP;
+    private javax.swing.JLabel iconHP1;
+    private javax.swing.JButton iniciarSimulacion;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1881,8 +2290,6 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -1890,11 +2297,14 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
@@ -1973,6 +2383,8 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel tGraficasEnStock_HP;
     private javax.swing.JLabel tarjetaGraficaMenu_Apple;
     private javax.swing.JLabel tarjetasGraficasMenu_HP;
+    private javax.swing.JLabel title;
+    private javax.swing.JLabel title1;
     private javax.swing.JLabel tituloMenu;
     private javax.swing.JLabel utilidadLabel_Apple;
     private javax.swing.JLabel utilidadLabel_HP;
