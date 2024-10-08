@@ -53,43 +53,49 @@ public class Almacen {
 
         switch (tipo) {
             case 0 -> {
-                
-                    if (this.placaBase <= 25 && (this.placaBase + cantidad) <= 25) {
-                        this.placaBase += cantidad;
-                    } else {
-                        this.placaBase = 25;
-                    }
-         
+                if (this.placaBase <= 25 && (this.placaBase + cantidad) <= 25) {
+                    this.placaBase += cantidad;
+                } else {
+                     this.placaBase = 25;
+                }
+                this.labels[tipo].setText(Integer.toString(this.getPlacaBase()));           
             }
+            
             case 1 -> {
                 if (this.cpu <= 20 && (this.cpu + cantidad) <= 20) {
                     this.cpu += cantidad;
                 } else {
                     this.cpu = 20;
                 }
+                this.labels[tipo].setText(Integer.toString(this.getCpu()));
             }
+            
             case 2 -> {
                 if (this.ram <= 25 && (this.ram + cantidad) <= 25) {
                     this.ram += cantidad;
                 } else {
                     this.ram = 25;
                 }
+                this.labels[tipo].setText(Integer.toString(this.getRam()));
             }
+            
             case 3 -> {
                 
-                    if (this.fuenteAlimentacion <= 35 && (this.fuenteAlimentacion + 5 * cantidad) <= 35) {
-                        this.fuenteAlimentacion += 5 * cantidad;
-                    } else {
-                        this.fuenteAlimentacion = 35;
-                    }
-                
+                if (this.fuenteAlimentacion <= 35 && (this.fuenteAlimentacion + 5 * cantidad) <= 35) {
+                    this.fuenteAlimentacion += 5 * cantidad;
+                } else {
+                     this.fuenteAlimentacion = 35;
+                }
+                this.labels[tipo].setText(Integer.toString(this.getFuenteAlimentacion()));
             }
+            
             default -> {
                 if (this.tarjetaGrafica <= 10 && (this.tarjetaGrafica + cantidad) <= 10) {
                     this.tarjetaGrafica += cantidad;
                 } else {
                     this.tarjetaGrafica = 10;
                 }
+                this.labels[tipo].setText(Integer.toString(this.getTarjetaGrafica()));
             }
         }
     }
@@ -121,7 +127,7 @@ public class Almacen {
      public void mandarCompus() {
         this.empresa.setGanancia(this.empresa.getGanancia() + (this.empresa.getPrecioCompu()*computadora));
         this.empresa.setGanancia(this.empresa.getGanancia() + this.empresa.getPrecioPremium()*computadoraPremium);
-        this.labels[0].setText(Integer.toString(this.empresa.getGanancia()));
+        this.labels[7].setText(Integer.toString(this.empresa.getGanancia()));
    
         computadora = 0;
         computadoraPremium = 0;
@@ -134,6 +140,46 @@ public class Almacen {
 
     public void setLabels(JLabel[] labels) {
         this.labels = labels;
+    }
+
+    public int getPlacaBase() {
+        return placaBase;
+    }
+
+    public void setPlacaBase(int placaBase) {
+        this.placaBase = placaBase;
+    }
+
+    public int getCpu() {
+        return cpu;
+    }
+
+    public void setCpu(int cpu) {
+        this.cpu = cpu;
+    }
+
+    public int getRam() {
+        return ram;
+    }
+
+    public void setRam(int ram) {
+        this.ram = ram;
+    }
+
+    public int getFuenteAlimentacion() {
+        return fuenteAlimentacion;
+    }
+
+    public void setFuenteAlimentacion(int fuenteAlimentacion) {
+        this.fuenteAlimentacion = fuenteAlimentacion;
+    }
+
+    public int getTarjetaGrafica() {
+        return tarjetaGrafica;
+    }
+
+    public void setTarjetaGrafica(int tarjetaGrafica) {
+        this.tarjetaGrafica = tarjetaGrafica;
     }
      
      

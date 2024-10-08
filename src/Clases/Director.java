@@ -50,7 +50,7 @@ public class Director extends Thread {
         while(true) {
             try {  
                 pago();
-                checkDeadline();
+                verificarDeadline();
                 if (directorMode) {
                     estado = "Enviando Computadoras";
                     this.labels[2].setText(estado);
@@ -85,13 +85,13 @@ public class Director extends Thread {
     }
     
 
-    public void checkDeadline(){
+    public void verificarDeadline(){
         try {
             this.mutex2.acquire();
             if (this.empresa.getDeadline() == 0) {
                 directorMode = true;
                 this.empresa.setDeadline(reinicioDeadline);
-                this.labels[0].setText(Integer.toString(this.empresa.getDeadline()));
+                this.labels[3].setText(Integer.toString(this.empresa.getDeadline()));
             }
             this.mutex2.release();
         } catch (InterruptedException ex) {

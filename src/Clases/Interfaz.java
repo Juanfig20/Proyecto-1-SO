@@ -62,13 +62,13 @@ public class Interfaz extends javax.swing.JFrame {
         this.numTrabajadoresEnsamb_Apple.setText(String.valueOf(numTrabajadoresInicialesA[5]));
         
         //Almacen
-        JLabel [] piezasAlmacen_Apple = {placasEnStock_Apple, CPUsEnStock_Apple, RAMsEnStock_Apple, fuentesEnStock_Apple, tGraficasEnStock_Apple, cantCompEstandarListos_Apple, cantCompTGListos_Apple};
+        JLabel [] piezasAlmacen_Apple = {placasEnStock_Apple, CPUsEnStock_Apple, RAMsEnStock_Apple, fuentesEnStock_Apple, tGraficasEnStock_Apple, cantCompEstandarListos_Apple, cantCompTGListos_Apple, ganancias_Apple};
         
         //Datos relevantes
         JLabel [] datosRelevantes_Apple = {};
         
         //Project Manager / Director
-        JLabel [] datosDirector_Apple = {nroFaltasPM_Apple, sueldoDescontadoPM_Apple, estadoDirector_Apple};
+        JLabel [] datosDirector_Apple = {nroFaltasPM_Apple, sueldoDescontadoPM_Apple, estadoDirector_Apple, diasRestantes_Apple};
         JLabel [] datosPM_Apple = {estadoPM_Apple, costos_Apple, utilidad_Apple};
         
         
@@ -83,13 +83,13 @@ public class Interfaz extends javax.swing.JFrame {
         this.numTrabajadoresEnsamb_HP.setText(String.valueOf(numTrabajadoresInicialesH[5]));
         
         //Almacen
-        JLabel [] piezasAlmacen_HP = {placasEnStock_HP, CPUsEnStock_HP, RAMsEnStock_HP, fuentesEnStock_HP, tGraficasEnStock_HP, cantCompEstandarListos_HP, cantCompTGListos_HP, };
+        JLabel [] piezasAlmacen_HP = {placasEnStock_HP, CPUsEnStock_HP, RAMsEnStock_HP, fuentesEnStock_HP, tGraficasEnStock_HP, cantCompEstandarListos_HP, cantCompTGListos_HP, ganancias_HP};
         
         //Datos relevantes
         JLabel [] datosRelevantes_HP = {};
         
         //Project Manager / Director
-        JLabel [] datosDirector_HP = {nroFaltasPM_HP, sueldoDescontadoPM_HP, estadoDirector_HP};
+        JLabel [] datosDirector_HP = {nroFaltasPM_HP, sueldoDescontadoPM_HP, estadoDirector_HP, diasRestantes_HP};
         JLabel [] datosPM_HP = {estadoPM_HP, costos_HP, utilidad_HP};
 
         
@@ -229,7 +229,7 @@ public class Interfaz extends javax.swing.JFrame {
         costosLabel_Apple = new javax.swing.JLabel();
         utilidadLabel_Apple = new javax.swing.JLabel();
         diasRestantesLabel_Apple = new javax.swing.JLabel();
-        ganacias_Apple = new javax.swing.JLabel();
+        ganancias_Apple = new javax.swing.JLabel();
         costos_Apple = new javax.swing.JLabel();
         utilidad_Apple = new javax.swing.JLabel();
         diasRestantes_Apple = new javax.swing.JLabel();
@@ -291,7 +291,7 @@ public class Interfaz extends javax.swing.JFrame {
         costosLabel_HP = new javax.swing.JLabel();
         utilidadLabel_HP = new javax.swing.JLabel();
         diasRestantesLabel_HP = new javax.swing.JLabel();
-        ganacias_HP = new javax.swing.JLabel();
+        ganancias_HP = new javax.swing.JLabel();
         costos_HP = new javax.swing.JLabel();
         utilidad_HP = new javax.swing.JLabel();
         diasRestantes_HP = new javax.swing.JLabel();
@@ -1226,8 +1226,8 @@ public class Interfaz extends javax.swing.JFrame {
         diasRestantesLabel_Apple.setForeground(new java.awt.Color(51, 51, 51));
         diasRestantesLabel_Apple.setText("Días restantes para la entrega:");
 
-        ganacias_Apple.setForeground(new java.awt.Color(51, 51, 51));
-        ganacias_Apple.setText("0");
+        ganancias_Apple.setForeground(new java.awt.Color(51, 51, 51));
+        ganancias_Apple.setText("0");
 
         costos_Apple.setForeground(new java.awt.Color(51, 51, 51));
         costos_Apple.setText("0");
@@ -1255,7 +1255,7 @@ public class Interfaz extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(costos_Apple, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ganacias_Apple, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ganancias_Apple, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(utilidad_Apple)
                     .addComponent(diasRestantes_Apple))
                 .addGap(66, 66, 66))
@@ -1268,7 +1268,7 @@ public class Interfaz extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ganaciasLabel_Apple)
-                    .addComponent(ganacias_Apple))
+                    .addComponent(ganancias_Apple))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(costosLabel_Apple)
@@ -1593,9 +1593,9 @@ public class Interfaz extends javax.swing.JFrame {
         diasRestantesLabel_HP.setText("Días restantes para la entrega:");
         jPanel13.add(diasRestantesLabel_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 155, -1, -1));
 
-        ganacias_HP.setForeground(new java.awt.Color(255, 255, 255));
-        ganacias_HP.setText("0");
-        jPanel13.add(ganacias_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(244, 53, 31, -1));
+        ganancias_HP.setForeground(new java.awt.Color(255, 255, 255));
+        ganancias_HP.setText("0");
+        jPanel13.add(ganancias_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(244, 53, 31, -1));
 
         costos_HP.setForeground(new java.awt.Color(255, 255, 255));
         costos_HP.setText("0");
@@ -2263,8 +2263,8 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel fuentesMenu_HP;
     private javax.swing.JLabel ganaciasLabel_Apple;
     private javax.swing.JLabel ganaciasLabel_HP;
-    private javax.swing.JLabel ganacias_Apple;
-    private javax.swing.JLabel ganacias_HP;
+    private javax.swing.JLabel ganancias_Apple;
+    private javax.swing.JLabel ganancias_HP;
     private javax.swing.JButton guardarCambios;
     private javax.swing.JLabel iconHP;
     private javax.swing.JLabel iconHP1;

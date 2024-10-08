@@ -1635,7 +1635,7 @@
                           <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="costos_Apple" alignment="0" max="32767" attributes="0"/>
-                              <Component id="ganacias_Apple" alignment="1" max="32767" attributes="0"/>
+                              <Component id="ganancias_Apple" alignment="1" max="32767" attributes="0"/>
                               <Component id="utilidad_Apple" min="-2" max="-2" attributes="0"/>
                               <Component id="diasRestantes_Apple" min="-2" max="-2" attributes="0"/>
                           </Group>
@@ -1651,7 +1651,7 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="ganaciasLabel_Apple" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="ganacias_Apple" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ganancias_Apple" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -1717,7 +1717,7 @@
                     <Property name="text" type="java.lang.String" value="D&#xed;as restantes para la entrega:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="ganacias_Apple">
+                <Component class="javax.swing.JLabel" name="ganancias_Apple">
                   <Properties>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="33" green="33" red="33" type="rgb"/>
@@ -2556,7 +2556,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JLabel" name="ganacias_HP">
+                <Component class="javax.swing.JLabel" name="ganancias_HP">
                   <Properties>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
