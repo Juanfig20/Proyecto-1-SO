@@ -1134,86 +1134,45 @@ public class Interfaz extends javax.swing.JFrame {
         ventanaApple.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 350, 320));
 
         jPanel9.setBackground(new java.awt.Color(245, 245, 245));
+        jPanel9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(51, 51, 51));
         jLabel12.setText("PROJECT MANAGER / DIRECTOR");
+        jPanel9.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(108, 6, -1, -1));
 
         estadoPMLabel_Apple.setForeground(new java.awt.Color(51, 51, 51));
         estadoPMLabel_Apple.setText("Estado PM:");
+        jPanel9.add(estadoPMLabel_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 34, -1, -1));
 
         nroFaltasPMLabel_Apple.setForeground(new java.awt.Color(51, 51, 51));
         nroFaltasPMLabel_Apple.setText("Nro. faltas PM:");
+        jPanel9.add(nroFaltasPMLabel_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 62, -1, -1));
 
         sueldoDescontadoPMLabel_Apple.setForeground(new java.awt.Color(51, 51, 51));
         sueldoDescontadoPMLabel_Apple.setText("Sueldo descontado:");
+        jPanel9.add(sueldoDescontadoPMLabel_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 89, -1, -1));
 
         estadoPM_Apple.setForeground(new java.awt.Color(51, 51, 51));
         estadoPM_Apple.setText("...");
+        jPanel9.add(estadoPM_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 30, -1, -1));
 
         nroFaltasPM_Apple.setForeground(new java.awt.Color(51, 51, 51));
         nroFaltasPM_Apple.setText("0");
+        jPanel9.add(nroFaltasPM_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(148, 62, -1, -1));
 
         sueldoDescontadoPM_Apple.setForeground(new java.awt.Color(51, 51, 51));
         sueldoDescontadoPM_Apple.setText("0");
+        jPanel9.add(sueldoDescontadoPM_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(148, 89, -1, -1));
 
         estadoDirectorLabel_Apple.setForeground(new java.awt.Color(51, 51, 51));
         estadoDirectorLabel_Apple.setText("Estado director:");
+        jPanel9.add(estadoDirectorLabel_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 60, -1, -1));
 
         estadoDirector_Apple.setText("...");
+        jPanel9.add(estadoDirector_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, -1, -1));
 
-        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
-        jPanel9.setLayout(jPanel9Layout);
-        jPanel9Layout.setHorizontalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(estadoPMLabel_Apple)
-                            .addComponent(nroFaltasPMLabel_Apple)
-                            .addComponent(sueldoDescontadoPMLabel_Apple))
-                        .addGap(26, 26, 26)
-                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(sueldoDescontadoPM_Apple)
-                            .addGroup(jPanel9Layout.createSequentialGroup()
-                                .addComponent(nroFaltasPM_Apple)
-                                .addGap(58, 58, 58)
-                                .addComponent(estadoDirectorLabel_Apple)
-                                .addGap(40, 40, 40)
-                                .addComponent(estadoDirector_Apple))
-                            .addComponent(estadoPM_Apple)))
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addGap(108, 108, 108)
-                        .addComponent(jLabel12)))
-                .addContainerGap(64, Short.MAX_VALUE))
-        );
-        jPanel9Layout.setVerticalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(estadoPMLabel_Apple)
-                    .addComponent(estadoPM_Apple))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(estadoDirectorLabel_Apple)
-                        .addComponent(estadoDirector_Apple))
-                    .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(nroFaltasPMLabel_Apple)
-                        .addComponent(nroFaltasPM_Apple)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(sueldoDescontadoPMLabel_Apple)
-                    .addComponent(sueldoDescontadoPM_Apple))
-                .addGap(12, 12, 12))
-        );
-
-        ventanaApple.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, -1, -1));
+        ventanaApple.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, 380, 120));
 
         jPanel10.setBackground(new java.awt.Color(224, 224, 224));
 
@@ -1640,7 +1599,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         estadoPM_HP.setForeground(new java.awt.Color(255, 255, 255));
         estadoPM_HP.setText("...");
-        jPanel14.add(estadoPM_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(148, 34, -1, -1));
+        jPanel14.add(estadoPM_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 30, 10, -1));
 
         nroFaltasPM_HP.setForeground(new java.awt.Color(255, 255, 255));
         nroFaltasPM_HP.setText("0");
@@ -1652,11 +1611,11 @@ public class Interfaz extends javax.swing.JFrame {
 
         estadoDirectorLabel_HP.setForeground(new java.awt.Color(255, 255, 255));
         estadoDirectorLabel_HP.setText("Estado director:");
-        jPanel14.add(estadoDirectorLabel_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(212, 62, -1, -1));
+        jPanel14.add(estadoDirectorLabel_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 60, -1, -1));
 
         estadoDirector_HP.setForeground(new java.awt.Color(255, 255, 255));
         estadoDirector_HP.setText("...");
-        jPanel14.add(estadoDirector_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(335, 62, -1, -1));
+        jPanel14.add(estadoDirector_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, -1, -1));
 
         ventanaHP.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, 380, 120));
 
