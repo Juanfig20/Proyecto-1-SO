@@ -70,7 +70,7 @@ public class Empresa extends Thread{
         productorFuente = new Trabajador(3,  numTrabajadoresIniciales[3], duracion, almacen, mutex);
         productorTGrafica = new Trabajador(4,  numTrabajadoresIniciales[4], duracion, almacen, mutex);
         ensamblador= new Trabajador(5,  numTrabajadoresIniciales[5], duracion, almacen, mutex);
-        pm = new ProjectManager(duracion,  mutex,  mutex2,  mutex3);
+        pm = new ProjectManager(duracion,  mutex,  mutex2,  mutex3,this);
         director = new Director( duracion, almacen,  mutex,  mutex2,  mutex3, this);
     }
     

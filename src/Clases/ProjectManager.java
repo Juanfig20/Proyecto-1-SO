@@ -30,7 +30,7 @@ public class ProjectManager extends Thread {
     private Semaphore mutex3;
     private JLabel [] labels;
     
-    public ProjectManager(int duracionDia, Semaphore mutex, Semaphore mutex2, Semaphore mutex3){
+    public ProjectManager(int duracionDia, Semaphore mutex, Semaphore mutex2, Semaphore mutex3, Empresa empresa){
         this.salarioAcumulado = 0;
         this.duracionDia = duracionDia;
         this.salario = 40;
