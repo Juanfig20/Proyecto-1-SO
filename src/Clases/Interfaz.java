@@ -63,13 +63,17 @@ public class Interfaz extends javax.swing.JFrame {
         
         //Almacen
         JLabel [] piezasAlmacen_Apple = {placasEnStock_Apple, CPUsEnStock_Apple, RAMsEnStock_Apple, fuentesEnStock_Apple, tGraficasEnStock_Apple, cantCompEstandarListos_Apple, cantCompTGListos_Apple, ganancias_Apple};
+        apple.getAlmacen().setLabels(piezasAlmacen_Apple);
+
         
         //Datos relevantes
         JLabel [] datosRelevantes_Apple = {};
         
         //Project Manager / Director
         JLabel [] datosDirector_Apple = {nroFaltasPM_Apple, sueldoDescontadoPM_Apple, estadoDirector_Apple, diasRestantes_Apple};
+        apple.getDirector().setLabels(datosDirector_Apple);
         JLabel [] datosPM_Apple = {estadoPM_Apple, costos_Apple, utilidad_Apple};
+        apple.getPm().setLabels(datosPM_Apple);
         
         
         // ---------------------- Interfaz Ventana: HP ----------------------
@@ -84,13 +88,16 @@ public class Interfaz extends javax.swing.JFrame {
         
         //Almacen
         JLabel [] piezasAlmacen_HP = {placasEnStock_HP, CPUsEnStock_HP, RAMsEnStock_HP, fuentesEnStock_HP, tGraficasEnStock_HP, cantCompEstandarListos_HP, cantCompTGListos_HP, ganancias_HP};
+        hp.getAlmacen().setLabels(piezasAlmacen_HP);
         
         //Datos relevantes
         JLabel [] datosRelevantes_HP = {};
         
         //Project Manager / Director
         JLabel [] datosDirector_HP = {nroFaltasPM_HP, sueldoDescontadoPM_HP, estadoDirector_HP, diasRestantes_HP};
+        hp.getDirector().setLabels(datosDirector_HP);
         JLabel [] datosPM_HP = {estadoPM_HP, costos_HP, utilidad_HP};
+        hp.getPm().setLabels(datosPM_HP);
 
         
     }
