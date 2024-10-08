@@ -106,12 +106,14 @@ public class Almacen {
         this.ram -= this.ramEnsamblaje;
         this.fuenteAlimentacion -= this.fuenteAlimentacionEnsamblaje;
         this.computadora ++;  // Se ensamblan computadoras
+        this.labels[5].setText(Integer.toString(computadora));
         this.contadorcompus ++ ;
 
         // Verificar si hay tarjetas gráficas para computadoras premium
         if (this.tarjetaGrafica >= this.tarjetaGraficaEnsamblaje && this.contadorcompus >= this.cantidad) {
             this.tarjetaGrafica -= this.tarjetaGraficaEnsamblaje;
-            this.computadoraPremium += 1;  // Se ensamblan computadoras premium
+            this.computadoraPremium ++;  // Se ensamblan computadoras premium
+            this.labels[6].setText(Integer.toString(computadoraPremium));
             this.contadorcompus = 0 ;
         }
     }
@@ -119,6 +121,7 @@ public class Almacen {
      public void mandarCompus() {
         this.empresa.setGanancia(this.empresa.getGanancia() + (this.empresa.getPrecioCompu()*computadora));
         this.empresa.setGanancia(this.empresa.getGanancia() + this.empresa.getPrecioPremium()*computadoraPremium);
+        this.labels[0].setText(Integer.toString(this.empresa.getGanancia()));
    
         computadora = 0;
         computadoraPremium = 0;

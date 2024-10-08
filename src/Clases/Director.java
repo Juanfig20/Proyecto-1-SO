@@ -91,6 +91,7 @@ public class Director extends Thread {
             if (this.empresa.getDeadline() == 0) {
                 directorMode = true;
                 this.empresa.setDeadline(reinicioDeadline);
+                this.labels[0].setText(Integer.toString(this.empresa.getDeadline()));
             }
             this.mutex2.release();
         } catch (InterruptedException ex) {
