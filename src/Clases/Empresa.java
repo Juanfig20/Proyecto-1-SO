@@ -74,6 +74,17 @@ public class Empresa extends Thread{
         director = new Director( duracion, almacen,  mutex,  mutex2,  mutex3, this);
     }
     
+    public void iniciar() {
+        productorPlacaBase.start();
+        productorCPUs.start();
+        productorRAM.start();
+        productorFuente.start();
+        productorTGrafica.start();
+        ensamblador.start();  
+        pm.start();   
+        director.start();
+    }
+    
     @Override
     public void run() {
         while (true) {

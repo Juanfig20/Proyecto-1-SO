@@ -2151,6 +2151,8 @@ public class Interfaz extends javax.swing.JFrame {
 
     private void iniciarSimulacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarSimulacionActionPerformed
         // TODO add your handling code here:
+        apple.iniciar();
+        hp.iniciar();
     }//GEN-LAST:event_iniciarSimulacionActionPerformed
     
     /**

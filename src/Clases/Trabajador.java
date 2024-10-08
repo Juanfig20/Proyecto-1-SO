@@ -79,36 +79,36 @@ public class Trabajador extends Thread{
     }
     
     public void trabajar() {
-    this.setContadorDias(this.getContadorDias() + 1);
-    
-    if (this.tipoTrabajador == 5) { // Solo los ensambladores (tipo 5) ensamblan computadoras
-        // Ensamblaje de computadoras
-        if (this.getContadorDias() >= this.getDiasRestantes()) { //Dias restantes depende de la compania
-            try {
-                this.getMutex().acquire(); //wait
-                this.getAlmacen().ensamblar(); // Método ensamblar computadora en la clase Almacen
-                this.getMutex().release(); // signal
-                this.setContadorDias(0);
-            } catch (InterruptedException ex) {
-                Logger.getLogger(Trabajador.class.getName()).log(Level.SEVERE, null, ex);
+        this.setContadorDias(this.getContadorDias() + 1);
+
+        if (this.tipoTrabajador == 5) { // Solo los ensambladores (tipo 5) ensamblan computadoras
+            // Ensamblaje de computadoras
+            if (this.getContadorDias() >= this.getDiasRestantes()) { //Dias restantes depende de la compania
+                try {
+                    this.getMutex().acquire(); //wait
+                    this.getAlmacen().ensamblar(); // Método ensamblar computadora en la clase Almacen
+                    this.getMutex().release(); // signal
+                    this.setContadorDias(0);
+                } catch (InterruptedException ex) {
+                    Logger.getLogger(Trabajador.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
-        }
-    } else {
-        // Lógica para otros trabajadores que producen partes
-        if (this.getContadorDias() >= this.getDiasRestantes()) {
-            try {
-                this.getMutex().acquire(); //wait
-                this.getAlmacen().añadirParte(this.getTipoTrabajador(), this.getCantidadTrabajadores()); 
-                this.getMutex().release(); // signal
-                this.setContadorDias(0);
-            } catch (InterruptedException ex) {
-                Logger.getLogger(Trabajador.class.getName()).log(Level.SEVERE, null, ex);
+        } else {
+            // Lógica para otros trabajadores que producen partes
+            if (this.getContadorDias() >= this.getDiasRestantes()) {
+                try {
+                    this.getMutex().acquire(); //wait
+                    this.getAlmacen().añadirParte(this.getTipoTrabajador(), this.getCantidadTrabajadores()); 
+                    this.getMutex().release(); // signal
+                    this.setContadorDias(0);
+                } catch (InterruptedException ex) {
+                    Logger.getLogger(Trabajador.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         }
     }
-}
     
-     public void despedir() {
+    public void despedir() {
         if (this.getCantidadTrabajadores() != 1) {
             this.setCantidadTrabajadores(this.cantidadTrabajadores - 1);
         } else {
