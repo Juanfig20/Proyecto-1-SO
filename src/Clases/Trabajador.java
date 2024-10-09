@@ -65,8 +65,8 @@ public class Trabajador extends Thread{
         while (true) {
             try {
                 pagar();
-                trabajar ();
-                sleep((this.duracionDia)*1000);
+                trabajar();
+                sleep((getDuracionDia())); //this.duracionDia)*1000
             } catch (InterruptedException ex) {
                 Logger.getLogger(Trabajador.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -86,7 +86,7 @@ public class Trabajador extends Thread{
             if (this.getContadorDias() >= this.getDiasRestantes()) { //Dias restantes depende de la compania
                 try {
                     this.getMutex().acquire(); //wait
-                    this.getAlmacen().ensamblar(); // Método ensamblar computadora en la clase Almacen
+                    this.getAlmacen().añadirComputador(getCantidadTrabajadores());// Método ensamblar computadora en la clase Almacen //Esta parte la cambié, antes estaba ensamblar()
                     this.getMutex().release(); // signal
                     this.setContadorDias(0);
                 } catch (InterruptedException ex) {

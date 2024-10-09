@@ -30,22 +30,17 @@ public class Empresa extends Thread{
     private int utilidad;
     private int maxTrabajadores;
     private int [] numTrabajadoresIniciales;
+    private int [] piezasNecesarias;
+    private int [] diasParaFinalizarPiezas;
     private Almacen almacen;
     private int precioCompu;
     private int precioPremium;
     private Semaphore mutex;
     private Semaphore mutex2;
     private Semaphore mutex3;
-    //Pruebita
-    private int placaBaseEnsamblaje;
-    private int cpuEnsamblaje;
-    private int ramEnsamblaje;
-    private int fuenteAlimentacionEnsamblaje;
-    private int tarjetaGraficaEnsamblaje;
-    private int cantidad;
    
 
-    public Empresa(int [] numTrabajadoresIniciales, int duracion, int deadline, int maxTrabajadores, int precioCompu, int precioPremium) {
+    public Empresa(int [] numTrabajadoresIniciales, int [] piezasNecesarias, int [] diasParaFinalizarPiezas, int duracion, int deadline, int maxTrabajadores, int precioCompu, int precioPremium) {
         this.ganancia = 0;
         this.costos = 0;
         this.utilidad = 0;
@@ -55,10 +50,12 @@ public class Empresa extends Thread{
         this.precioPremium = precioPremium;
         this.maxTrabajadores = maxTrabajadores;
         this.numTrabajadoresIniciales = numTrabajadoresIniciales;
+        this.piezasNecesarias = piezasNecesarias;
+        this.diasParaFinalizarPiezas = diasParaFinalizarPiezas;
         this.mutex = new Semaphore(1);
         this.mutex2 = new Semaphore(1);
         this.mutex3 = new Semaphore(1);
-        this.almacen = new Almacen(this, placaBaseEnsamblaje, cpuEnsamblaje, ramEnsamblaje, fuenteAlimentacionEnsamblaje, tarjetaGraficaEnsamblaje, cantidad);
+        this.almacen = new Almacen(piezasNecesarias, this);
         empleados();
     }
     
@@ -107,8 +104,6 @@ public class Empresa extends Thread{
     public void calcularUtilidad() {
         setUtilidad(getGanancia() - getCostos());
     }
-    
-    //Falta ver como calcular la ganancia
     
     public void añadirTrabajadores(int type) {
         int cantidadTrabajadoresActuales = (productorPlacaBase.getCantidadTrabajadores() + productorCPUs.getCantidadTrabajadores() + productorRAM.getCantidadTrabajadores() + productorFuente.getCantidadTrabajadores() + productorTGrafica.getCantidadTrabajadores() + ensamblador.getCantidadTrabajadores());

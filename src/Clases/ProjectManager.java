@@ -49,6 +49,7 @@ public class ProjectManager extends Thread {
         while(true) {
             try {
                 pagar();
+                operacionesEmpresa();
                 // Primeras 16 horas
                 long startTime = System.currentTimeMillis();
                 while(System.currentTimeMillis() - startTime <= ((duracionDia/24)*16)){
@@ -76,7 +77,8 @@ public class ProjectManager extends Thread {
     public void trabajar(){
         try {
             this.mutex2.acquire();
-            this.empresa.setDeadline(this.empresa.getDeadline() - 1); 
+            this.empresa.setDeadline(this.empresa.getDeadline() - 1);
+            this.labels[3].setText(Integer.toString(this.empresa.getDeadline()));
             this.mutex2.release();
         } catch (InterruptedException ex) {
             Logger.getLogger(Trabajador.class.getName()).log(Level.SEVERE, null, ex);
@@ -85,7 +87,7 @@ public class ProjectManager extends Thread {
     }
     
     public void operacionesEmpresa(){
-         try {
+        try {
             this.mutex3.acquire();
             this.empresa.calcularCostos();
             this.labels[1].setText(Integer.toString(this.empresa.getCostos()));
@@ -95,7 +97,7 @@ public class ProjectManager extends Thread {
         } catch (InterruptedException ex) {
             Logger.getLogger(Trabajador.class.getName()).log(Level.SEVERE, null, ex);
         }
-     }
+    }
     
     public void pagar() {
         this.salarioAcumulado += this.salario * 24;

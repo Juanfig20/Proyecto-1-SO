@@ -55,36 +55,27 @@ public class Proyecto1SO {
                 }
             }
             
-            Empresa apple = new Empresa(numTrabajadoresIniciales_Apple, duracionDia, deadline, 19, 100000, 150000);
+            int [] diasParaFinalizarPiezas = {4, 4, 1, 1, 2}; //Ambas empresas comparten los mismos días
             
-            Empresa hp = new Empresa(numTrabajadoresIniciales_HP, duracionDia, deadline, 20, 90000, 140000);
+            //Creación empresa Apple
+            int [] piezasNecesarias_Apple = {2, 1, 4, 4, 2, 5};
             
-            Almacen almacenApple = new Almacen(apple, 2, 1, 4, 4, 2, 5);
+            Empresa apple = new Empresa(numTrabajadoresIniciales_Apple, piezasNecesarias_Apple, diasParaFinalizarPiezas, duracionDia, deadline, 19, 100000, 150000);
             
-            Almacen almacenHP = new Almacen(hp, 1, 1, 2, 4, 3, 2);
+            
+            //Creación empresa HP
+            int [] piezasNecesarias_HP = {1, 1, 2, 4, 3, 2};
+            
+            Empresa hp = new Empresa(numTrabajadoresIniciales_HP, piezasNecesarias_HP, diasParaFinalizarPiezas,duracionDia, deadline, 20, 90000, 140000);
             
             Interfaz interfaz = new Interfaz(apple, hp, numTrabajadoresIniciales_Apple, numTrabajadoresIniciales_HP);
             interfaz.setLocationRelativeTo(null);
             interfaz.show();
-
-//            System.out.println("Deadline: " + deadline);
-//            System.out.println("Duracion Dia: " + duracionDia);
-//            System.out.print("Cantidad Apple: ");
-//            for (int cantidad : numTrabajadoresIniciales_Apple) {
-//                System.out.print(cantidad + " ");
-//            }
-//            System.out.println();
-//            System.out.print("Cantidad HP: ");
-//            for (int cantidad : numTrabajadoresIniciales_HP) {
-//                System.out.print(cantidad + " ");
-//            }
             
         } catch (IOException e) {
             e.printStackTrace();
-        }
- 
-        
-        }
+        }  
+    }
 }
     
 
