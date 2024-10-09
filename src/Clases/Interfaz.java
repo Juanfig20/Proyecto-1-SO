@@ -64,15 +64,12 @@ public class Interfaz extends javax.swing.JFrame {
         //Almacen
         JLabel [] piezasAlmacen_Apple = {placasEnStock_Apple, CPUsEnStock_Apple, RAMsEnStock_Apple, fuentesEnStock_Apple, tGraficasEnStock_Apple, cantCompEstandarListos_Apple, cantCompTGListos_Apple, ganancias_Apple};
         apple.getAlmacen().setLabels(piezasAlmacen_Apple);
-
-        
-        //Datos relevantes
-        JLabel [] datosRelevantes_Apple = {};
         
         //Project Manager / Director
-        JLabel [] datosDirector_Apple = {nroFaltasPM_Apple, sueldoDescontadoPM_Apple, estadoDirector_Apple, diasRestantes_Apple};
+        JLabel [] datosDirector_Apple = {nroFaltasPM_Apple, sueldoDescontadoPM_Apple, estadoDirector_Apple, diasRestantes_HP};
         apple.getDirector().setLabels(datosDirector_Apple);
-        JLabel [] datosPM_Apple = {estadoPM_Apple, costos_Apple, utilidad_Apple};
+        
+        JLabel [] datosPM_Apple = {estadoPM_Apple, costos_Apple, utilidad_Apple, diasRestantes_Apple};
         apple.getPm().setLabels(datosPM_Apple);
         
         
@@ -90,13 +87,11 @@ public class Interfaz extends javax.swing.JFrame {
         JLabel [] piezasAlmacen_HP = {placasEnStock_HP, CPUsEnStock_HP, RAMsEnStock_HP, fuentesEnStock_HP, tGraficasEnStock_HP, cantCompEstandarListos_HP, cantCompTGListos_HP, ganancias_HP};
         hp.getAlmacen().setLabels(piezasAlmacen_HP);
         
-        //Datos relevantes
-        JLabel [] datosRelevantes_HP = {};
-        
         //Project Manager / Director
         JLabel [] datosDirector_HP = {nroFaltasPM_HP, sueldoDescontadoPM_HP, estadoDirector_HP, diasRestantes_HP};
         hp.getDirector().setLabels(datosDirector_HP);
-        JLabel [] datosPM_HP = {estadoPM_HP, costos_HP, utilidad_HP};
+        
+        JLabel [] datosPM_HP = {estadoPM_HP, costos_HP, utilidad_HP, diasRestantes_HP};
         hp.getPm().setLabels(datosPM_HP);
 
         
@@ -1536,44 +1531,88 @@ public class Interfaz extends javax.swing.JFrame {
         ventanaHP.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 60, 420, 260));
 
         jPanel13.setBackground(new java.awt.Color(153, 153, 255));
-        jPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel25.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel25.setForeground(new java.awt.Color(255, 255, 255));
         jLabel25.setText("DATOS RELEVANTES");
-        jPanel13.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(112, 19, -1, -1));
 
         ganaciasLabel_HP.setForeground(new java.awt.Color(255, 255, 255));
         ganaciasLabel_HP.setText("Ganancias en bruto:");
-        jPanel13.add(ganaciasLabel_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 53, -1, -1));
 
         costosLabel_HP.setForeground(new java.awt.Color(255, 255, 255));
         costosLabel_HP.setText("Costos operativos:");
-        jPanel13.add(costosLabel_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 87, -1, -1));
 
         utilidadLabel_HP.setForeground(new java.awt.Color(255, 255, 255));
         utilidadLabel_HP.setText("Utilidad total:");
-        jPanel13.add(utilidadLabel_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 121, -1, -1));
 
         diasRestantesLabel_HP.setForeground(new java.awt.Color(255, 255, 255));
         diasRestantesLabel_HP.setText("Días restantes para la entrega:");
-        jPanel13.add(diasRestantesLabel_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 155, -1, -1));
 
         ganancias_HP.setForeground(new java.awt.Color(255, 255, 255));
         ganancias_HP.setText("0");
-        jPanel13.add(ganancias_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(244, 53, 31, -1));
 
         costos_HP.setForeground(new java.awt.Color(255, 255, 255));
         costos_HP.setText("0");
-        jPanel13.add(costos_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(244, 87, 31, -1));
 
         utilidad_HP.setForeground(new java.awt.Color(255, 255, 255));
         utilidad_HP.setText("0");
-        jPanel13.add(utilidad_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(244, 121, -1, -1));
 
         diasRestantes_HP.setForeground(new java.awt.Color(255, 255, 255));
         diasRestantes_HP.setText("0");
-        jPanel13.add(diasRestantes_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(244, 155, -1, -1));
+
+        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
+        jPanel13.setLayout(jPanel13Layout);
+        jPanel13Layout.setHorizontalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addGap(112, 112, 112)
+                        .addComponent(jLabel25))
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addGap(51, 51, 51)
+                        .addComponent(costosLabel_HP)
+                        .addGap(96, 96, 96)
+                        .addComponent(costos_HP, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
+                        .addGap(51, 51, 51)
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
+                                .addComponent(ganaciasLabel_HP)
+                                .addGap(89, 89, 89)
+                                .addComponent(ganancias_HP, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
+                                .addComponent(utilidadLabel_HP)
+                                .addGap(120, 120, 120)
+                                .addComponent(utilidad_HP, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
+                                .addComponent(diasRestantesLabel_HP)
+                                .addGap(33, 33, 33)
+                                .addComponent(diasRestantes_HP, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(19, Short.MAX_VALUE))
+        );
+        jPanel13Layout.setVerticalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(jLabel25)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ganaciasLabel_HP)
+                    .addComponent(ganancias_HP))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(costosLabel_HP)
+                    .addComponent(costos_HP))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(utilidadLabel_HP)
+                    .addComponent(utilidad_HP))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(diasRestantesLabel_HP)
+                    .addComponent(diasRestantes_HP)))
+        );
 
         ventanaHP.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 350, 320, 190));
 
@@ -1599,7 +1638,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         estadoPM_HP.setForeground(new java.awt.Color(255, 255, 255));
         estadoPM_HP.setText("...");
-        jPanel14.add(estadoPM_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 30, 10, -1));
+        jPanel14.add(estadoPM_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 30, 180, -1));
 
         nroFaltasPM_HP.setForeground(new java.awt.Color(255, 255, 255));
         nroFaltasPM_HP.setText("0");

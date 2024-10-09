@@ -104,7 +104,7 @@ public class Director extends Thread {
         if (this.contadorDias == this.diasTerminar){
             try {
                 this.mutex.acquire();
-                getAlmacen().mandarCompus();
+                getAlmacen().enviarComputadores(); //aquí iba mandanCompues()
                 this.mutex.release();
                 this.contadorDias = 0;
                 directorMode = false;
