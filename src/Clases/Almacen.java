@@ -140,7 +140,7 @@ public class Almacen {
      
     public void añadirParte(int tipo, int cantidadTrabajadores) {
         if (tipo == 0 && this.getPlacaBase()< 25){
-            int calc = this.getPlacaBase() + (1 * cantidadTrabajadores);
+            int calc = this.getPlacaBase() + (cantidadTrabajadores);
             if (calc < 25) {
                 this.setPlacaBase(calc);
             } else {
@@ -149,7 +149,7 @@ public class Almacen {
             this.labels[tipo].setText(Integer.toString(this.getPlacaBase()));
         }
         else if (tipo == 1 && this.getCpu()< 20){
-            int calc = this.getCpu()+ (1 * cantidadTrabajadores);
+            int calc = this.getCpu()+ ( cantidadTrabajadores);
             if (calc < 20) {
                 this.setCpu(calc);
             } else {
@@ -158,7 +158,7 @@ public class Almacen {
             this.labels[tipo].setText(Integer.toString(this.getCpu()));
         }
         else if (tipo == 2 && this.getRam()< 55){
-            int calc = this.getRam()+ (3 * cantidadTrabajadores);
+            int calc = this.getRam()+ ( cantidadTrabajadores);
             if (calc < 55) {
                 this.setRam(calc);
             } else {
@@ -167,7 +167,7 @@ public class Almacen {
             this.labels[tipo].setText(Integer.toString(this.getRam()));
         }
         else if (tipo == 3 && this.getFuenteAlimentacion()< 35){
-            int calc = this.getFuenteAlimentacion() + (3 * cantidadTrabajadores);
+            int calc = this.getFuenteAlimentacion() + (5 * cantidadTrabajadores);
             if (calc < 35) {
                 this.setFuenteAlimentacion(calc);
             } else {
@@ -176,7 +176,7 @@ public class Almacen {
             this.labels[tipo].setText(Integer.toString(this.getFuenteAlimentacion()));
         }
         else if (tipo == 4 && this.getTarjetaGrafica()< 10){
-            int calc = this.getTarjetaGrafica()+ (1 * cantidadTrabajadores);
+            int calc = this.getTarjetaGrafica()+ ( cantidadTrabajadores);
             if (calc < 10) {
                 this.setTarjetaGrafica(calc);
             } else {
