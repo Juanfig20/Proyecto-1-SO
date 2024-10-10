@@ -29,6 +29,7 @@ public class ProjectManager extends Thread {
     private Semaphore mutex2;
     private Semaphore mutex3;
     private JLabel [] labels;
+    private Grafico grafico;
     
     public ProjectManager(int duracionDia, Semaphore mutex, Semaphore mutex2, Semaphore mutex3, Empresa empresa){
         this.salarioAcumulado = 0;
@@ -67,6 +68,9 @@ public class ProjectManager extends Thread {
                 this.labels[0].setText(estado);
                 trabajar(); 
                 setDaysPassedTotal(getDaysPassedTotal() + 1);
+                if (empresa.getMaxTrabajadores() == 19) {
+                    this.grafico.actualizarGrafico();
+                }
                 sleep((duracionDia/24)*8);
             } catch (InterruptedException ex) {
                 Logger.getLogger(Trabajador.class.getName()).log(Level.SEVERE, null, ex);
@@ -158,6 +162,14 @@ public class ProjectManager extends Thread {
 
     public void setLabels(JLabel[] labels) {
         this.labels = labels;
+    }
+
+    public Grafico getGrafico() {
+        return grafico;
+    }
+
+    public void setGrafico(Grafico grafico) {
+        this.grafico = grafico;
     }
 
     
