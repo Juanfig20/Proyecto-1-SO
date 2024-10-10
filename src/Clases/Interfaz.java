@@ -66,7 +66,7 @@ public class Interfaz extends javax.swing.JFrame {
         apple.getAlmacen().setLabels(piezasAlmacen_Apple);
         
         //Project Manager / Director
-        JLabel [] datosDirector_Apple = {nroFaltasPM_Apple, sueldoDescontadoPM_Apple, estadoDirector_Apple, diasRestantes_HP};
+        JLabel [] datosDirector_Apple = {nroFaltasPM_Apple, sueldoDescontadoPM_Apple, estadoDirector_Apple, diasRestantes_Apple};
         apple.getDirector().setLabels(datosDirector_Apple);
         
         JLabel [] datosPM_Apple = {estadoPM_Apple, costos_Apple, utilidad_Apple, diasRestantes_Apple};
