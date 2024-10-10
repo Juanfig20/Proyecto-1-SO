@@ -25,13 +25,13 @@ public class Trabajador extends Thread{
     private Almacen almacen;
     private Semaphore mutex;
 
-    public Trabajador(int tipo, int cantidadTrabajadores, int duracionDia, Almacen almacen, Semaphore mutex) {
+    public Trabajador(int tipo, int cantidadTrabajadores, int duracionDia, int [] diasParaFinalizar, Almacen almacen, Semaphore mutex) {
         this.tipoTrabajador = tipoTrabajador;
         this.salario = 0;
         this.salarioAcumulado = 0;
         this.cantidadTrabajadores = cantidadTrabajadores;
         this.duracionDia = duracionDia;
-        this.diasRestantes = diasRestantes;
+        this.diasRestantes = diasParaFinalizar[tipo];
         this.contadorDias = 0;
         this.almacen = almacen;
         this.mutex = mutex;
@@ -78,34 +78,48 @@ public class Trabajador extends Thread{
         this.setSalarioAcumulado(this.getSalarioAcumulado() + ((this.getSalario() * 24)) * this.getCantidadTrabajadores());
     }
     
-    public void trabajar() {
-        this.setContadorDias(this.getContadorDias() + 1);
-
-        if (this.tipoTrabajador == 5) { // Solo los ensambladores (tipo 5) ensamblan computadoras
-            // Ensamblaje de computadoras
-            if (this.getContadorDias() >= this.getDiasRestantes()) { //Dias restantes depende de la compania
-                try {
-                    this.getMutex().acquire(); //wait
-                    this.getAlmacen().añadirComputador(getCantidadTrabajadores());// Método ensamblar computadora en la clase Almacen //Esta parte la cambié, antes estaba ensamblar()
-                    this.getMutex().release(); // signal
-                    this.setContadorDias(0);
-                } catch (InterruptedException ex) {
-                    Logger.getLogger(Trabajador.class.getName()).log(Level.SEVERE, null, ex);
-                }
+//    public void trabajar() {
+//        this.setContadorDias(this.getContadorDias() + 1);
+//
+//        if (this.tipoTrabajador == 5) { // Solo los ensambladores (tipo 5) ensamblan computadoras
+//            // Ensamblaje de computadoras
+//            if (this.getContadorDias() >= this.getDiasRestantes()) { //Dias restantes depende de la compania
+//                try {
+//                    this.getMutex().acquire(); //wait
+//                    this.getAlmacen().añadirComputador(getCantidadTrabajadores());// Método ensamblar computadora en la clase Almacen //Esta parte la cambié, antes estaba ensamblar()
+//                    this.getMutex().release(); // signal
+//                    this.setContadorDias(0);
+//                } catch (InterruptedException ex) {
+//                    Logger.getLogger(Trabajador.class.getName()).log(Level.SEVERE, null, ex);
+//                }
+//            }
+//        } else {
+//            // Lógica para otros trabajadores que producen partes
+//            if (this.getContadorDias() >= this.getDiasRestantes()) {
+//                try {
+//                    this.getMutex().acquire(); //wait
+//                    this.getAlmacen().añadirParte(this.getTipoTrabajador(), this.getCantidadTrabajadores()); 
+//                    this.getMutex().release(); // signal
+//                    this.setContadorDias(0);
+//                } catch (InterruptedException ex) {
+//                    Logger.getLogger(Trabajador.class.getName()).log(Level.SEVERE, null, ex);
+//                }
+//            }
+//        }
+//    }
+    
+    public void trabajar(){
+        this.setContadorDias(this.getContadorDias()+ 1);
+        if (this.getContadorDias() == this.getDiasRestantes()){
+            try {
+                this.getMutex().acquire();
+                this.getAlmacen().añadirParte(this.getTipoTrabajador(), this.getCantidadTrabajadores());
+                this.getMutex().release();
+                this.setContadorDias(0);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Trabajador.class.getName()).log(Level.SEVERE, null, ex);
             }
-        } else {
-            // Lógica para otros trabajadores que producen partes
-            if (this.getContadorDias() >= this.getDiasRestantes()) {
-                try {
-                    this.getMutex().acquire(); //wait
-                    this.getAlmacen().añadirParte(this.getTipoTrabajador(), this.getCantidadTrabajadores()); 
-                    this.getMutex().release(); // signal
-                    this.setContadorDias(0);
-                } catch (InterruptedException ex) {
-                    Logger.getLogger(Trabajador.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-        }
+        }   
     }
     
     public void despedir() {

@@ -831,153 +831,90 @@ public class Interfaz extends javax.swing.JFrame {
         ventanaApple.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel5.setBackground(new java.awt.Color(224, 224, 224));
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setForeground(new java.awt.Color(51, 51, 51));
         jLabel1.setText("Cant. de placas bases:");
+        jPanel5.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 47, -1, -1));
 
         jLabel2.setForeground(new java.awt.Color(51, 51, 51));
         jLabel2.setText("Cant. de CPUs:");
+        jPanel5.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 75, -1, -1));
 
         jLabel3.setForeground(new java.awt.Color(51, 51, 51));
         jLabel3.setText("Cant. de memorias RAM:");
+        jPanel5.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 103, -1, -1));
 
         jLabel4.setForeground(new java.awt.Color(51, 51, 51));
         jLabel4.setText("Cant. de fuentes:");
+        jPanel5.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 131, -1, -1));
 
         jLabel5.setForeground(new java.awt.Color(51, 51, 51));
         jLabel5.setText("Cant. de tarjetas gráficas:");
+        jPanel5.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 159, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(51, 51, 51));
         jLabel6.setText("ALMACEN");
+        jPanel5.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(189, 13, -1, -1));
 
         placasEnStock_Apple.setForeground(new java.awt.Color(51, 51, 51));
         placasEnStock_Apple.setText("0");
+        jPanel5.add(placasEnStock_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(209, 47, -1, -1));
 
         CPUsEnStock_Apple.setForeground(new java.awt.Color(51, 51, 51));
         CPUsEnStock_Apple.setText("0");
+        jPanel5.add(CPUsEnStock_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(209, 75, -1, -1));
 
         RAMsEnStock_Apple.setForeground(new java.awt.Color(51, 51, 51));
         RAMsEnStock_Apple.setText("0");
+        jPanel5.add(RAMsEnStock_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(209, 103, -1, -1));
 
         fuentesEnStock_Apple.setForeground(new java.awt.Color(51, 51, 51));
         fuentesEnStock_Apple.setText("0");
+        jPanel5.add(fuentesEnStock_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(209, 131, -1, -1));
 
         tGraficasEnStock_Apple.setForeground(new java.awt.Color(51, 51, 51));
         tGraficasEnStock_Apple.setText("0");
+        jPanel5.add(tGraficasEnStock_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(209, 159, -1, -1));
 
         jLabel7.setForeground(new java.awt.Color(51, 51, 51));
         jLabel7.setText("Capacidad máx.:            25");
+        jPanel5.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(263, 47, 148, -1));
 
         jLabel8.setForeground(new java.awt.Color(51, 51, 51));
         jLabel8.setText("Capacidad máx.:            20");
+        jPanel5.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(263, 75, 148, -1));
 
         jLabel9.setForeground(new java.awt.Color(51, 51, 51));
         jLabel9.setText("Capacidad máx.:            55");
+        jPanel5.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(263, 103, 148, -1));
 
         jLabel10.setForeground(new java.awt.Color(51, 51, 51));
         jLabel10.setText("Capacidad máx.:            35");
+        jPanel5.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(263, 131, 148, -1));
 
         jLabel11.setForeground(new java.awt.Color(51, 51, 51));
         jLabel11.setText("Capacidad máx.:            10");
+        jPanel5.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(263, 159, 148, -1));
 
         cantCompEstandarListos_Apple.setForeground(new java.awt.Color(51, 51, 51));
         cantCompEstandarListos_Apple.setText("0");
+        jPanel5.add(cantCompEstandarListos_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(331, 203, -1, -1));
 
         compEstandarLabel_Apple.setForeground(new java.awt.Color(51, 51, 51));
         compEstandarLabel_Apple.setText("Computadores estándar listos:");
+        jPanel5.add(compEstandarLabel_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(79, 203, -1, -1));
 
         compConTGLabel_Apple.setForeground(new java.awt.Color(51, 51, 51));
         compConTGLabel_Apple.setText("Computadores con tarjeta gráfica listos:");
+        jPanel5.add(compConTGLabel_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(79, 231, -1, -1));
 
         cantCompTGListos_Apple.setForeground(new java.awt.Color(51, 51, 51));
         cantCompTGListos_Apple.setText("0");
+        jPanel5.add(cantCompTGListos_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(331, 231, -1, -1));
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel3))
-                .addGap(52, 52, 52)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(placasEnStock_Apple)
-                    .addComponent(tGraficasEnStock_Apple)
-                    .addComponent(fuentesEnStock_Apple)
-                    .addComponent(RAMsEnStock_Apple)
-                    .addComponent(CPUsEnStock_Apple))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(17, 17, 17))
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(79, 79, 79)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(compEstandarLabel_Apple)
-                    .addComponent(compConTGLabel_Apple))
-                .addGap(41, 41, 41)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(cantCompTGListos_Apple)
-                    .addComponent(cantCompEstandarListos_Apple))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel6)
-                .addGap(181, 181, 181))
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(13, 13, 13)
-                .addComponent(jLabel6)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(placasEnStock_Apple)
-                    .addComponent(jLabel7))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CPUsEnStock_Apple)
-                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel2)
-                        .addComponent(jLabel8)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(RAMsEnStock_Apple)
-                    .addComponent(jLabel9))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(fuentesEnStock_Apple)
-                    .addComponent(jLabel10))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(tGraficasEnStock_Apple)
-                    .addComponent(jLabel11))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(compEstandarLabel_Apple)
-                    .addComponent(cantCompEstandarListos_Apple))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(compConTGLabel_Apple)
-                    .addComponent(cantCompTGListos_Apple))
-                .addGap(25, 25, 25))
-        );
-
-        ventanaApple.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 60, -1, -1));
+        ventanaApple.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 60, 420, 260));
 
         jPanel6.setBackground(new java.awt.Color(245, 245, 245));
         jPanel6.setForeground(new java.awt.Color(51, 51, 51));
