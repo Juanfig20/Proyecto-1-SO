@@ -39,7 +39,6 @@ public class Empresa extends Thread{
     private Semaphore mutex2;
     private Semaphore mutex3;
    
-
     public Empresa(int [] numTrabajadoresIniciales, int [] piezasNecesarias, int [] diasParaFinalizarPiezas, int duracion, int deadline, int maxTrabajadores, int precioCompu, int precioPremium) {
         this.ganancia = 0;
         this.costos = 0;

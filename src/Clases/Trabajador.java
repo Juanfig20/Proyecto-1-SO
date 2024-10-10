@@ -25,13 +25,13 @@ public class Trabajador extends Thread{
     private Almacen almacen;
     private Semaphore mutex;
 
-    public Trabajador(int tipo, int cantidadTrabajadores, int duracionDia, int [] diasParaFinalizar, Almacen almacen, Semaphore mutex) {
+    public Trabajador(int tipoTrabajador, int cantidadTrabajadores, int duracionDia, int [] diasParaFinalizar, Almacen almacen, Semaphore mutex) {
         this.tipoTrabajador = tipoTrabajador;
         this.salario = 0;
         this.salarioAcumulado = 0;
         this.cantidadTrabajadores = cantidadTrabajadores;
         this.duracionDia = duracionDia;
-        this.diasRestantes = diasParaFinalizar[tipo];
+        this.diasRestantes = diasParaFinalizar[tipoTrabajador];
         this.contadorDias = 0;
         this.almacen = almacen;
         this.mutex = mutex;
