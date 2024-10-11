@@ -21,9 +21,7 @@ public class ProjectManager extends Thread {
     private int falta;
     private int descuento;
     private String estado;
-    private int contadorHoras;
-    private int contadorMin;
-    private int daysPassedTotal;
+    private int totalDiasPasados;
     private Semaphore mutex;
     private Empresa empresa;
     private Semaphore mutex2;
@@ -37,7 +35,7 @@ public class ProjectManager extends Thread {
         this.salario = 40;
         this.falta = 0;
         this.descuento = 0;
-        this.daysPassedTotal = 0;
+        this.totalDiasPasados = 0;
         this.estado = "Viendo One Piece";
         this.mutex = mutex;
         this.mutex3 = mutex3;
@@ -67,7 +65,8 @@ public class ProjectManager extends Thread {
                 estado = "Trabajando";
                 this.labels[0].setText(estado);
                 trabajar(); 
-                setDaysPassedTotal(getDaysPassedTotal() + 1);
+                setTotalDiasPasados(getTotalDiasPasados()+ 1);
+                this.labels[4].setText(Integer.toString(getTotalDiasPasados()));
                 if (empresa.getMaxTrabajadores() == 19) {
                     this.grafico.actualizarGrafico();
                 }
@@ -108,12 +107,12 @@ public class ProjectManager extends Thread {
         
     }
 
-    public int getDaysPassedTotal() {
-        return daysPassedTotal;
+    public int getTotalDiasPasados() {
+        return totalDiasPasados;
     }
 
-    public void setDaysPassedTotal(int daysPassedTotal) {
-        this.daysPassedTotal = daysPassedTotal;
+    public void setTotalDiasPasados(int totalDiasPasados) {
+        this.totalDiasPasados = totalDiasPasados;
     }
 
     public String getEstado() {

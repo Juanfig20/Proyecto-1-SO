@@ -69,7 +69,7 @@ public class Interfaz extends javax.swing.JFrame {
         JLabel [] datosDirector_Apple = {nroFaltasPM_Apple, sueldoDescontadoPM_Apple, estadoDirector_Apple, diasRestantes_Apple};
         apple.getDirector().setLabels(datosDirector_Apple);
         
-        JLabel [] datosPM_Apple = {estadoPM_Apple, costos_Apple, utilidad_Apple, diasRestantes_Apple};
+        JLabel [] datosPM_Apple = {estadoPM_Apple, costos_Apple, utilidad_Apple, diasRestantes_Apple, diasTranscurridos_Apple};
         apple.getPm().setLabels(datosPM_Apple);
         
         
@@ -91,7 +91,7 @@ public class Interfaz extends javax.swing.JFrame {
         JLabel [] datosDirector_HP = {nroFaltasPM_HP, sueldoDescontadoPM_HP, estadoDirector_HP, diasRestantes_HP};
         hp.getDirector().setLabels(datosDirector_HP);
         
-        JLabel [] datosPM_HP = {estadoPM_HP, costos_HP, utilidad_HP, diasRestantes_HP};
+        JLabel [] datosPM_HP = {estadoPM_HP, costos_HP, utilidad_HP, diasRestantes_HP, diasTranscurridos_HP};
         hp.getPm().setLabels(datosPM_HP);
         
         
@@ -244,6 +244,8 @@ public class Interfaz extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         iconHP1 = new javax.swing.JLabel();
         title1 = new javax.swing.JLabel();
+        diasTranscurridosLabelA = new javax.swing.JLabel();
+        diasTranscurridos_Apple = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
         ventanaHP = new javax.swing.JPanel();
         jPanel11 = new javax.swing.JPanel();
@@ -316,6 +318,8 @@ public class Interfaz extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         iconHP = new javax.swing.JLabel();
         title = new javax.swing.JLabel();
+        labelDiasTranscurridos = new javax.swing.JLabel();
+        diasTranscurridos_HP = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
         ventanaGrafico = new javax.swing.JPanel();
         grafico = new javax.swing.JPanel();
@@ -1224,6 +1228,16 @@ public class Interfaz extends javax.swing.JFrame {
 
         ventanaApple.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 240, 80));
 
+        diasTranscurridosLabelA.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        diasTranscurridosLabelA.setForeground(new java.awt.Color(0, 0, 0));
+        diasTranscurridosLabelA.setText("Días transcurridos de la simulación:");
+        ventanaApple.add(diasTranscurridosLabelA, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 20, -1, -1));
+
+        diasTranscurridos_Apple.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        diasTranscurridos_Apple.setForeground(new java.awt.Color(0, 0, 0));
+        diasTranscurridos_Apple.setText("0");
+        ventanaApple.add(diasTranscurridos_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 20, -1, -1));
+
         jLabel32.setForeground(new java.awt.Color(51, 51, 51));
         jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/WhiteBackground.jpg"))); // NOI18N
         jLabel32.setText("jLabel32");
@@ -1635,6 +1649,16 @@ public class Interfaz extends javax.swing.JFrame {
 
         ventanaHP.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 200, 80));
 
+        labelDiasTranscurridos.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        labelDiasTranscurridos.setForeground(new java.awt.Color(0, 0, 0));
+        labelDiasTranscurridos.setText("Días transcurridos de la simulación:");
+        ventanaHP.add(labelDiasTranscurridos, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 20, -1, -1));
+
+        diasTranscurridos_HP.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        diasTranscurridos_HP.setForeground(new java.awt.Color(0, 0, 0));
+        diasTranscurridos_HP.setText("0");
+        ventanaHP.add(diasTranscurridos_HP, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 20, -1, -1));
+
         jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/BlueBackground.jpg"))); // NOI18N
         jLabel29.setText("jLabel29");
         ventanaHP.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 840, 560));
@@ -1661,7 +1685,7 @@ public class Interfaz extends javax.swing.JFrame {
             .addGroup(ventanaGraficoLayout.createSequentialGroup()
                 .addGap(127, 127, 127)
                 .addComponent(grafico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(155, Short.MAX_VALUE))
+                .addContainerGap(156, Short.MAX_VALUE))
         );
         ventanaGraficoLayout.setVerticalGroup(
             ventanaGraficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1677,7 +1701,7 @@ public class Interfaz extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 841, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2191,6 +2215,9 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel diasRestantesLabel_HP;
     private javax.swing.JLabel diasRestantes_Apple;
     private javax.swing.JLabel diasRestantes_HP;
+    private javax.swing.JLabel diasTranscurridosLabelA;
+    private javax.swing.JLabel diasTranscurridos_Apple;
+    private javax.swing.JLabel diasTranscurridos_HP;
     private javax.swing.JSpinner duracionDia;
     private javax.swing.JLabel duracionDiaLabel;
     private javax.swing.JLabel ensambladorMenu_Apple;
@@ -2263,6 +2290,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JLabel labelDiasTranscurridos;
     private javax.swing.JLabel labelTrabajadores;
     private javax.swing.JLabel labelTrabajadores1;
     private javax.swing.JLabel memoriaRAMMenu_Apple;
