@@ -197,51 +197,51 @@ public class Almacen {
     }
     
     public void añadirComputador(int cantidadEnsambladores){
-        int cantidadCapitulos = cantidadEnsambladores;
+        int compus = cantidadEnsambladores;
         
         // Placas bases
         int quantity = calcularPosiblesComputadoras(placaBase, 0);
-        if (quantity < cantidadCapitulos){
-            cantidadCapitulos = quantity;
+        if (quantity < compus){
+            compus = quantity;
         }
         
         // CPUs
         quantity = calcularPosiblesComputadoras(cpu, 1);
-        if (quantity < cantidadCapitulos){
-            cantidadCapitulos = quantity;
+        if (quantity < compus){
+            compus = quantity;
         }
         
         // Memorias RAM
         quantity = calcularPosiblesComputadoras(ram, 2);
-        if (quantity < cantidadCapitulos){
-            cantidadCapitulos = quantity;
+        if (quantity < compus){
+            compus = quantity;
         }
         
         // Fuentes de alimentación
         quantity = calcularPosiblesComputadoras(fuenteAlimentacion, 3);
-        if (quantity < cantidadCapitulos){
-            cantidadCapitulos = quantity;
+        if (quantity < compus){
+            compus = quantity;
         }
         
-        placaBase -= (piezasNecesarias[0]*cantidadCapitulos);
+        placaBase -= (piezasNecesarias[0]*compus);
         this.labels[0].setText(Integer.toString(this.getPlacaBase()));
-        cpu -= (piezasNecesarias[1]*cantidadCapitulos);
+        cpu -= (piezasNecesarias[1]*compus);
         this.labels[1].setText(Integer.toString(this.getCpu()));
-        ram -= (piezasNecesarias[2]*cantidadCapitulos);
+        ram -= (piezasNecesarias[2]*compus);
         this.labels[2].setText(Integer.toString(this.getRam()));
-        fuenteAlimentacion -= (piezasNecesarias[3]*cantidadCapitulos);
+        fuenteAlimentacion -= (piezasNecesarias[3]*compus);
         this.labels[3].setText(Integer.toString(this.getFuenteAlimentacion()));
         
         
-        while (contadorcompus >= piezasNecesarias[5] && tarjetaGrafica >= piezasNecesarias[4] && cantidadCapitulos > 0){
+        while (contadorcompus >= piezasNecesarias[5] && tarjetaGrafica >= piezasNecesarias[4] && compus > 0){
             computadoraPremium += 1;
             tarjetaGrafica -= piezasNecesarias[4];
             contadorcompus -= piezasNecesarias[5];
-            cantidadCapitulos -= 1;
+            compus -= 1;
         }        
         this.labels[4].setText(Integer.toString(this.getTarjetaGrafica()));
-        computadora += cantidadCapitulos;
-        contadorcompus += cantidadCapitulos;
+        computadora += compus;
+        contadorcompus += compus;
         
         this.labels[5].setText(Integer.toString(computadora));
         this.labels[6].setText(Integer.toString(computadoraPremium));
