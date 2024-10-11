@@ -41,10 +41,9 @@ public class Grafico {
         
         XYPlot plot = lineChart.getXYPlot();
 
-        // Crear un renderizador de series personalizado (LineAndShapeRenderer para gráficos de líneas)
         XYLineAndShapeRenderer renderer = new XYLineAndShapeRenderer();
-        renderer.setSeriesPaint(0, Color.BLACK);  // Serie 0 (Apple) en negro
-        renderer.setSeriesPaint(1, Color.BLUE);    // Serie 1 (HP) en azul
+        renderer.setSeriesPaint(0, Color.GRAY);  // Serie 0 (Apple)
+        renderer.setSeriesPaint(1, Color.BLUE);    // Serie 1 (HP)
         renderer.setSeriesShapesVisible(0, true);  // Mostrar puntos para la serie 0
         renderer.setSeriesShapesVisible(1, true);  // Mostrar puntos para la serie 1
         renderer.setSeriesLinesVisible(0, true);    // Mostrar líneas para la serie 0

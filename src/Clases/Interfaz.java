@@ -1683,16 +1683,16 @@ public class Interfaz extends javax.swing.JFrame {
         ventanaGraficoLayout.setHorizontalGroup(
             ventanaGraficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ventanaGraficoLayout.createSequentialGroup()
-                .addGap(127, 127, 127)
+                .addGap(60, 60, 60)
                 .addComponent(grafico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(156, Short.MAX_VALUE))
+                .addContainerGap(223, Short.MAX_VALUE))
         );
         ventanaGraficoLayout.setVerticalGroup(
             ventanaGraficoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ventanaGraficoLayout.createSequentialGroup()
-                .addGap(71, 71, 71)
+                .addGap(23, 23, 23)
                 .addComponent(grafico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(112, Short.MAX_VALUE))
+                .addContainerGap(160, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Gráfico", ventanaGrafico);

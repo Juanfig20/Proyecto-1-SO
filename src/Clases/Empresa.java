@@ -58,7 +58,6 @@ public class Empresa extends Thread{
         empleados();
     }
     
-    // Hay que ver como poner la cantidad inicial de trabajadores, es el segundo atributo en el constructor trabajador
     public void empleados(){
         productorPlacaBase = new Trabajador(0,  numTrabajadoresIniciales[0], duracion, diasParaFinalizarPiezas, almacen, mutex);
         productorCPUs = new Trabajador(1,  numTrabajadoresIniciales[1], duracion, diasParaFinalizarPiezas, almacen, mutex);
@@ -130,8 +129,6 @@ public class Empresa extends Thread{
             JOptionPane.showMessageDialog(null, "Se ha alcanzado el límite de trabajadores");        
         }
     }
-    
-    
     
     public Trabajador getProductorPlacaBase() {
         return productorPlacaBase;
@@ -221,7 +218,6 @@ public class Empresa extends Thread{
         this.precioPremium = precioPremium;
     }
 
-
     public int getMaxTrabajadores() {
         return maxTrabajadores;
     }
@@ -229,7 +225,6 @@ public class Empresa extends Thread{
     public void setMaxTrabajadores(int maxTrabajadores) {
         this.maxTrabajadores = maxTrabajadores;
     }
-
 
     public Semaphore getMutex() {
         return mutex;

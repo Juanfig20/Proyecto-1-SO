@@ -170,7 +170,5 @@ public class ProjectManager extends Thread {
     public void setGrafico(Grafico grafico) {
         this.grafico = grafico;
     }
-
-    
-    
+  
 }
