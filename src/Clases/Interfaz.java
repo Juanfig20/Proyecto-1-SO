@@ -19,7 +19,7 @@ public class Interfaz extends javax.swing.JFrame {
     static Empresa hp;
     
     /**
-     * Creates new form Interfaz
+     * Creates new form Interface
      */
     
     public Interfaz(Empresa apple, Empresa hp, int [] numTrabajadoresInicialesA, int [] numTrabajadoresInicialesH) {
@@ -96,10 +96,9 @@ public class Interfaz extends javax.swing.JFrame {
         
         
         // ---------------------- Interfaz Ventana: Gráfico ----------------------
+        
         Grafico grafica = new Grafico(grafico, apple, hp);
         apple.getPm().setGrafico(grafica);
-        
-
         
     }
 
