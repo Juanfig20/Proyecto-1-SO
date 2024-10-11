@@ -55,7 +55,7 @@ public class Proyecto1SO {
                 }
             }
             
-            int [] diasParaFinalizarPiezas = {4, 4, 1, 1, 2}; //Ambas empresas comparten los mismos días
+            int [] diasParaFinalizarPiezas = {4, 4, 1, 1, 2, 2}; //Ambas empresas comparten los mismos días
             
             //Creación empresa Apple
             int [] piezasNecesarias_Apple = {2, 1, 4, 4, 2, 5};

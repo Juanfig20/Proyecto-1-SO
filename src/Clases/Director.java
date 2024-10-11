@@ -54,7 +54,7 @@ public class Director extends Thread {
                 if (directorMode) {
                     estado = "Enviando Computadoras";
                     this.labels[2].setText(estado);
-                    work();
+                    trabajar();
                     sleep(this.duracionDia);
                 }else{
                     double randomHour = Math.random( )*23;
@@ -63,9 +63,9 @@ public class Director extends Thread {
                     
                     estado = "Revisando Project Manager";
                     this.labels[2].setText(estado);
-                    checkPM();
+                    vigilarProjectM();
                     sleep((duracionDia*30)/(24*60));
-                    checkPM();
+                    vigilarProjectM();
                     sleep((duracionDia*5)/(24*60));                    
                     
                     estado = "Labores administrativas";
@@ -84,7 +84,6 @@ public class Director extends Thread {
         this.salarioAcumulado = this.salarioAcumulado + (this.salario * 24);
     }
     
-
     public void verificarDeadline(){
         try {
             this.mutex2.acquire();
@@ -99,12 +98,12 @@ public class Director extends Thread {
         }
     }
     
-    public void work(){
+    public void trabajar(){
         this.contadorDias = this.contadorDias + 1;
         if (this.contadorDias == this.diasTerminar){
             try {
                 this.mutex.acquire();
-                getAlmacen().enviarComputadores(); //aquí iba mandanCompues()
+                getAlmacen().enviarComputadores();
                 this.mutex.release();
                 this.contadorDias = 0;
                 directorMode = false;
@@ -114,7 +113,7 @@ public class Director extends Thread {
         }   
     }
     
-    public void checkPM(){
+    public void vigilarProjectM(){
         if (empresa.getPm().getEstado().equals("Viendo One Piece")){
             empresa.getPm().setFalta(empresa.getPm().getFalta() + 1);
             this.labels[0].setText(Integer.toString(empresa.getPm().getFalta()));

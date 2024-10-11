@@ -25,13 +25,13 @@ public class Trabajador extends Thread{
     private Almacen almacen;
     private Semaphore mutex;
 
-    public Trabajador(int tipo, int cantidadTrabajadores, int duracionDia, Almacen almacen, Semaphore mutex) {
+    public Trabajador(int tipoTrabajador, int cantidadTrabajadores, int duracionDia, int [] diasParaFinalizar, Almacen almacen, Semaphore mutex) {
         this.tipoTrabajador = tipoTrabajador;
         this.salario = 0;
         this.salarioAcumulado = 0;
         this.cantidadTrabajadores = cantidadTrabajadores;
         this.duracionDia = duracionDia;
-        this.diasRestantes = diasRestantes;
+        this.diasRestantes = diasParaFinalizar[tipoTrabajador];
         this.contadorDias = 0;
         this.almacen = almacen;
         this.mutex = mutex;
@@ -66,7 +66,7 @@ public class Trabajador extends Thread{
             try {
                 pagar();
                 trabajar();
-                sleep((getDuracionDia())); //this.duracionDia)*1000
+                sleep((getDuracionDia()));
             } catch (InterruptedException ex) {
                 Logger.getLogger(Trabajador.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -86,7 +86,7 @@ public class Trabajador extends Thread{
             if (this.getContadorDias() >= this.getDiasRestantes()) { //Dias restantes depende de la compania
                 try {
                     this.getMutex().acquire(); //wait
-                    this.getAlmacen().añadirComputador(getCantidadTrabajadores());// Método ensamblar computadora en la clase Almacen //Esta parte la cambié, antes estaba ensamblar()
+                    this.getAlmacen().añadirComputador(getCantidadTrabajadores());
                     this.getMutex().release(); // signal
                     this.setContadorDias(0);
                 } catch (InterruptedException ex) {
@@ -188,7 +188,6 @@ public class Trabajador extends Thread{
     public Semaphore getMutex() {
         return mutex;
     }
-    
     
 }
 
